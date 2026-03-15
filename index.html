@@ -338,8 +338,8 @@ h1 em{color:var(--accent);font-style:normal}
       <div class="logo-sub">Ganzjährig &nbsp;·&nbsp; Alle Wochentage &nbsp;·&nbsp; Stand März 2026</div>
     </div>
     <div class="hdr-stats">
-      <div class="stat"><div class="sn" id="sn-total">67</div><div class="sl">Events</div></div>
-      <div class="stat"><div class="sn" id="sn-sp">21</div><div class="sl">Specials</div></div>
+      <div class="stat"><div class="sn" id="sn-total">81</div><div class="sl">Events</div></div>
+      <div class="stat"><div class="sn" id="sn-sp">35</div><div class="sl">Specials</div></div>
       <div class="stat"><div class="sn">20</div><div class="sl">Gratis</div></div>
     </div>
   </div>
@@ -349,7 +349,7 @@ h1 em{color:var(--accent);font-style:normal}
   <div class="tab-inner">
     <button class="tab on" id="t-week" onclick="switchTab('week')">
       📅 Wochenplaner
-      <span class="tb" id="tb-week">21</span>
+      <span class="tb" id="tb-week">35</span>
     </button>
     <button class="tab" id="t-dis" onclick="switchTab('dis')">
       🗂 Entdecken
@@ -687,6 +687,161 @@ var SP=[
    tags:["Kino","Festival","Kinderfilm","International"],
    desc:"Internationales Kinderfilmfestival mit Filmen für alle Altersgruppen, von Kurzfilmen für die Kleinsten bis zu abendfüllenden Familienfilmen. Diverse Spielorte in ganz Wien.",
    link:"https://www.kinderfilmfestival.at"}
+,
+
+  {id:"s22",cat:"Fest",title:"Hollis Graetzltour @ VHS",
+   sub:"Monatlicher Gratis-Familiennachmittag 15-18 Uhr",
+   dateFrom:"2026-04-30",dateTo:"2026-04-30",
+   time:"15:00 bis 18:00",
+   indoor:true,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle Altersgruppen",
+   loc:"VHS Liesing, Liesinger Platz 3, 1230",locS:"23. Bezirk",
+   tags:["Gratis","Basteln","Spielen","Buehnenprogramm"],
+   desc:"WIENXTRA-Maskottchen Holli kommt mit Familienprogramm in den Bezirk. Bewegungsbereich, Mal- und Bastelstation, Spielebox mit 9.000 Spielen und Buehnenprogramm. Einfach vorbeikommen, keine Anmeldung. Weitere Termine: 20.3. VHS Floridsdorf, 23.10., 20.11., 18.12.",
+   link:"https://wienxtra.at/hollistour"},
+
+  {id:"s23",cat:"Festival",title:"Hollis Graetzltour Sommer-Aktivraeder",
+   sub:"WIENXTRA-Raeder in Parks Juli bis September",
+   dateFrom:"2026-07-01",dateTo:"2026-09-30",
+   time:"Nachmittags, diverse Termine",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Diverse Parks, alle 23 Bezirke",locS:"Alle Bezirke",
+   tags:["Gratis","Spielen","Park","Sommer","Spontan"],
+   desc:"Vier Aktiv-Fahrraeder mit Spielebox, Pedalos, Stelzen, Huepfsaecken und Bastelmaterial touren durch alle 23 Bezirke. Kinder schminken, Experimente, Spiele. Aktuelle Termine: wienxtra.at/hollistour",
+   link:"https://wienxtra.at/hollistour"},
+
+  {id:"s24",cat:"Festival",title:"Sommernachtskonzert Wiener Philharmoniker",
+   sub:"Open Air Schoenbrunn Schlosspark GRATIS mit Picknick",
+   dateFrom:"2026-06-19",dateTo:"2026-06-19",
+   time:"Ab 18:00 Uhr, Konzert bei Daemmerung",
+   indoor:false,gratis:true,preis:"GRATIS kein Ticket noetig",
+   reg:false,alter:"Alle",
+   loc:"Schlosspark Schoenbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Konzert","Klassik","Picknick","Gratis","Schoenbrunn"],
+   desc:"Die Wiener Philharmoniker spielen gratis im Schoenbrunner Schlosspark. 100.000 Besucher, Picknick mitbringen, auf der Wiese sitzen. Bezaubernde Atmosphaere bei Einbruch der Dunkelheit. Eines der schoensten Gratis-Erlebnisse Wiens fuer die ganze Familie.",
+   link:"https://www.wienerphilharmoniker.at/sommernachtskonzert"},
+
+  {id:"s25",cat:"Festival",title:"Prater-Picknick Wiener Symphoniker",
+   sub:"Open Air Konzert vor dem Riesenrad GRATIS",
+   dateFrom:"2026-07-01",dateTo:"2026-07-02",
+   time:"19:30 Uhr",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Kaiserwiese Prater, 1020 Wien",locS:"2. Bezirk",
+   tags:["Konzert","Picknick","Prater","Riesenrad","Gratis"],
+   desc:"Wiener Symphoniker spielen vor dem Riesenrad. Decke ausbreiten, Picknick geniessen und Walzer lauschen. Eines der stimmungsvollsten Familien-Open-Airs Wiens. Kinder koennen frei herumtollen.",
+   link:"https://www.wienersymphoniker.at"},
+
+  {id:"s26",cat:"Festival",title:"Film Festival Rathausplatz",
+   sub:"Gratis Open Air Kino ganzer Sommer",
+   dateFrom:"2026-07-04",dateTo:"2026-09-06",
+   time:"Ab ca. 21:00 bei Dunkelheit",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Rathausplatz, 1010 Wien",locS:"1. Bezirk",
+   tags:["Kino","Sommer","Rathausplatz","Gratis","Open Air"],
+   desc:"Rathausplatz als Europas groesstes Open-Air-Kino. Musikfilme, Konzertmitschnitte, Oper und Pop auf Grossleinwand. Gratis, einfach vorbeikommen. Mit Kulinarik-Standeln und toller Rathaus-Kulisse. Familienfreundlich.",
+   link:"https://filmfestival-rathausplatz.at"},
+
+  {id:"s27",cat:"Festival",title:"Kultursommer Wien",
+   sub:"2.000 Kuenstler auf 10 Buehnen alles gratis",
+   dateFrom:"2026-07-01",dateTo:"2026-08-10",
+   time:"Taeglich, diverse Zeiten",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"10 Buehnen quer durch Wien",locS:"Alle Bezirke",
+   tags:["Gratis","Theater","Musik","Zirkus","Open Air"],
+   desc:"Staedtisches Kulturfestival mit Rock, Pop, Jazz, Klassik, Tanz, Theater, Zirkus und Figurentheater auf 10 Buehnen. Viele Angebote fuer Familien. Zeitgenoessischer Zirkus und Mitmachaktionen fuer Kinder. Programm auf wien.gv.at",
+   link:"https://www.wien.gv.at/kultur/kultursommer"},
+
+  {id:"s28",cat:"Festival",title:"Donauinselfest 2026",
+   sub:"Europas groesstes Open-Air-Festival 3 bis 5 Juli",
+   dateFrom:"2026-07-03",dateTo:"2026-07-05",
+   time:"Ganztags",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Donauinsel Wien",locS:"2. und 22. Bezirk",
+   tags:["Festival","Musik","Sommer","Gratis","Kinderzone"],
+   desc:"3 Tage Open-Air-Megafestival mit grosser Kinderzone. Live-Musik, Mitmachaktionen, Riesenspielgeraete. 3 Mio. Besucher. ACHTUNG: 2026 ausnahmsweise 3. bis 5. Juli (nicht Ende Juni wie sonst)!",
+   link:"https://www.donauinselfest.at"},
+
+  {id:"s29",cat:"Ausstellung",title:"Lipizzaner-Kinderfuehrung Hofreitschule",
+   sub:"Hinter die Kulissen der Spanischen Hofreitschule ab 3 J.",
+   dateFrom:"2026-04-01",dateTo:"2026-10-31",
+   time:"Diverse Zeiten lt. Spielplan",
+   indoor:true,gratis:false,preis:"Variabel, Kinder ermaessigt",
+   reg:true,alter:"Ab 3 J.",
+   loc:"Spanische Hofreitschule, Michaelerplatz 1, 1010",locS:"1. Bezirk",
+   tags:["Pferde","Lipizzaner","Hofreitschule","Fuehrung"],
+   desc:"Kinderfuehrungen hinter die Kulissen der weltberuehten Spanischen Hofreitschule. Kinder erfahren alles ueber die weissen Hengste und ihre Reiter. Einblick in Stallungen und Reithalle. Eines der einzigartigsten Wiener Erlebnisse fuer Kinder.",
+   link:"https://www.srs.at"},
+
+  {id:"s30",cat:"Natur",title:"City Farm Augarten",
+   sub:"Groesster Garten fuer Kinder in Wien gratis",
+   dateFrom:"2026-04-01",dateTo:"2026-10-31",
+   time:"Taeglich geoeffnet",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Augarten, 1020 Wien",locS:"2. Bezirk",
+   tags:["Garten","Pflanzen","Natur","Gratis","Gaertnern"],
+   desc:"Groesster Garten fuer Kinder in Wien mitten im Augarten. Gaertnern, Pflanzen beobachten, Natur hautnah erleben. Kostenlos zugaenglich. Ideales Spontan-Ziel fuer einen Nachmittag im Gruenen.",
+   link:"https://www.cityfarm-augarten.at"},
+
+  {id:"s31",cat:"Natur",title:"Alpakas im Kurpark Oberlaa",
+   sub:"Alpakas und Brillenschafe streicheln gratis",
+   dateFrom:"2026-04-01",dateTo:"2026-10-31",
+   time:"Taeglich, Parkoeeffnungszeiten",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Kurpark Oberlaa, 1100 Wien",locS:"10. Bezirk",
+   tags:["Alpakas","Schafe","Tiere","Gratis","Streicheln"],
+   desc:"Im Kurpark Oberlaa leben Alpakas und Brillenschafe in einem Gehege. Kinder koennen die flauschigen Tiere beobachten und manchmal streicheln. Gratis zugaenglich. Der Kurpark selbst laedt zum Spazieren ein.",
+   link:"https://www.wien.gv.at/freizeit/parks"},
+
+  {id:"s32",cat:"Markt",title:"Genuss-Festival Stadtpark",
+   sub:"Kulinarik-Festival mit Kinderprogramm im Stadtpark",
+   dateFrom:"2026-05-08",dateTo:"2026-05-10",
+   time:"11:00 bis 22:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis, Essen kostenpflichtig",
+   reg:false,alter:"Alle",
+   loc:"Stadtpark, 1030 Wien",locS:"3. Bezirk",
+   tags:["Kulinarik","Festival","Stadtpark","Fruehling","Familien"],
+   desc:"100 Staende und Erlebnisstationen im wunderschoenen Stadtpark. Regionale Kueche, Foodtrucks, Live-Musik. Kinder koennen frei herumtoben. Schoener Familienausflug im Gruenen.",
+   link:"https://www.genussfestival.at"},
+
+  {id:"s33",cat:"Fest",title:"Wiener Ferienspiel Startfest",
+   sub:"Grosses Ferienbeginn-Fest WIENXTRA gratis",
+   dateFrom:"2026-07-04",dateTo:"2026-07-04",
+   time:"Ab 14:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Lassallestasse 3, 1020 Wien",locS:"2. Bezirk",
+   tags:["Ferienspiel","Gratis","Sommer","Mitmachen"],
+   desc:"WIENXTRA feiert den Ferienbeginn mit grossem Startfest. Viele Mitmachstationen, Buehnenprogramm, Spiele. Offizieller Kick-off des Wiener Ferienspiels mit hunderten kostenlosen Ferienprogrammen fuer den ganzen Sommer.",
+   link:"https://wienxtra.at/kinderaktiv"},
+
+  {id:"s34",cat:"Fest",title:"Herbst-Grätzlfest Stadtpark",
+   sub:"Jaehrliches Herbstfest mit Kinderprogramm",
+   dateFrom:"2026-09-12",dateTo:"2026-09-13",
+   time:"11:00 bis 19:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Stadtpark, 1030 Wien",locS:"3. Bezirk",
+   tags:["Herbst","Stadtpark","Gratis","Familien","Spielen"],
+   desc:"Stimmungsvolles Herbstfest im Stadtpark mit Kinderzone, Kasperl, Basteln und Grossspielen. Herbstzauber mit goldenen Blaettern als Kulisse. Gratis fuer die ganze Familie.",
+   link:"https://www.wien.gv.at"},
+
+  {id:"s35",cat:"Fest",title:"Mistfest MA 48 Hernals",
+   sub:"Kinderflohmarkt, Vorstellungen, Infostas GRATIS",
+   dateFrom:"2026-09-13",dateTo:"2026-09-14",
+   time:"10:00 bis 18:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Mistplatz Hernals, 1170 Wien",locS:"17. Bezirk",
+   tags:["Gratis","Flohmarkt","Familie","Mitmachen"],
+   desc:"Die Stadt Wien laedt zum jaehrlichen Mistfest: Kinderflohmarkt, Buehnenangebote fuer Klein und Gross, Informationsstaende. Feuerwehrautos und Muellfahrzeuge zum Anschauen. Eintritt frei.",
+   link:"https://www.wien.gv.at/umwelt/mistfest"}
 ];
 
 // ════════════════════════════════════════
