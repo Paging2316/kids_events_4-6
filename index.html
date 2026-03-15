@@ -3,146 +3,329 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wien mit Kindern · 4–6 Jahre</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Wien mit Kindern · 4–6 Jahre · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#fdf8f3;--ink:#1a1612;--muted:#6b5f54;--border:#e8e0d8;
-  --card:#fff;--accent:#e8411e;--radius:12px;
-  --c-theater:#7c3aed;--c-museum:#2563a8;--c-natur:#1a9e5f;
-  --c-sport:#e8411e;--c-musik:#db2777;--c-kreativ:#c47d0e;
-  --c-kino:#0891b2;--c-spielen:#65a30d;--c-saisonal:#dc2626;
+  --bg:#f9f6f2;--ink:#17130f;--muted:#6b5f54;--border:#e5ddd5;
+  --card:#fff;--accent:#d94f1e;--a2:#1e5fa8;--a3:#1a9e5f;--a4:#b87010;
+  --r:10px;
+  --cT:#6d28d9;--cM:#1e5fa8;--cN:#1a9e5f;--cS:#d94f1e;
+  --cMu:#be185d;--cK:#b87010;--cKi:#0e7490;--cSp:#4d7c0f;--cSe:#b91c1c;
 }
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink)}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
 
-/* HEADER */
-header{background:var(--ink);color:#fdf8f3;padding:20px 28px;position:sticky;top:0;z-index:200;border-bottom:3px solid var(--accent)}
-.hdr{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-h1{font-family:'Fraunces',serif;font-size:1.55rem;font-weight:900;letter-spacing:-.02em}
-h1 span{color:var(--accent)}
-.hdr-sub{font-size:.72rem;opacity:.6;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
-.hdr-stats{display:flex;gap:16px;margin-left:auto}
-.stat{text-align:center}
-.stat-n{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--accent);line-height:1}
-.stat-l{font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;opacity:.6}
+/* ── HEADER ── */
+header{
+  background:var(--ink);color:#f9f6f2;
+  padding:16px 28px;
+  position:sticky;top:0;z-index:300;
+  border-bottom:3px solid var(--accent);
+}
+.hdr{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;flex-direction:column;gap:2px}
+h1{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:900;letter-spacing:-.02em;line-height:1}
+h1 em{color:var(--accent);font-style:normal}
+.logo-sub{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.5}
+.hdr-stats{display:flex;gap:20px;margin-left:auto}
+.stat{text-align:center;line-height:1}
+.sn{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:700;color:var(--accent)}
+.sl{font-size:.58rem;text-transform:uppercase;letter-spacing:.07em;opacity:.5;margin-top:2px}
 
-/* FILTERS */
-.filters{background:var(--card);border-bottom:1px solid var(--border);padding:12px 28px;position:sticky;top:82px;z-index:100}
-.filters-inner{max-width:1400px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.fl{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;white-space:nowrap}
-.sep{width:1px;height:24px;background:var(--border);flex-shrink:0}
-.fb{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;border-radius:20px;border:1.5px solid var(--border);background:transparent;color:var(--muted);font-size:.75rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all .15s}
-.fb:hover{border-color:var(--ink);color:var(--ink)}
-.fb.on{background:var(--ink);border-color:var(--ink);color:#fff}
-.fb.on[data-f="Theater"]{background:var(--c-theater);border-color:var(--c-theater)}
-.fb.on[data-f="Museum"]{background:var(--c-museum);border-color:var(--c-museum)}
-.fb.on[data-f="Natur"]{background:var(--c-natur);border-color:var(--c-natur)}
-.fb.on[data-f="Sport"]{background:var(--c-sport);border-color:var(--c-sport)}
-.fb.on[data-f="Musik"]{background:var(--c-musik);border-color:var(--c-musik)}
-.fb.on[data-f="Kreativ"]{background:var(--c-kreativ);border-color:var(--c-kreativ)}
-.fb.on[data-f="Kino"]{background:var(--c-kino);border-color:var(--c-kino)}
-.fb.on[data-f="Spielen"]{background:var(--c-spielen);border-color:var(--c-spielen)}
-.fb.on[data-f="Saisonal"]{background:var(--c-saisonal);border-color:var(--c-saisonal)}
-.srch{margin-left:auto;position:relative}
-.srch input{padding:6px 12px 6px 32px;border-radius:20px;border:1.5px solid var(--border);background:var(--bg);font-size:.77rem;color:var(--ink);font-family:'DM Sans',sans-serif;outline:none;width:190px;transition:border-color .15s}
-.srch input:focus{border-color:var(--accent)}
-.srch-ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.8rem;pointer-events:none}
+/* ── MAIN TAB NAV ── */
+.tab-nav{
+  background:var(--card);
+  border-bottom:2px solid var(--border);
+  padding:0 28px;
+  position:sticky;top:74px;z-index:200;
+}
+.tab-inner{max-width:1440px;margin:0 auto;display:flex}
+.tab{
+  padding:13px 22px;border:none;background:transparent;
+  font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;
+  color:var(--muted);cursor:pointer;
+  border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:all .15s;display:flex;align-items:center;gap:7px;white-space:nowrap;
+}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent)}
+.tb{background:var(--accent);color:#fff;font-size:.58rem;font-weight:700;
+  padding:1px 5px;border-radius:8px;min-width:18px;text-align:center}
+.tb.grey{background:#a09285}
 
-/* MAIN */
-main{max-width:1400px;margin:0 auto;padding:20px 28px 60px}
-.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px}
-.rc{font-size:.8rem;color:var(--muted)}.rc strong{color:var(--ink)}
-.vt{display:flex;gap:3px;background:var(--border);border-radius:7px;padding:2px}
-.vb{padding:4px 12px;border-radius:5px;border:none;font-size:.75rem;font-weight:500;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;background:transparent;transition:all .15s}
-.vb.on{background:var(--card);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+/* ── VIEWS ── */
+.view{display:none}
+.view.on{display:block}
 
-/* CATEGORY SECTION */
-.cat-sec{margin-bottom:32px}
-.cat-hdr{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border)}
-.cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.cat-hdr h2{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700}
-.cat-cnt{font-size:.72rem;color:var(--muted);background:var(--border);padding:2px 7px;border-radius:9px}
+/* ══════════════════════════════════
+   WOCHENPLANER VIEW
+══════════════════════════════════ */
+#v-week{background:var(--bg)}
+.week-wrap{max-width:1440px;margin:0 auto;padding:20px 28px 60px}
 
-/* GRID */
-.egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
-.egrid.lv{grid-template-columns:1fr;gap:7px}
+/* THIS WEEK HERO */
+.week-hero{
+  background:var(--ink);color:#f9f6f2;
+  border-radius:14px;padding:20px 24px;margin-bottom:20px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.week-hero-left{flex:1;min-width:200px}
+.week-hero h2{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:900;margin-bottom:4px}
+.week-hero p{font-size:.78rem;opacity:.7;line-height:1.5}
+.week-date-pill{
+  background:var(--accent);color:#fff;
+  font-size:.65rem;font-weight:700;
+  padding:3px 10px;border-radius:20px;margin-bottom:8px;
+  display:inline-block;letter-spacing:.05em;text-transform:uppercase;
+}
+.live-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ll{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:7px 13px;border-radius:7px;
+  background:rgba(249,246,242,.12);border:1px solid rgba(249,246,242,.2);
+  color:#f9f6f2;text-decoration:none;font-size:.72rem;font-weight:600;
+  transition:all .15s;white-space:nowrap;
+}
+.ll:hover{background:rgba(249,246,242,.22)}
+.ll-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* CARD */
-.ec{background:var(--card);border-radius:var(--radius);border:1.5px solid var(--border);cursor:pointer;transition:box-shadow .18s,transform .18s;position:relative;overflow:hidden}
-.ec:hover{box-shadow:0 6px 28px rgba(26,22,18,.13);transform:translateY(-2px)}
-.ec.open{border-color:var(--ink);box-shadow:0 6px 28px rgba(26,22,18,.13)}
-.ec-stripe{height:3px;width:100%}
-.ec[data-cat="Theater"] .ec-stripe{background:var(--c-theater)}
-.ec[data-cat="Museum"]  .ec-stripe{background:var(--c-museum)}
-.ec[data-cat="Natur"]   .ec-stripe{background:var(--c-natur)}
-.ec[data-cat="Sport"]   .ec-stripe{background:var(--c-sport)}
-.ec[data-cat="Musik"]   .ec-stripe{background:var(--c-musik)}
-.ec[data-cat="Kreativ"] .ec-stripe{background:var(--c-kreativ)}
-.ec[data-cat="Kino"]    .ec-stripe{background:var(--c-kino)}
-.ec[data-cat="Spielen"] .ec-stripe{background:var(--c-spielen)}
-.ec[data-cat="Saisonal"].ec-stripe{background:var(--c-saisonal)}
+/* MONTH NAV */
+.month-nav-bar{
+  display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;
+}
+.month-pills{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.mpill{
+  padding:5px 14px;border-radius:20px;
+  border:1.5px solid var(--border);background:transparent;
+  font-size:.73rem;font-weight:500;color:var(--muted);
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;
+}
+.mpill:hover{border-color:var(--ink);color:var(--ink)}
+.mpill.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.month-filter-btns{display:flex;gap:6px}
+.mfb{
+  padding:5px 12px;border-radius:20px;
+  border:1.5px solid var(--border);background:transparent;
+  font-size:.72rem;font-weight:500;color:var(--muted);
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;
+}
+.mfb:hover{border-color:var(--ink);color:var(--ink)}
+.mfb.on{background:var(--ink);border-color:var(--ink);color:#fff}
 
-.ec-hdr{padding:12px 13px 0}
-.ec-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px}
-.ec-title{font-family:'Fraunces',serif;font-size:.95rem;font-weight:700;line-height:1.25;flex:1}
-.ec-arr{font-size:.75rem;color:var(--muted);flex-shrink:0;margin-top:2px;transition:transform .2s}
-.ec.open .ec-arr{transform:rotate(180deg)}
-.ec-sub{font-size:.72rem;color:var(--muted);line-height:1.4;margin-bottom:8px}
-.badges{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
-.b{display:inline-flex;align-items:center;gap:2px;padding:2px 7px;border-radius:5px;font-size:.64rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+/* WEEK GROUPS in timeline */
+.wk-section{margin-bottom:24px}
+.wk-label{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:10px;padding-bottom:8px;
+  border-bottom:2px solid var(--border);
+}
+.wk-chip{
+  background:var(--ink);color:#fff;
+  font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  padding:3px 10px;border-radius:20px;
+}
+.wk-chip.current{background:var(--accent)}
+.wk-title{font-family:'Fraunces',serif;font-size:.95rem;font-weight:700;flex:1}
+.wk-count{font-size:.68rem;color:var(--muted)}
+
+/* TIMELINE EVENT CARD */
+.ev-list{display:flex;flex-direction:column;gap:7px}
+.tc{
+  background:var(--card);border-radius:var(--r);
+  border:1.5px solid var(--border);
+  cursor:pointer;transition:box-shadow .15s,transform .15s;
+  overflow:hidden;position:relative;
+  display:grid;grid-template-columns:auto 1fr;
+}
+.tc:hover{box-shadow:0 4px 18px rgba(23,19,15,.1);transform:translateY(-1px)}
+.tc.open{border-color:var(--ink);box-shadow:0 4px 18px rgba(23,19,15,.1)}
+.tc-stripe{
+  width:4px;
+  background:var(--accent);
+  border-radius:var(--r) 0 0 var(--r);
+  grid-row:1/99;
+}
+.tc[data-cat="Zirkus"] .tc-stripe{background:#7c3aed}
+.tc[data-cat="Ausstellung"] .tc-stripe{background:var(--cM)}
+.tc[data-cat="Oper"] .tc-stripe{background:var(--cMu)}
+.tc[data-cat="Musical"] .tc-stripe{background:var(--cT)}
+.tc[data-cat="Festival"] .tc-stripe{background:var(--cN)}
+.tc[data-cat="Markt"] .tc-stripe{background:var(--a4)}
+.tc[data-cat="Fest"] .tc-stripe{background:var(--cS)}
+.tc[data-cat="Natur"] .tc-stripe{background:var(--a3)}
+.tc[data-cat="Theater"] .tc-stripe{background:var(--cT)}
+.tc[data-cat="Museum"] .tc-stripe{background:var(--cM)}
+
+.tc-body{padding:11px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tc-date-box{
+  flex-shrink:0;text-align:center;
+  background:var(--bg);border-radius:8px;
+  padding:5px 10px;min-width:50px;
+}
+.tc-day{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;line-height:1;color:var(--ink)}
+.tc-mon{font-size:.58rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.tc-time{font-size:.62rem;color:var(--muted);margin-top:1px}
+.tc-info{flex:1;min-width:0}
+.tc-title{font-family:'Fraunces',serif;font-size:.93rem;font-weight:700;line-height:1.2;margin-bottom:2px}
+.tc-sub{font-size:.7rem;color:var(--muted);line-height:1.4;margin-bottom:5px}
+.tc-range{font-size:.65rem;color:var(--muted);font-style:italic;margin-bottom:4px}
+.tc-badges{display:flex;flex-wrap:wrap;gap:4px}
+.tc-arr{flex-shrink:0;font-size:.72rem;color:var(--muted);transition:transform .2s}
+.tc.open .tc-arr{transform:rotate(180deg)}
+
+/* DETAIL PANEL */
+.tc-det{
+  display:none;
+  border-top:1px solid var(--border);
+  padding:13px 14px 13px 18px;
+  background:#faf8f6;
+  grid-column:2;
+  animation:slideIn .18s ease-out;
+}
+.tc.open .tc-det{display:block}
+@keyframes slideIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.det-desc{
+  font-size:.76rem;color:var(--muted);line-height:1.6;
+  margin-bottom:10px;padding:9px 10px;
+  background:var(--bg);border-radius:7px;border-left:3px solid var(--border);
+}
+.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-bottom:10px}
+.det-k{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:1px}
+.det-v{font-size:.77rem;color:var(--ink);line-height:1.4}
+.det-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:var(--a2);
+  text-decoration:none;padding:5px 11px;
+  border:1.5px solid var(--a2);border-radius:5px;
+  transition:all .15s;
+}
+.det-link:hover{background:var(--a2);color:#fff}
+
+/* BADGES */
+.b{display:inline-flex;align-items:center;gap:2px;padding:2px 7px;border-radius:5px;font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
 .b-in{background:#dbeafe;color:#1e40af}
 .b-out{background:#dcfce7;color:#166534}
 .b-free{background:#dcfce7;color:#166534}
 .b-paid{background:#fef3c7;color:#92400e}
 .b-reg{background:#fee2e2;color:#991b1b}
 .b-tag{background:#f3f4f6;color:#374151}
-
-/* QUICK BAR */
-.qbar{display:flex;border-top:1px solid var(--border)}
-.qi{flex:1;padding:7px 8px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:1px}
-.qi:last-child{border-right:none}
-.qi-ic{font-size:.9rem;line-height:1}
-.qi-v{font-size:.64rem;font-weight:600;color:var(--ink);line-height:1.2}
-.qi-k{font-size:.55rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-
-/* DETAILS */
-.ec-det{display:none;border-top:1px solid var(--border);padding:13px;background:#fcfaf8}
-.ec.open .ec-det{display:block;animation:sd .18s ease-out}
-@keyframes sd{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
-.det-desc{font-size:.77rem;color:var(--muted);line-height:1.55;margin-bottom:11px;padding:9px;background:var(--bg);border-radius:7px;border-left:3px solid var(--border)}
-.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin-bottom:11px}
-.det-k{font-size:.6rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:2px}
-.det-v{font-size:.78rem;color:var(--ink);line-height:1.4}
-.det-link{display:inline-flex;align-items:center;gap:5px;font-size:.73rem;font-weight:600;color:var(--c-museum);text-decoration:none;padding:5px 11px;border:1.5px solid var(--c-museum);border-radius:5px;transition:all .15s}
-.det-link:hover{background:var(--c-museum);color:#fff}
-
-/* LIST VIEW */
-.egrid.lv .ec{display:grid;grid-template-columns:4px 1fr}
-.egrid.lv .ec-stripe{grid-row:1/99;border-radius:var(--radius) 0 0 var(--radius);width:4px;height:auto}
-.egrid.lv .ec-hdr{display:flex;align-items:center;gap:12px;padding:9px 13px;flex-wrap:wrap}
-.egrid.lv .ec-top{margin-bottom:0;min-width:180px}
-.egrid.lv .ec-sub{margin-bottom:0}
-.egrid.lv .badges{flex:1;justify-content:flex-end;margin-bottom:0}
-.egrid.lv .qbar{display:none}
-.egrid.lv .ec-det{grid-column:2}
+.b-hot{background:#fff1f2;color:#9f1239;border:1px solid #fecdd3}
+.b-now{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
 
 /* EMPTY */
-.empty{text-align:center;padding:50px;color:var(--muted);grid-column:1/-1}
-.empty-em{font-size:2.5rem;margin-bottom:10px}
+.tl-empty{text-align:center;padding:40px;color:var(--muted)}
 
 /* LEGEND */
-.legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;padding:10px 14px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border);font-size:.68rem;color:var(--muted);align-items:center}
-.legend strong{color:var(--ink);font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
-.li{display:flex;align-items:center;gap:4px}
+.tl-legend{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-bottom:14px;padding:9px 13px;
+  background:var(--card);border-radius:var(--r);
+  border:1px solid var(--border);font-size:.65rem;color:var(--muted);
+  align-items:center;
+}
+.tl-legend strong{color:var(--ink);font-size:.62rem;text-transform:uppercase;letter-spacing:.07em}
+.leg-item{display:flex;align-items:center;gap:4px}
 
-@media(max-width:680px){
-  header{padding:14px 16px}
-  .filters{padding:10px 16px;top:74px}
-  main{padding:14px 16px 40px}
+/* ══════════════════════════════════
+   ENTDECKEN VIEW
+══════════════════════════════════ */
+.dis-filter-bar{
+  background:var(--card);border-bottom:1px solid var(--border);
+  padding:11px 28px;
+  position:sticky;top:119px;z-index:100;
+}
+.dis-filter-inner{
+  max-width:1440px;margin:0 auto;
+  display:flex;gap:7px;flex-wrap:wrap;align-items:center;
+}
+.fl{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;white-space:nowrap}
+.fsep{width:1px;height:20px;background:var(--border);flex-shrink:0}
+.fb{
+  display:inline-flex;align-items:center;gap:3px;
+  padding:4px 10px;border-radius:20px;
+  border:1.5px solid var(--border);background:transparent;
+  color:var(--muted);font-size:.71rem;font-weight:500;
+  cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all .15s;
+}
+.fb:hover{border-color:var(--ink);color:var(--ink)}
+.fb.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.fb.on[data-f="Museum"]{background:var(--cM);border-color:var(--cM)}
+.fb.on[data-f="Theater"]{background:var(--cT);border-color:var(--cT)}
+.fb.on[data-f="Musik"]{background:var(--cMu);border-color:var(--cMu)}
+.fb.on[data-f="Natur"]{background:var(--cN);border-color:var(--cN)}
+.fb.on[data-f="Sport"]{background:var(--cS);border-color:var(--cS)}
+.fb.on[data-f="Kreativ"]{background:var(--cK);border-color:var(--cK)}
+.fb.on[data-f="Kino"]{background:var(--cKi);border-color:var(--cKi)}
+.fb.on[data-f="Spielen"]{background:var(--cSp);border-color:var(--cSp)}
+.fb.on[data-f="Saisonal"]{background:var(--cSe);border-color:var(--cSe)}
+.srch{margin-left:auto;position:relative}
+.srch input{
+  padding:5px 11px 5px 28px;border-radius:20px;
+  border:1.5px solid var(--border);background:var(--bg);
+  font-size:.75rem;color:var(--ink);font-family:'DM Sans',sans-serif;
+  outline:none;width:170px;transition:border-color .15s;
+}
+.srch input:focus{border-color:var(--accent)}
+.srch-ic{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.78rem;pointer-events:none}
+
+.dis-content{max-width:1440px;margin:0 auto;padding:18px 28px 60px}
+.rc{font-size:.76rem;color:var(--muted);margin-bottom:14px}.rc strong{color:var(--ink)}
+
+/* CATEGORY SECTION */
+.cat-sec{margin-bottom:28px}
+.cat-hdr{display:flex;align-items:center;gap:8px;margin-bottom:9px;padding-bottom:7px;border-bottom:2px solid var(--border)}
+.cat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.cat-hdr h2{font-family:'Fraunces',serif;font-size:.98rem;font-weight:700}
+.cat-cnt{font-size:.66rem;color:var(--muted);background:var(--border);padding:2px 7px;border-radius:9px}
+.egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+
+/* DISCOVER CARD */
+.ec{background:var(--card);border-radius:var(--r);border:1.5px solid var(--border);cursor:pointer;transition:box-shadow .18s,transform .18s;position:relative;overflow:hidden}
+.ec:hover{box-shadow:0 5px 22px rgba(23,19,15,.1);transform:translateY(-2px)}
+.ec.open{border-color:var(--ink);box-shadow:0 5px 22px rgba(23,19,15,.1)}
+.ec-stripe{height:3px}
+.ec[data-cat="Theater"] .ec-stripe{background:var(--cT)}
+.ec[data-cat="Museum"]  .ec-stripe{background:var(--cM)}
+.ec[data-cat="Natur"]   .ec-stripe{background:var(--cN)}
+.ec[data-cat="Sport"]   .ec-stripe{background:var(--cS)}
+.ec[data-cat="Musik"]   .ec-stripe{background:var(--cMu)}
+.ec[data-cat="Kreativ"] .ec-stripe{background:var(--cK)}
+.ec[data-cat="Kino"]    .ec-stripe{background:var(--cKi)}
+.ec[data-cat="Spielen"] .ec-stripe{background:var(--cSp)}
+.ec[data-cat="Saisonal"].ec-stripe{background:var(--cSe)}
+.ec-hdr{padding:10px 11px 0}
+.ec-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:2px}
+.ec-title{font-family:'Fraunces',serif;font-size:.9rem;font-weight:700;line-height:1.2;flex:1}
+.ec-arr{font-size:.7rem;color:var(--muted);flex-shrink:0;margin-top:2px;transition:transform .2s}
+.ec.open .ec-arr{transform:rotate(180deg)}
+.ec-sub{font-size:.68rem;color:var(--muted);line-height:1.35;margin-bottom:7px}
+.badges{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px}
+.qbar{display:flex;border-top:1px solid var(--border)}
+.qi{flex:1;padding:6px 5px;text-align:center;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;gap:1px}
+.qi:last-child{border-right:none}
+.qi-ic{font-size:.82rem;line-height:1}
+.qi-v{font-size:.6rem;font-weight:600;color:var(--ink);line-height:1.2}
+.qi-k{font-size:.52rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.ec-det{display:none;border-top:1px solid var(--border);padding:11px;background:#faf8f6}
+.ec.open .ec-det{display:block;animation:slideIn .18s ease-out}
+.empty{text-align:center;padding:44px;color:var(--muted);grid-column:1/-1}
+.empty-em{font-size:2.2rem;margin-bottom:8px}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media(max-width:700px){
+  header{padding:12px 16px}
+  .tab-nav{padding:0 16px;top:68px}
+  .dis-filter-bar{padding:9px 16px;top:113px}
+  .week-wrap,.dis-content{padding:14px 16px 40px}
   .egrid{grid-template-columns:1fr}
   .hdr-stats{display:none}
   .srch{display:none}
+  .tab{padding:11px 14px;font-size:.76rem}
+  .week-hero{padding:16px}
 }
 </style>
 </head>
@@ -150,141 +333,616 @@ main{max-width:1400px;margin:0 auto;padding:20px 28px 60px}
 
 <header>
   <div class="hdr">
-    <div>
-      <h1>Wien mit Kindern <span>·</span> 4–6 Jahre</h1>
-      <div class="hdr-sub">Ganzjährig &nbsp;·&nbsp; Alle Wochentage &nbsp;·&nbsp; Stand März 2026</div>
+    <div class="logo">
+      <h1>Wien mit Kindern <em>·</em> 4–6 Jahre</h1>
+      <div class="logo-sub">Ganzjährig &nbsp;·&nbsp; Alle Wochentage &nbsp;·&nbsp; Stand März 2026</div>
     </div>
     <div class="hdr-stats">
-      <div class="stat"><div class="stat-n" id="tn">52</div><div class="stat-l">Events</div></div>
-      <div class="stat"><div class="stat-n">9</div><div class="stat-l">Kategorien</div></div>
-      <div class="stat"><div class="stat-n">18</div><div class="stat-l">Gratis</div></div>
+      <div class="stat"><div class="sn" id="sn-total">67</div><div class="sl">Events</div></div>
+      <div class="stat"><div class="sn" id="sn-sp">21</div><div class="sl">Specials</div></div>
+      <div class="stat"><div class="sn">20</div><div class="sl">Gratis</div></div>
     </div>
   </div>
 </header>
 
-<div class="filters">
-  <div class="filters-inner">
-    <span class="fl">Kategorie</span>
-    <button class="fb on" data-f="all" id="fb-all">Alle</button>
-    <button class="fb" data-f="Museum">🏛 Museum</button>
-    <button class="fb" data-f="Theater">🎭 Theater</button>
-    <button class="fb" data-f="Musik">🎵 Musik</button>
-    <button class="fb" data-f="Natur">🌿 Natur</button>
-    <button class="fb" data-f="Sport">⚽ Sport</button>
-    <button class="fb" data-f="Kreativ">🎨 Kreativ</button>
-    <button class="fb" data-f="Kino">🎬 Kino</button>
-    <button class="fb" data-f="Spielen">🧸 Spielen</button>
-    <button class="fb" data-f="Saisonal">🎪 Saisonal</button>
-    <div class="sep"></div>
-    <span class="fl">Filter</span>
-    <button class="fb" data-x="indoor">🏠 Indoor</button>
-    <button class="fb" data-x="outdoor">🌳 Outdoor</button>
-    <button class="fb" data-x="gratis">💚 Gratis</button>
-    <button class="fb" data-x="anmeldung">⚠ Anmeldung</button>
-    <div class="srch"><span class="srch-ic">🔍</span><input type="text" id="sq" placeholder="Suchen…"></div>
+<nav class="tab-nav">
+  <div class="tab-inner">
+    <button class="tab on" id="t-week" onclick="switchTab('week')">
+      📅 Wochenplaner
+      <span class="tb" id="tb-week">21</span>
+    </button>
+    <button class="tab" id="t-dis" onclick="switchTab('dis')">
+      🗂 Entdecken
+      <span class="tb grey" id="tb-dis">46</span>
+    </button>
   </div>
-</div>
+</nav>
 
-<main>
-  <div class="toolbar">
-    <div class="rc">Zeige <strong id="vc">52</strong> von <strong>52</strong> Events</div>
-    <div style="display:flex;gap:10px;align-items:center">
-      <div class="legend">
-        <strong>Legende:</strong>
-        <span class="li"><span class="b b-in">Indoor</span></span>
-        <span class="li"><span class="b b-out">Outdoor</span></span>
-        <span class="li"><span class="b b-free">💚 Gratis</span></span>
-        <span class="li"><span class="b b-paid">💰 Preis</span></span>
-        <span class="li"><span class="b b-reg">⚠ Anmeldung</span></span>
-      </div>
-      <div class="vt">
-        <button class="vb on" id="vg" onclick="setView('grid')">⊞ Grid</button>
-        <button class="vb" id="vl" onclick="setView('list')">☰ Liste</button>
+<!-- ══════════════ WOCHENPLANER ══════════════ -->
+<div class="view on" id="v-week">
+<div class="week-wrap">
+
+  <!-- HERO: Live-Links -->
+  <div class="week-hero">
+    <div class="week-hero-left">
+      <div class="week-date-pill" id="hero-week">Diese Woche</div>
+      <h2>Was machen wir am Wochenende? 🎠</h2>
+      <p>Hier findest du alle einmaligen Events mit konkreten Terminen.<br>
+         Für täglich aktualisierte Veranstaltungen direkt zu den Live-Quellen:</p>
+      <div class="live-links">
+        <a href="https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A4+Jahre" target="_blank" class="ll">
+          <span class="ll-dot"></span> WIENXTRA Kalender
+        </a>
+        <a href="https://www.wien.gv.at/kultur/veranstaltungen-kinder" target="_blank" class="ll">
+          <span class="ll-dot"></span> Wien.gv.at Kinder
+        </a>
+        <a href="https://all4family.at/veranstaltungen/" target="_blank" class="ll">
+          <span class="ll-dot"></span> all4family.at
+        </a>
+        <a href="https://www.mamilade.at/termine" target="_blank" class="ll">
+          <span class="ll-dot"></span> mamilade.at
+        </a>
       </div>
     </div>
   </div>
-  <div id="wrap"></div>
-</main>
+
+  <!-- MONTH NAV + FILTERS -->
+  <div class="month-nav-bar">
+    <div class="month-pills" id="month-pills"></div>
+    <div class="month-filter-btns">
+      <button class="mfb" data-mf="gratis" onclick="toggleMF(this)">💚 Gratis</button>
+      <button class="mfb" data-mf="indoor" onclick="toggleMF(this)">🏠 Indoor</button>
+      <button class="mfb" data-mf="outdoor" onclick="toggleMF(this)">🌳 Outdoor</button>
+      <button class="mfb" data-mf="anmeldung" onclick="toggleMF(this)">⚠ Anmeldung</button>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="tl-legend">
+    <strong>Legende:</strong>
+    <span class="leg-item"><span class="b b-now">● Läuft jetzt</span></span>
+    <span class="leg-item"><span class="b b-hot">🔥 Special</span></span>
+    <span class="leg-item"><span class="b b-in">🏠 Indoor</span></span>
+    <span class="leg-item"><span class="b b-out">🌳 Outdoor</span></span>
+    <span class="leg-item"><span class="b b-free">💚 Gratis</span></span>
+    <span class="leg-item"><span class="b b-paid">💰 Preis</span></span>
+    <span class="leg-item"><span class="b b-reg">⚠ Anmeldung</span></span>
+  </div>
+
+  <div id="tl-content"></div>
+</div>
+</div>
+
+<!-- ══════════════ ENTDECKEN ══════════════ -->
+<div class="view" id="v-dis">
+  <div class="dis-filter-bar">
+    <div class="dis-filter-inner">
+      <span class="fl">Kategorie</span>
+      <button class="fb on" data-f="all">Alle</button>
+      <button class="fb" data-f="Museum">🏛 Museum</button>
+      <button class="fb" data-f="Theater">🎭 Theater</button>
+      <button class="fb" data-f="Musik">🎵 Musik</button>
+      <button class="fb" data-f="Natur">🌿 Natur</button>
+      <button class="fb" data-f="Sport">⚽ Sport</button>
+      <button class="fb" data-f="Kreativ">🎨 Kreativ</button>
+      <button class="fb" data-f="Kino">🎬 Kino</button>
+      <button class="fb" data-f="Spielen">🧸 Spielen</button>
+      <button class="fb" data-f="Saisonal">🎪 Saisonal</button>
+      <div class="fsep"></div>
+      <button class="fb" data-x="indoor">🏠 Indoor</button>
+      <button class="fb" data-x="outdoor">🌳 Outdoor</button>
+      <button class="fb" data-x="gratis">💚 Gratis</button>
+      <button class="fb" data-x="anmeldung">⚠ Anmeldung</button>
+      <div class="srch">
+        <span class="srch-ic">🔍</span>
+        <input type="text" id="sq" placeholder="Suchen…">
+      </div>
+    </div>
+  </div>
+  <div class="dis-content">
+    <div class="rc">Zeige <strong id="vc">46</strong> reguläre Angebote</div>
+    <div id="dis-wrap"></div>
+  </div>
+</div>
 
 <script>
-var EV=[
-{id:1,cat:"Museum",title:"ZOOM Ozean",sub:"Spiel- & Erlebnisbereich fuer die Juengsten",loc:"MuseumsQuartier, 1070",locS:"7. Bezirk",indoor:true,gratis:false,preis:"6,50 Euro/Person (75 Min.)",reg:true,alter:"8 Mon. bis 6 J.",freq:"Di-So, fixe Beginnzeiten",tags:["Sinneserfahrung","Freies Spiel","Wasser"],desc:"Grosszuegiger Kleinkind-Spielbereich im ZOOM Kindermuseum. Wasserelemente, Sandlandschaft, Kletterstrukturen und ruhige Zonen. 75 Minuten Spielzeit pro Session. Online-Ticketing erforderlich, 10 Tage im Voraus buchbar.",link:"https://www.kindermuseum.at"},
-{id:2,cat:"Museum",title:"ZOOM Atelier",sub:"Bildnerisches Atelier mit Kuenstlerinnen",loc:"MuseumsQuartier, 1070",locS:"7. Bezirk",indoor:true,gratis:false,preis:"8,50 Euro/Person (90 Min.)",reg:true,alter:"3 bis 12 J.",freq:"Di-So, wechselnde Themen",tags:["Malen","Basteln","Kreativitaet"],desc:"Angeleitetes Atelier mit wechselnden Themen und Techniken: Filzen, Ton, Farbe, Papier. Kinder arbeiten unter professioneller Anleitung an eigenen kleinen Kunstwerken. Verschiedene Themenschwerpunkte je nach Ausstellungsprogramm.",link:"https://www.kindermuseum.at"},
-{id:3,cat:"Museum",title:"Technisches Museum: mini",sub:"Erlebnisbereich fuer Kleinkinder",loc:"Mariahilfer Str. 212, 1140",locS:"14. Bezirk",indoor:true,gratis:false,preis:"2,50 Euro (Museumseintritt gratis)",reg:true,alter:"1,5 bis 5 J.",freq:"Taeglich, 40-Min.-Slots",tags:["Feuerwehrauto","Dreirad","Bausteine"],desc:"Geschuetzter Kleinkind-Bereich mit Dreiraedern, Feuerwehrauto, Magnetwand, Bilderbuecher und Bausteinen. Feste Zeitslots, kleine Gruppen, Aufsicht inklusive. Sehr beliebt, daher fruehzeitig buchen.",link:"https://www.technischesmuseum.at"},
-{id:4,cat:"Museum",title:"Technisches Museum: miniXplore",sub:"30 interaktive MINT-Stationen",loc:"Mariahilfer Str. 212, 1140",locS:"14. Bezirk",indoor:true,gratis:false,preis:"2,50 Euro (Museumseintritt gratis)",reg:true,alter:"3 bis 8 J.",freq:"Taeglich",tags:["Experimentieren","Rutsche","MINT"],desc:"Grosse interaktive Ausstellung mit Rutsche, Klettergeruest, Windkanal und 30 Experimentierstationen. Kinder entdecken naturwissenschaftliche Phaenomene spielerisch. Bewegungslandschaft mit wissenschaftlichem Anspruch.",link:"https://www.technischesmuseum.at"},
-{id:5,cat:"Museum",title:"NHM: Kids und Co. Fuehrung",sub:"Fossilien, Haizaehne, Schnecken anfassen",loc:"Burgring 7, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"6 Euro/Person (Eintritt gratis)",reg:true,alter:"3 bis 5 J.",freq:"Ausgewaehlte Wochenenden",tags:["Fossilien","Natur","Anfassen"],desc:"Gefuehrte Entdeckungsrunden durchs Naturhistorische Museum speziell fuer Kleinkinder. Inhalte: Steine, Fossilien, Haizaehne, Schnecken. Alles darf angefasst werden. Sehr beliebt, fruehzeitig anmelden.",link:"https://www.nhm-wien.ac.at/kinder"},
-{id:6,cat:"Museum",title:"NHM: Eiszeitkinder-Ausstellung",sub:"Interaktive Dauerausstellung gratis",loc:"Burgring 7, 1010",locS:"1. Bezirk",indoor:true,gratis:true,preis:"GRATIS (unter 19 J.)",reg:false,alter:"Ab 3 J.",freq:"Dauerhaft, taeglich",tags:["Steinzeit","Hoehle","Interaktiv"],desc:"Taucht in die Welt der Steinzeit ein: nachgebaute Hoehle, Feuerstelle, Jagdszenen und Sammelkoerbe. Kinder koennen mitmachen und spielerisch die Steinzeit erleben. Kein Eintritt fuer Kinder und Jugendliche.",link:"https://www.nhm-wien.ac.at"},
-{id:7,cat:"Museum",title:"KHM: Offenes Atelier",sub:"Basteln von Kunstwerken inspiriert",loc:"Maria-Theresien-Platz, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"4,50 Euro/Kind (Eintritt gratis)",reg:true,alter:"3 bis 10 J.",freq:"Letzter Sonntag im Monat",tags:["Kunst","Malen","KHM"],desc:"Monatliches Kreativ-Atelier im Kunsthistorischen Museum. Kinder lassen sich von echten Meisterwerken inspirieren und erschaffen eigene Bilder oder Objekte. Material wird gestellt.",link:"https://www.khm.at/kinder-familien"},
-{id:8,cat:"Museum",title:"Haus der Musik",sub:"4 Stockwerke voller Klangerlebnisse",loc:"Seilerstatte 30, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"Kinder 7 Euro, Familienticket 33 Euro",reg:false,alter:"Ab 4 J.",freq:"Dauerhaft, taeglich 10 bis 22 Uhr",tags:["Musik","Dirigieren","Interaktiv"],desc:"Interaktives Musikmuseum: Klangtreppe, den Wiener Philharmonikern dirigieren, Walzer-Wuerfelspiel, Zookonzert. Stundenlang erkunden ohne Langeweile. Abends geoeffnet, ideal fuer Nachmittag.",link:"https://www.hdm.at"},
-{id:9,cat:"Museum",title:"Haus des Meeres",sub:"10.000 Tiere auf 11 Stockwerken",loc:"Fritz-Gruenbaum-Platz 1, 1060",locS:"6. Bezirk",indoor:true,gratis:false,preis:"Kinder 3-5 J.: 6,50 Euro / 6-15 J.: 9,80 Euro",reg:false,alter:"Alle Altersgruppen",freq:"Dauerhaft, taeglich 9 bis 20 Uhr",tags:["Haie","Tropenhaus","Affen","Zoo"],desc:"Aqua Terra Zoo im ehemaligen Flakturm: Haibecken, freilaufende Javaneraffchen, Koi-Streichelbecken, tropisches Regenhaus. Einzigartig in Wien. Kinder sind meist begeistert von den freilaufenden Affen.",link:"https://www.haus-des-meeres.at"},
-{id:10,cat:"Museum",title:"Kindermuseum Schoenbrunn",sub:"In Barockgewaender schluepfen",loc:"Schoenbrunner Schlossstr. 47, 1130",locS:"13. Bezirk",indoor:true,gratis:false,preis:"12 Euro/Person",reg:true,alter:"3 bis 12 J.",freq:"Dauerhaft, taeglich",tags:["Schoenbrunn","Verkleiden","Geschichte"],desc:"Kaiserliche Kostueme anlegen, Faechersprache erlernen, am Festbankett Platz nehmen. Fuehrt spielerisch in die Geschichte der Habsburger ein. Feste Einlasszeiten, Online-Ticket empfohlen.",link:"https://www.kindermuseumschoenbrunn.at"},
-{id:11,cat:"Museum",title:"MAK: MAK4Family Workshops",sub:"Kostenlose Kreativwerkstatt",loc:"Stubenring 5, 1010",locS:"1. Bezirk",indoor:true,gratis:true,preis:"GRATIS (Eintritt unter 19 J. frei)",reg:false,alter:"Ab 4 J.",freq:"Jeden 2. und 4. Samstag im Monat",tags:["Kunst","Handwerk","Basteln"],desc:"Samstagnachmittag-Workshops fuer Familien im MAK. Themen wechseln saisonal. Inspiration aus den aktuellen Ausstellungen, alles Material inklusive. Einfach erscheinen, keine Anmeldung noetig.",link:"https://www.mak.at/kinder"},
-{id:12,cat:"Museum",title:"Planetarium: Kindershows",sub:"Elsa und der Grosse Baer im Kuppelkino",loc:"Oswald-Thomas-Platz 1, 1020",locS:"2. Bezirk",indoor:true,gratis:false,preis:"6 bis 13 Euro",reg:true,alter:"4 bis 7 J.",freq:"Regelmaessig lt. Spielplan",tags:["Sterne","Weltraum","Kuppelkino"],desc:"Faszinierende Kuppelprojektionen des Sternenhimmels speziell fuer Kinder. Kindgerechte Kommentare, fantasievolle Rahmengeschichten, 30 bis 45 Minuten Laufzeit.",link:"https://www.vhs.at/planetarium"},
-{id:13,cat:"Theater",title:"Dschungel Wien",sub:"Theaterhaus fuer junges Publikum im MQ",loc:"MuseumsQuartier, 1070",locS:"7. Bezirk",indoor:true,gratis:false,preis:"Kinder 9 Euro / Erwachsene 12 Euro",reg:true,alter:"Ab 2 bis 4 J. je Stueck",freq:"Nahezu taeglich, September bis Juni",tags:["Theater","Tanz","Figurentheater"],desc:"Rund 50 Produktionen pro Saison: Theater, Tanz, Musiktheater, Figurenspiel. Jede Produktion gibt Altersempfehlung an. Familienttermine Samstag und Sonntag nachmittags. Eines der besten Kindertheater Europas.",link:"https://www.dschungelwien.at"},
-{id:14,cat:"Theater",title:"Figurentheater Lilarum",sub:"Puppentheater im 3. Bezirk",loc:"Goellnergasse 8, 1030",locS:"3. Bezirk",indoor:true,gratis:false,preis:"Ca. 10 bis 12 Euro/Person",reg:true,alter:"Ab 3 J., perfekt 4 bis 6 J.",freq:"370 bis 400 Vorstellungen pro Jahr",tags:["Puppentheater","Maerchen","Figurenspiel"],desc:"Finn Flosse raeumt das Meer auf, Koko mit dem Zauberschirm, Wer wohnt denn da im Schneckenhaus. Liebevoll gestaltete Figurentheater-Stuecke fuer die Kleinen. Eines der besten Puppentheater Wiens.",link:"https://www.lilarum.at"},
-{id:15,cat:"Theater",title:"Marionettentheater Schoenbrunn",sub:"Klassiker als Marionettenspiel",loc:"Schoenbrunner Schlossstr. 47, 1130",locS:"13. Bezirk",indoor:true,gratis:false,preis:"Ab 15 Euro Kinderstuecke",reg:true,alter:"Ab 2 J.",freq:"Ca. 400 Vorstellungen pro Jahr",tags:["Marionettentheater","Oper","Maerchen"],desc:"Kinderzauberfloete, Haensel und Gretel, Aladdin, Ritter Kamenbert. International ausgezeichnetes Marionettenspiel in imperialem Ambiente. Bezaubernde Buehnentechnik.",link:"https://www.marionettentheater.at"},
-{id:16,cat:"Theater",title:"KinderOper in der Krypta",sub:"Mitmach-Oper fuer die Kleinsten",loc:"Peterskirche, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"Ca. 15 bis 20 Euro",reg:true,alter:"Ab 4 J.",freq:"Regelmaessig Samstag und Sonntag",tags:["Oper","Mitmachen","Klassik","Interaktiv"],desc:"Kinder sitzen mittendrin, singen mit, bewegen sich. Rotkaeppchen, Schneewittchen, Rumpelstilzchen, Zauberfloete als 45-minuetige Mitmachoper in der Krypta. Einzigartiges Erlebnis.",link:"https://www.viennaticketoffice.com/kinder_de.php"},
-{id:17,cat:"Theater",title:"Volkstheater: Familienvorstellungen",sub:"Pettersson und Findus u.a.",loc:"Arthur-Schnitzler-Platz 1, 1070",locS:"7. Bezirk",indoor:true,gratis:false,preis:"Kinder 8 Euro / Erwachsene 16 Euro",reg:true,alter:"Ab 5 J.",freq:"Saisonal lt. Spielplan",tags:["Theater","Familientheater"],desc:"Das Volkstheater produziert saisonal Familienforstellt. Professionelle Inszenierungen bekannter Kinderbuchstoffe in einem der schoensten Theatersaele Wiens.",link:"https://www.volkstheater.at"},
-{id:18,cat:"Theater",title:"Theater Akzent: Kinder-Abo",sub:"Gastspiele bekannter Kinderstoffe",loc:"Theresianumgasse 18, 1040",locS:"4. Bezirk",indoor:true,gratis:false,preis:"Abo-basiert, variabel",reg:true,alter:"Ab 4 J.",freq:"Mehrmals pro Saison",tags:["Theater","Abo","Gastspiele"],desc:"Pippi Langstrumpf, Rauber Hotzenplotz. Das Akzent bringt bekannte Kinderstoffe als professionelle Gastspiele auf die Buehne.",link:"https://www.akzent.at/kinder"},
-{id:19,cat:"Theater",title:"WUK KinderKultur",sub:"Improtheater, Zirkus, Tanz",loc:"Waehringer Str. 59, 1090",locS:"9. Bezirk",indoor:true,gratis:false,preis:"Variabel, guenstig",reg:false,alter:"Ab 3 bis 4 J.",freq:"Regelmaessig lt. Spielplan",tags:["Improtheater","Zirkus","Tanz"],desc:"Alternatives Kulturzentrum mit starkem Kinderprogramm. Neue Zirkusformen, Improvisationstheater und Tanzperformances fuer junge Zuschauerinnen.",link:"https://www.wuk.at/kinder"},
-{id:20,cat:"Musik",title:"Agathes Wunderkoffer",sub:"Musikverein: Kammerkonzerte fuer Kleinkinder",loc:"Musikvereinsplatz 1, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"Ca. 14 Euro/Karte",reg:true,alter:"Ab 3 J., perfekt 4 bis 6 J.",freq:"4x pro Saison, Samstag und Sonntag",tags:["Konzert","Kammermusik","Musikverein"],desc:"Wechselnde Themen rund um Musik und Klang. Professionelle Kammermusiker spielen in intimem Rahmen. Der Metallene Saal des Musikvereins als Konzertformat fuer Kinder.",link:"https://www.musikverein.at/kinder"},
-{id:21,cat:"Musik",title:"Allez Hop (Konzerthaus)",sub:"Musiktheater mit Puppen und Projektionen",loc:"Lothringerstr. 20, 1030",locS:"3. Bezirk",indoor:true,gratis:false,preis:"35 Prozent Kinderermassigung",reg:true,alter:"Ab 3 J.",freq:"Mehrmals pro Saison",tags:["Musiktheater","Konzerthaus","Klassik"],desc:"Die Reihe des Wiener Konzerthauses fuer die Kleinsten verbindet Live-Musik mit Figuren, Projektionen und Bewegung. Professionelles Orchester trifft auf bezaubernde Visualisierungen.",link:"https://konzerthaus.at/familien"},
-{id:22,cat:"Musik",title:"Grossundklein Mitmachkonzerte",sub:"Live-Konzerte 45 Min., Kinder mittendrin",loc:"Diverse Spielorte Wien",locS:"Diverse Bezirke",indoor:true,gratis:false,preis:"Ca. 11 Euro",reg:true,alter:"Ab 2 J.",freq:"Mehrmals monatlich",tags:["Mitmachkonzert","Interaktiv"],desc:"Kulturverein fuer kleine Menschen und ihr Umfeld. Konzerte an ungewoehnlichen Orten. Kinder duerfen mitsingen, mitklatschen und auf die Buehne. Stets wechselndes Programm.",link:"https://www.grossundklein.info"},
-{id:23,cat:"Musik",title:"Musikschulen Wien: Fruehfoerderung",sub:"Woechentliche musikalische Fruehfoerderung",loc:"Diverse Standorte Wien",locS:"Alle Bezirke",indoor:true,gratis:false,preis:"100 Euro pro Semester",reg:true,alter:"4 bis 6 J.",freq:"Woechentlich, Schuljahr",tags:["Musikerziehung","Singen","Rhythmus"],desc:"Ganzheitliche musikalische Fruehfoerderung durch die Stadt Wien. Singen, Bewegen, Horen, Klatschen, Trommeln. Kleingruppenunterricht. Sehr guenstiger Semesterbeitrag.",link:"https://musikschulen.wien.gv.at"},
-{id:24,cat:"Musik",title:"Wiener Symphoniker: Im Klang",sub:"Mitten im Orchester sitzen",loc:"Konzerthaus und Musikverein",locS:"1. und 3. Bezirk",indoor:true,gratis:false,preis:"Variabel",reg:true,alter:"Ab 5 bis 6 J.",freq:"Mehrmals pro Saison",tags:["Orchester","Symphonie","Familien"],desc:"Familien sitzen buchstaeblich zwischen den Musikern. Die Instrumente zum Anfassen, der Klang unmittelbar erlebbar. Eines der beeindruckendsten Konzerterlebnisse fuer Kinder.",link:"https://www.wienersymphoniker.at/familien"},
-{id:25,cat:"Natur",title:"Tiergarten Schoenbrunn",sub:"Kinder unter 6 Jahren GRATIS",loc:"Seckendorff-Gudent-Weg, 1130",locS:"13. Bezirk",indoor:false,gratis:true,preis:"Kinder unter 6 J.: GRATIS",reg:false,alter:"Alle, unter 6 gratis",freq:"365 Tage im Jahr",tags:["Zoo","Tiere","Elefanten","Giraffen"],desc:"Aeltester Zoo der Welt mit 600 Tierarten. Regenwaldhaus, Tirolerhof mit Haustieren, Panoramabahn, Baumkronenpfad. Taegliche Fuetterungszeiten. Kinder unter 6 Jahren zahlen keinen Eintritt.",link:"https://www.zoovienna.at"},
-{id:26,cat:"Natur",title:"Landgut Wien Cobenzl",sub:"Erlebnisbauernhof mit 100 Tieren",loc:"Am Cobenzl 96a, 1190",locS:"19. Bezirk",indoor:false,gratis:false,preis:"Kinder 3-15 J.: 8,90 Euro",reg:false,alter:"Ab 2 bis 3 J.",freq:"Taeglich 10 bis 19 Uhr, ab Maerz",tags:["Bauernhof","Tiere streicheln","Brotbacken"],desc:"Pferde, Kuehe, Schafe, Ziegen, Schweine und Federvieh. Streichelzoo, Stallfuehrungen, Brotbacken, Bauerngolf. Mit traumhaftem Ausblick ueber Wien.",link:"https://www.landgutcobenzl.at"},
-{id:27,cat:"Natur",title:"Lainzer Tiergarten",sub:"Gratis, Wildtiere, 6 Waldspielplaetze",loc:"Lainzer Tor, 1130",locS:"13. Bezirk",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Ganzjaehrig",tags:["Wildschweine","Hirsche","Waldspielplatz"],desc:"2450 Hektar Urwald mitten in Wien. Wildschweine und Wisente frei beobachten, 6 Waldspielplaetze, Naturlehrpfad mit Quiz. Ideale Halbtagswanderung.",link:"https://www.lainzer-tiergarten.at"},
-{id:28,cat:"Natur",title:"Donauinsel Wasserspielplatz",sub:"5000 Quadratmeter Wasserspielparadies gratis",loc:"Donauinsel, 1220",locS:"22. Bezirk",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Mai bis September",tags:["Wasser","Spielen","Floss","Sommer"],desc:"Riesiger Wasserspielplatz mit Spiel-Bach zum Stauen und Umleiten, Floss, Haengebruecke, Kletterturm. Eigener Kleinkindbereich mit sehr geringer Wassertiefe.",link:"https://www.wien.gv.at/freizeit/donauinsel"},
-{id:29,cat:"Natur",title:"Waldschule Wien",sub:"Gefuehrte Walderlebnisse mit Foerstern gratis",loc:"Ottakring und Lobau",locS:"16. und 22. Bezirk",indoor:false,gratis:true,preis:"GRATIS",reg:true,alter:"Ab 4 J.",freq:"Ganzjaehrig, Anmeldung",tags:["Wald","Natur","Foerster","Lernen"],desc:"Staedtische Waldschulen der MA 49: Gefuehrte Wanderungen mit Revierfoerstern, Tierspuren lesen, Pilze bestimmen, Tierpraeparate anfassen. Kostenlos fuer Familien.",link:"https://www.wien.gv.at/umwelt/wald/bildung"},
-{id:30,cat:"Natur",title:"Wiener Prater und Liliputbahn",sub:"Vergenuegungspark und 4 km Dampfbahn",loc:"Prater, 1020",locS:"2. Bezirk",indoor:false,gratis:false,preis:"Gelaende gratis, Liliputbahn ca. 5 Euro",reg:false,alter:"Ab 0 J.",freq:"Maerz bis Oktober",tags:["Karussell","Liliputbahn","Riesenrad"],desc:"Wurstelprater mit Kinderkarussells und Autoscooter. Dampflok-Liliputbahn durch den Gruenen Prater. Riesenrad als ikonisches Wien-Erlebnis. Gelaende gratis zugaenglich.",link:"https://www.praterwien.com"},
-{id:31,cat:"Natur",title:"Boehmischer Prater",sub:"Historischer Mini-Freizeitpark im 10. Bezirk",loc:"Laaer Wald, 1100",locS:"10. Bezirk",indoor:false,gratis:true,preis:"Gelaende gratis, Fahrgeschaefte 2 bis 5 Euro",reg:false,alter:"Ab 0 J.",freq:"Maerz bis November",tags:["Karussell","Nostalgie","Guenstig"],desc:"Charmanter nostalgischer Freizeitpark mit kleinen Fahrgeschaeften, Karussells und Rutschbahn. Viel guenstiger als der grosse Prater, sehr familienfreundliche Atmosphaere.",link:"https://www.boehmischer-prater.com"},
-{id:32,cat:"Natur",title:"Motorikpark Donaustadt",sub:"23 kostenlose Stationen im Freien",loc:"Suessenbrunner Str. 101, 1220",locS:"22. Bezirk",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Ganzjaehrig",tags:["Motorik","Klettern","Balancieren","Trampoline"],desc:"23 Bewegungsstationen: Balancierpfad, Trampoline, Kletterparadies, Balancierwerkstatt, Haengebruecke. Ideales Ziel fuer aktive Kinder die sich austoben wollen.",link:"https://www.wien.gv.at/freizeit/parks"},
-{id:33,cat:"Natur",title:"Schmetterlinghaus Burggarten",sub:"Tropisches Schmetterlingshaus",loc:"Josefsplatz 1, 1010",locS:"1. Bezirk",indoor:true,gratis:false,preis:"Kinder 3-5 J.: ca. 4 Euro",reg:false,alter:"Alle",freq:"Ganzjaehrig, taeglich",tags:["Schmetterlinge","Tropisch","Natur"],desc:"Ueber 400 freifliegende tropische Schmetterlinge im historischen Palmenhaus. Eier, Raupen und Puppen zum Beobachten. Waerme und Ueppigkeit mitten in Wien.",link:"https://www.schmetterlinghaus.at"},
-{id:34,cat:"Sport",title:"Kinderturnen ASKOE und SPORTUNION",sub:"Polysportives Turnen woechentlich",loc:"Diverse Turnsaele Wien",locS:"Alle Bezirke",indoor:true,gratis:false,preis:"Ca. 60 bis 150 Euro pro Semester",reg:true,alter:"3 bis 6 J.",freq:"Woechentlich, Schuljahr",tags:["Turnen","Bewegung","Koordination"],desc:"Woechentliches Kinderturnen in ueber 50 Vereinen. Bewegungslandschaften, Geraeteturnen, Laufen, Rollen, Klettern, alles polysportiv und altersgerecht.",link:"https://askoe-fit.at/kinder"},
-{id:35,cat:"Sport",title:"Kinderschwimmkurse",sub:"Anfaenger und Wassergewoehnug ab 4 J.",loc:"Staedtische Baeder Wien",locS:"Alle Bezirke",indoor:true,gratis:false,preis:"Ca. 100 Euro pro Kurs (10 x 45 Min.)",reg:true,alter:"Ab 4 bis 5 J.",freq:"Semesterweise",tags:["Schwimmen","Wasser","Kurs","Sicherheit"],desc:"Staedtische Schwimmkurse in 20 Baedern: Wassergewoehnug, Anfaenger, Fortgeschrittene. Kinder unter 6 Jahren haben freien Eintritt in alle Stadtbaeder.",link:"https://www.wien.gv.at/freizeit/baeder"},
-{id:36,cat:"Sport",title:"Kindertanz Kreadance",sub:"Ballet, HipHop, Minidance, 20 Standorte",loc:"20 Standorte in Wien",locS:"Alle Bezirke",indoor:true,gratis:false,preis:"Ca. 200 Euro pro Semester",reg:true,alter:"Ab 3 J.",freq:"Woechentlich, Schuljahr",tags:["Tanzen","Ballet","HipHop","Musik"],desc:"Groesste Kinder-Tanzschule Wiens. Kinderballett, HipHop, Musical Dance und Minidance fuer die Juengsten. 20 Standorte in allen Bezirken, Schnupperstunden moeglich.",link:"https://kreadance.com"},
-{id:37,cat:"Sport",title:"Kletterzwerge Naturfreunde",sub:"Schnupperklettern ab 4 Jahren",loc:"Erzherzog-Karl-Str. 108, 1220",locS:"22. Bezirk",indoor:true,gratis:false,preis:"16 bis 22 Euro pro Schnupperstunde",reg:true,alter:"Ab 4 J.",freq:"Wochenende und Ferien",tags:["Klettern","Sport","Kletterhalle"],desc:"Eigens konzipiertes Kletterprogramm fuer Kinder. Kleine Waende, bunte Griffe, viel Ermutigung. Grundlagen werden spielerisch vermittelt, keine Vorkenntnisse noetig.",link:"https://www.kletterhallewien.at"},
-{id:38,cat:"Sport",title:"Wiener Eistraum Kinderflaece",sub:"Kindereisflaeche gratis, Eislaufhilfen",loc:"Rathausplatz, 1010",locS:"1. Bezirk",indoor:false,gratis:true,preis:"Kinderflaece GRATIS (Hauptflaeche ca. 7,40 Euro)",reg:false,alter:"Alle",freq:"Jaenner bis Maerz",tags:["Eislaufen","Winter","Rathausplatz"],desc:"10000 Quadratmeter Eisflaeche rund ums Wiener Rathaus. Extra Kinderflaece mit Pinguinen und Eisbajonetten gratis. Sky Rink mit erhoehtem Parcours fuer aeltere Kinder.",link:"https://www.wienereistraum.com"},
-{id:39,cat:"Kreativ",title:"Kleine Gestalten KUNSTWERK",sub:"Kunstworkshops Samstag und Sonntag",loc:"1060 und 1180 Wien",locS:"6. und 18. Bezirk",indoor:true,gratis:false,preis:"Semesterkurs",reg:true,alter:"Ab 2,5 J.",freq:"Woechentlich Sa und So sowie Di",tags:["Malen","Ton","Collage","Kunst"],desc:"Atelierworkshops in kleinen Gruppen. Freies Gestalten mit Farbe, Ton, Papier, gefundenen Materialien. Kuenstlerisch angeleitete Atmosphaere.",link:"https://kleinegestalten.at"},
-{id:40,cat:"Kreativ",title:"VHS Wien: Kreativ und Bastelkurse",sub:"Diverse Kreativkurse in allen Bezirken",loc:"Diverse VHS-Standorte",locS:"Alle Bezirke",indoor:true,gratis:false,preis:"Ca. 16 bis 65 Euro pro Kurs",reg:true,alter:"3 bis 6 J.",freq:"Semesterweise",tags:["Basteln","Malen","Musik","Guenstig"],desc:"Volksschule bietet breites Kreativprogramm: Malen, Basteln, Tanz, Musik fuer Kleinkinder und Vorschulkinder. Guenstige Tarife, Standorte in allen 23 Bezirken.",link:"https://www.vhs.at/kinder"},
-{id:41,cat:"Kreativ",title:"Zirkusworkshops Circus KAOS",sub:"Akrobatik, Jonglieren, Clownerie",loc:"Wien, diverse Standorte",locS:"Diverse Bezirke",indoor:true,gratis:false,preis:"Kursgebuehr",reg:true,alter:"Ab 4 J.",freq:"Semesterkurse und Workshops",tags:["Zirkus","Akrobatik","Jonglieren","Clown"],desc:"Kinderzirkus mit echten Zirkusdisziplinen: Jonglieren, Akrobatik, Clownerie, Gleichgewicht. Am Ende der Kurse gibt es kleine Auffuehrungen fuer die Eltern.",link:"https://www.kaos.at"},
-{id:42,cat:"Kino",title:"WIENXTRA Cinemagic",sub:"Bilderbuchkino mit Live-Erzaehlerin",loc:"Diverse Spielorte Wien",locS:"Diverse Bezirke",indoor:true,gratis:false,preis:"Ca. 4 bis 6 Euro (3,50 mit Kinderaktivcard)",reg:false,alter:"Ab 3 J.",freq:"Wochenende und Ferien",tags:["Kino","Bilderbuch","Kurzfilm","Erzaehler"],desc:"Kinoerlebnis mit grosser Leinwand, aber mit Live-Erzaehlerin und Musik statt Ton. Bilderbuchkino macht die Geschichte lebendig. Anders als Zuhause vorlesen.",link:"https://wienxtra.at/cinemagic"},
-{id:43,cat:"Kino",title:"Votiv Kino: Kinderkino",sub:"Kuratierte Kinderfilme am Wochenende",loc:"Waehringer Str. 12, 1090",locS:"9. Bezirk",indoor:true,gratis:false,preis:"Variabel, guenstig",reg:false,alter:"Ab 4 J.",freq:"Wochenende",tags:["Kino","Film","Arthouse"],desc:"Das Votiv Kino zeigt am Wochenende handverlesene Kinderfilme, darunter internationale Produktionen und Klassiker. Gemuetliches Filmhaus-Ambiente.",link:"https://www.votivkino.at"},
-{id:44,cat:"Spielen",title:"Buechereien Wien: Bilderbuchkino",sub:"Kostenlose Vorlese-Events in 39 Filialen",loc:"39 Zweigstellen Wien",locS:"Alle Bezirke",indoor:true,gratis:true,preis:"GRATIS (Kinderkarte gratis unter 18)",reg:false,alter:"Ab 4 J.",freq:"Woechentlich in diversen Filialen",tags:["Buecherei","Vorlesen","Bilderbuch"],desc:"In fast jeder Buechereifiliale gibt es regelmaessige Vorlestunden, Kamishibai-Abende und Bilderbuchkino. Mehrsprachige Angebote verfuegbar. Einfach auftauchen.",link:"https://buechereien.wien.gv.at"},
-{id:45,cat:"Spielen",title:"Family Fun Indoor-Spielplatz",sub:"8000 Quadratmeter Wiens groesster Indoor-Spielplatz",loc:"Breitenleerstr. 77, 1220",locS:"22. Bezirk",indoor:true,gratis:false,preis:"Mo-Fr 14,90 Euro / Sa-So 18,90 Euro",reg:false,alter:"0 bis 12 J.",freq:"Taeglich",tags:["Indoor","Spielplatz","Klettern","Rutschen"],desc:"Riesige ueberdachte Spielwelt mit mehrgeschossigen Klettergeruesten, Riesen-Rutschen, Baeollebad, Trampolin-Bereich und Kleinkindecke. Ideal fuer Regentage.",link:"https://familyfun.at"},
-{id:46,cat:"Spielen",title:"Playworld Indoor-Spielplatz",sub:"5500 Quadratmeter, 3 Etagen im 10. Bezirk",loc:"Himberger Str. 2, 1100",locS:"10. Bezirk",indoor:true,gratis:false,preis:"Di-Do 14 Euro / Fr-So 17 Euro",reg:false,alter:"0 bis 16 J.",freq:"Taeglich ausser Montag",tags:["Indoor","Spielplatz","3 Etagen"],desc:"Dreigeschossige Indoor-Spielwelt mit Kletterturmen, Rutschen, Baeollebad, Trampoline und Kleinkinderbereich. Cafe fuer Eltern mit Blick auf die Spielflaeche.",link:"https://playworld-wien.at"},
-{id:47,cat:"Spielen",title:"Gratis-Spielraeume der Stadt Wien",sub:"Betreute kostenlose Indoor-Spielraeume",loc:"Diverse Bezirke Wien",locS:"Diverse Bezirke",indoor:true,gratis:true,preis:"GRATIS",reg:false,alter:"0 bis 6 J.",freq:"Regelmaessige Oeffnungszeiten",tags:["Spielraum","Gratis","Betreut"],desc:"Die Stadt Wien betreibt betreute Spielraeume (Pusteblume 1070, Indoor Jojo 1080 u.a.). Spielzeug, Kletterwand, Rollenspiel mit Freizeitpaedagoginnen. Kostenlos.",link:"https://www.wien.gv.at/freizeit/spielraeume"},
-{id:48,cat:"Spielen",title:"Kinderfreunde: Parkbetreuung",sub:"Kostenlose betreute Spielnachmittage in Parks",loc:"Alle 23 Bezirke Wien",locS:"Alle Bezirke",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Sommer, taeglich in diversen Parks",tags:["Park","Spielen","Basteln","Gratis"],desc:"Parkbetreuung in hunderten Wiener Parks: Basteln, Kinderschminken, Grossspiele, Sport. Der Spielbus bringt Jonglage, Stelzenlaufen und Riesenmikado zu Bezirksfesten.",link:"https://wien.kinderfreunde.at"},
-{id:49,cat:"Saisonal",title:"Wiener Ostermarkt Freyung",sub:"Bastelwerkstatt taeglich GRATIS",loc:"Freyung, 1010",locS:"1. Bezirk",indoor:false,gratis:true,preis:"Eintritt gratis, Bastelwerkstatt gratis",reg:false,alter:"Alle",freq:"Maerz bis April, Ostern",tags:["Ostern","Basteln","Kasperl"],desc:"Charmanter Ostermarkt mit taeglicher kostenloser Bastelwerkstatt fuer Kinder. Kasperl-Theater, Eier bemalen, Blumenhandwerk. Inmitten des mittelalterlichen Platzes.",link:"https://www.wien.info/ostermarkt"},
-{id:50,cat:"Saisonal",title:"Donauinselfest",sub:"Europas groesstes Freiluftfestival gratis",loc:"Donauinsel Wien",locS:"2. und 22. Bezirk",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Junes, 3 Tage",tags:["Festival","Musik","Sommer","Gratis"],desc:"3 Tage kostenloses Megafestival mit eigener Kinderzone. Live-Musik, Mitmach-Stationen, Bewegungsangebote. Ueber 3 Millionen Besucherinnen jaehrlich.",link:"https://www.donauinselfest.at"},
-{id:51,cat:"Saisonal",title:"Christkindlmarkt Rathausplatz",sub:"Bastelhuette und Karussell im Advent",loc:"Rathausplatz, 1010",locS:"1. Bezirk",indoor:false,gratis:false,preis:"Eintritt gratis, Basteln 5-10 Euro",reg:false,alter:"Alle",freq:"November bis Dezember",tags:["Weihnachten","Advent","Basteln","Karussell"],desc:"Wiens schoenster Weihnachtsmarkt: historisches Rathaus als Kulisse, Bastelhuette fuer Kinder, Kinderkarussell, beleuchtete Traumstadt.",link:"https://www.christkindlmarkt.at"},
-{id:52,cat:"Saisonal",title:"Weihnachtsmarkt Schoenbrunn",sub:"Glice-Eisbahn GRATIS und Weihnachtsbaeckerei",loc:"Schloss Schoenbrunn, 1130",locS:"13. Bezirk",indoor:false,gratis:true,preis:"Glice-Eisbahn GRATIS",reg:false,alter:"Alle",freq:"November bis Januar",tags:["Weihnachten","Eisbahn","Backen","Schoenbrunn"],desc:"Weihnachtsmarkt mit kostenloser Kunsteis-Glice-Bahn, Maerchenstunde, Weihnachtsbaeckerei und Puppentheater. Imperiale Schlosskulisse als Rahmen.",link:"https://www.weihnachtsmarkt-schoenbrunn.at"}
+// ════════════════════════════════════════
+//  DATA: SPECIAL EVENTS (mit konkreten Daten)
+// ════════════════════════════════════════
+var SP=[
+  // ── MÄRZ ──
+  {id:"s01",cat:"Zirkus",title:"Circus Alex Kaiser – Full Adrenalin",
+   sub:"Akrobatik, Pferdedressur, Globe of Speed, Clown Bambino",
+   dateFrom:"2026-03-06",dateTo:"2026-04-06",
+   time:"Mo+Do 16:00 / Fr+Sa 15+19 / So 14:00",
+   indoor:true,gratis:false,preis:"Kinder nur € 7 (mit Web-Ticket)",
+   reg:false,alter:"Alle Altersgruppen",
+   loc:"Erzherzog-Karl-Str. 204–208, 1220 Wien",locS:"22. Bezirk (U2 Aspernstr.)",
+   tags:["Zirkus","Akrobatik","Pferde","Clown"],
+   desc:"Weltklasse-Zirkus in Wien-Donaustadt. Highlight: The Troupe Adrenalin aus der Ukraine auf der Russischen Schaukel, The Allison Riders in der Globe of Death, Handstandakrobatik und Clown Bambino. Beheiztes Zelt! Kinder zahlen mit Web-Ticket nur 7 Euro.",
+   link:"https://www.circusalexkaiser.at"},
+
+  {id:"s02",cat:"Markt",title:"Ostermarkt Schloss Schoenbrunn",
+   sub:"Riesenrad, Streichelzoo, Strohlabyrinth, Basteln",
+   dateFrom:"2026-03-21",dateTo:"2026-04-06",
+   time:"10:00–18:00 täglich",
+   indoor:false,gratis:true,preis:"Eintritt gratis, Aktivitäten extra",
+   reg:false,alter:"Alle",
+   loc:"Schloss Schönbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Ostern","Schönbrunn","Frühjahr","Basteln"],
+   desc:"Frühlingsmarkt in imperialer Kulisse mit kleinem Riesenrad, Strohlabyrinth, Lämmer und Küken streicheln sowie Bastelworkshops für Kinder. Größtes Osterprogramm Wiens für Familien, Schönbrunner Schloss als Kulisse.",
+   link:"https://www.ostermarkt-schoenbrunn.at"},
+
+  {id:"s03",cat:"Museum",title:"Kindermuseum Schoenbrunn: Osterwerkstatt",
+   sub:"Kaiserliche Nestsuche mit Poldi, Bastelwerkstatt, Handpuppenfuehrung",
+   dateFrom:"2026-03-21",dateTo:"2026-04-06",
+   time:"10:00–17:00",
+   indoor:true,gratis:false,preis:"€ 12/Person",
+   reg:true,alter:"3–12 J.",
+   loc:"Schloss Schönbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Ostern","Museum","Schönbrunn","Basteln"],
+   desc:"Schlossgeist Poldi führt durch die kaiserliche Nestsuche, Poldis Bastelwerkstatt (Osterlamm, Tontopfhase), Handpuppenfuehrung. Spezialprogramm zu Ostern – mehr Abwechslung als das normale Programm.",
+   link:"https://www.kindermuseumschoenbrunn.at"},
+
+  {id:"s04",cat:"Ausstellung",title:"World of Bricks – LEGO Ausstellung",
+   sub:"Weltrekord-Riesenrad, DUPLO-Bauzone, Flohmarkt",
+   dateFrom:"2026-03-28",dateTo:"2026-04-06",
+   time:"09:00–19:00 täglich",
+   indoor:true,gratis:false,preis:"Ab € 17,25 (Timeslot, Kinder günstiger)",
+   reg:true,alter:"Alle (DUPLO-Zone ideal 3–6 J.)",
+   loc:"Wiener Stadthalle Studio F, 1150 Wien",locS:"15. Bezirk (U6 Burggasse)",
+   tags:["LEGO","DUPLO","Bauen","Weltrekord"],
+   desc:"1.500 m² LEGO-Erlebniswelt in den Osterferien: Modelle aus ganz Europa, das größte LEGO-Riesenrad der Welt (Guinness-Rekord), tägliche DUPLO-Bauevents speziell für Kleinkinder, riesige Spielzone und LEGO-Flohmarkt. Timeslot-Tickets online buchen!",
+   link:"https://www.world-of-bricks.at"},
+
+  {id:"s05",cat:"Markt",title:"Ostermarkt Freyung",
+   sub:"Bastelwerkstatt täglich gratis, Kasperl, Eier bemalen",
+   dateFrom:"2026-03-28",dateTo:"2026-04-05",
+   time:"10:00–19:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis, Bastelwerkstatt gratis",
+   reg:false,alter:"Alle",
+   loc:"Freyung, 1010 Wien",locS:"1. Bezirk",
+   tags:["Ostern","Basteln","Kasperl","Gratis"],
+   desc:"Klassischer Wiener Ostermarkt mit täglicher kostenloser Bastelwerkstatt für Kinder, Kasperl-Theater, Eier bemalen. Wunderschöner mittelalterlicher Platz als Kulisse.",
+   link:"https://www.wien.info/ostermarkt"},
+
+  // ── APRIL ──
+  {id:"s06",cat:"Oper",title:"KinderOper Krypta: Rumpelstilzchen",
+   sub:"Mitmachoper ab 4 J. – Bartok-Musik, 45 Min.",
+   dateFrom:"2026-04-03",dateTo:"2026-04-03",
+   time:"18:00",
+   indoor:true,gratis:false,preis:"Ca. € 15–20",
+   reg:true,alter:"Ab 4 J.",
+   loc:"Krypta der Peterskirche, 1010 Wien",locS:"1. Bezirk",
+   tags:["Oper","Mitmachen","Märchen","Klassik"],
+   desc:"Rumpelstilzchen als 45-minütige Mitmachoper für Kleinkinder – Kinder sitzen mittendrin, singen und bewegen sich mit. Musik von Béla Bartók, speziell arrangiert. Max. 50 Plätze – sehr früh buchen!",
+   link:"https://www.viennaticketoffice.com/kinder_de.php"},
+
+  {id:"s07",cat:"Museum",title:"Haus des Meeres: Oster-Dschungelcamp",
+   sub:"Krabbler auf die Hand, Rätselrallye, Ostereier bemalen",
+   dateFrom:"2026-04-14",dateTo:"2026-04-18",
+   time:"10:30 + 15:30 täglich",
+   indoor:true,gratis:false,preis:"Kinder 3–5 J.: € 6,50",
+   reg:false,alter:"Alle",
+   loc:"Fritz-Grünbaum-Platz 1, 1060 Wien",locS:"6. Bezirk",
+   tags:["Ostern","Tiere","Insekten","Haie"],
+   desc:"Tausendfüßler, Gespenstschrecken, Achatschnecken – auf die Hand gesetzt werden! Ziel: Kindern die Scheu vor Tieren nehmen. Rätselrallye durchs Haus, Fütterungen, Ostereier bemalen. Spezialprogramm zu Ostern.",
+   link:"https://www.haus-des-meeres.at"},
+
+  {id:"s08",cat:"Oper",title:"KinderOper Krypta: Aladin",
+   sub:"Mitmachoper ab 4 J. – Rimsky-Korsakov",
+   dateFrom:"2026-04-18",dateTo:"2026-04-18",
+   time:"14:30",
+   indoor:true,gratis:false,preis:"Ca. € 15–20",
+   reg:true,alter:"Ab 4 J.",
+   loc:"Krypta der Peterskirche, 1010 Wien",locS:"1. Bezirk",
+   tags:["Oper","Mitmachen","1001 Nacht","Klassik"],
+   desc:"Aladin und die Wunderlampe als Mitmachoper für Kinder. Musik von Nikolai Rimsky-Korsakov, kindgerecht arrangiert. Maximale 50 Plätze – bitte rechtzeitig buchen!",
+   link:"https://www.viennaticketoffice.com/kinder_de.php"},
+
+  {id:"s09",cat:"Fest",title:"Nationalparkfest Donau-Auen: 30 Jahre",
+   sub:"Ranger-Führungen, Naturspiele, Rätselrallye – Kinder GRATIS",
+   dateFrom:"2026-04-26",dateTo:"2026-04-26",
+   time:"10:00–17:00",
+   indoor:false,gratis:true,preis:"Kinder unter 18: GRATIS / Erw. € 15",
+   reg:false,alter:"Alle",
+   loc:"Nationalpark Donau-Auen, Lobau / 1220 Wien",locS:"22. Bezirk",
+   tags:["Natur","Nationalpark","Ranger","Gratis"],
+   desc:"30 Jahre Nationalpark Donau-Auen – großes Familienfest. Rangerfuehrungen, Mitmachstationen, Rätselrallye mit Naturwissen. Hundsfisch, Seeadler und Biber entdecken. Bio-Kulinarik, bei jedem Wetter.",
+   link:"https://www.donauauen.at"},
+
+  // ── MAI ──
+  {id:"s10",cat:"Fest",title:"Südwind Straßenfest",
+   sub:"Live-Musik, Workshops, Kinderprogramm, internationales Essen",
+   dateFrom:"2026-05-30",dateTo:"2026-05-31",
+   time:"14:00–23:00 / 11:00–20:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis",
+   reg:false,alter:"Alle",
+   loc:"Campus Universität Wien (Altes AKH), Hof 1, 1090 Wien",locS:"9. Bezirk",
+   tags:["Straßenfest","Gratis","Musik","Kinder"],
+   desc:"Großes Straßenfest auf dem Campus der Universität Wien. Live-Musik aus aller Welt, Kulinarik, Workshops, Kunsthandwerk, Poetry Slam und Kinderprogramm. Nachhaltig gestaltet, familienfreundlich.",
+   link:"https://www.suedwind.at"},
+
+  {id:"s11",cat:"Musical",title:"Feuerwehrmann Sam Live! – Dino-Insel",
+   sub:"Interaktive Familienshow, 60 Min., Foto mit Sam danach",
+   dateFrom:"2026-05-29",dateTo:"2026-05-29",
+   time:"16:00",
+   indoor:true,gratis:false,preis:"Ab € 23,40 (Kinder günstiger)",
+   reg:true,alter:"Ab 3 J. – perfekt 4–6 J.",
+   loc:"Wiener Stadthalle Halle F, 1150 Wien",locS:"15. Bezirk",
+   tags:["Musical","Feuerwehrmann Sam","TV-Show","Dinosaurier"],
+   desc:"Sam, Elvis, Jenny und Hauptfeuerwehrmann Steele auf der Dino-Insel. 60 Minuten interaktive Show mit Tanz, Gesang und Rettungsaktionen. Kinder dürfen mitmachen! Foto-Möglichkeit mit Sam im Foyer danach.",
+   link:"https://www.stadthalle.com"},
+
+  // ── JUNI ──
+  {id:"s12",cat:"Fest",title:"Kinderflohmarkt Erzbischöfliches Palais",
+   sub:"Stöbermarkt im historischen Arkadenhof",
+   dateFrom:"2026-06-07",dateTo:"2026-06-07",
+   time:"10:00–17:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis",
+   reg:false,alter:"Alle",
+   loc:"Wollzeile 2, 1010 Wien",locS:"1. Bezirk",
+   tags:["Flohmarkt","Schnäppchen","Arkadenhof","Gratis"],
+   desc:"Familienflohmarkt im wunderschönen Arkadenhof des Erzbischöflichen Palais. Kinderkleidung, Spielzeug, Bücher, Fahrräder. Gemütliche Atmosphäre, historisches Ambiente mitten in der Innenstadt.",
+   link:"https://www.meinefamilie.at"},
+
+  {id:"s13",cat:"Fest",title:"PROSI Exotic Street Festival",
+   sub:"Fest der Kulturen – Musik, Tanz, Kulinarik, Kinderprogramm",
+   dateFrom:"2026-06-12",dateTo:"2026-06-13",
+   time:"11:00–22:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis",
+   reg:false,alter:"Alle",
+   loc:"Kandlgasse 46, 1070 Wien",locS:"7. Bezirk",
+   tags:["Straßenfest","Kulturen","Musik","Tanz","Gratis"],
+   desc:"Interkulturelles Straßenfest mit Musik, Gesang und Tanz aus verschiedenen Ländern. Kulinarik, Kunsthandwerk, kulturelle Vielfalt hautnah. Kinderfreundliche Atmosphäre.",
+   link:"https://www.prosi.at"},
+
+  {id:"s14",cat:"Festival",title:"Donauinselfest 2026",
+   sub:"Europas größtes Freiluftfestival – Kinderzone gratis",
+   dateFrom:"2026-06-19",dateTo:"2026-06-21",
+   time:"Ganztags",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Donauinsel Wien",locS:"2. + 22. Bezirk",
+   tags:["Festival","Musik","Sommer","Gratis","Kinderzone"],
+   desc:"3 Tage Open-Air-Megafestival mit eigener großer Kinderzone. Live-Musik auf vielen Bühnen, Mitmachaktionen, Riesenspielgeräte, Bewegungsangebote. Über 3 Millionen Besucher:innen jährlich. Eintritt für alle gratis.",
+   link:"https://www.donauinselfest.at"},
+
+  // ── HERBST ──
+  {id:"s15",cat:"Zirkus",title:"Circus Roncalli – 50-Jahr-Jubiläum",
+   sub:"Der legendäre Zirkus ohne Tiere – Weltklasse-Artistik",
+   dateFrom:"2026-09-16",dateTo:"2026-10-11",
+   time:"Mehrmals täglich lt. Spielplan",
+   indoor:true,gratis:false,preis:"Ab € 35 (Kinder ermäßigt)",
+   reg:true,alter:"Ab 3–4 J.",
+   loc:"Rathausplatz, 1010 Wien",locS:"1. Bezirk",
+   tags:["Zirkus","Artistik","Roncalli","Jubiläum"],
+   desc:"50. Geburtstag des legendären Circus Roncalli! Ohne Tiere, aber mit Weltklasse-Artistik, bezaubernden Clowns und nostalgischer Atmosphäre unter dem historischen Zirkuszelt am Rathausplatz. Eines der schönsten Zirkus-Erlebnisse überhaupt.",
+   link:"https://www.roncalli.de"},
+
+  // ── WINTER ──
+  {id:"s16",cat:"Markt",title:"Weihnachtsmarkt Schönbrunn",
+   sub:"Glice-Eisbahn GRATIS, Weihnachtsbäckerei, Puppentheater",
+   dateFrom:"2026-11-21",dateTo:"2027-01-06",
+   time:"10:00–21:00",
+   indoor:false,gratis:true,preis:"Glice-Eisbahn GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Schloss Schönbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Weihnachten","Eisbahn","Backen","Schönbrunn"],
+   desc:"Weihnachtsmarkt mit kostenloser Kunsteis-Glice-Bahn, Märchenstunde, Weihnachtsbäckerei für Kinder und Puppentheater. Imperiale Schlosskulisse als Rahmen – einer der schönsten Weihnachtsmärkte Europas.",
+   link:"https://www.weihnachtsmarkt-schoenbrunn.at"},
+
+  {id:"s17",cat:"Markt",title:"Christkindlmarkt Rathausplatz",
+   sub:"Bastelhuette, Kinderkarussell, Traumstadtbeleuchtung",
+   dateFrom:"2026-11-13",dateTo:"2026-12-26",
+   time:"10:00–21:30",
+   indoor:false,gratis:false,preis:"Eintritt gratis, Basteln € 5–10",
+   reg:false,alter:"Alle",
+   loc:"Rathausplatz, 1010 Wien",locS:"1. Bezirk",
+   tags:["Weihnachten","Advent","Basteln","Karussell"],
+   desc:"Wiens schönster Weihnachtsmarkt vor dem historischen Rathaus. Bastelhuette für Kinder (Kerzen gießen, Plätzchen), Kinderkarussell, Traumstadt-Beleuchtung. Einer der bekanntesten Weihnachtsmärkte weltweit.",
+   link:"https://www.christkindlmarkt.at"},
+
+  // ── WIEDERKEHREND/SAISONAL mit Terminhinweisen ──
+  {id:"s18",cat:"Fest",title:"Frühlingswirbel Rathaus",
+   sub:"Kasperlbuehne, Theatervorstellungen, Kreativstationen",
+   dateFrom:"2026-05-08",dateTo:"2026-05-10",
+   time:"11:00–18:00",
+   indoor:false,gratis:true,preis:"Gratis",
+   reg:false,alter:"Alle",
+   loc:"Rathauspark, 1010 Wien",locS:"1. Bezirk",
+   tags:["Park","Kasperl","Theater","Frühjahr","Gratis"],
+   desc:"Jährliches Stadtfest im Rathauspark. Kasperlbühne, Theatervorstellungen, Kreativstationen, Großspiele. Frühlingsatmosphäre mit Blick aufs Rathaus – kostenlos für die ganze Familie.",
+   link:"https://www.wien.gv.at"},
+
+  {id:"s19",cat:"Fest",title:"Nationalparkfest Lobau – Frühjahr",
+   sub:"Waldführungen, Naturerlebnisse, Familienpicknick gratis",
+   dateFrom:"2026-04-19",dateTo:"2026-04-19",
+   time:"10:00–16:00",
+   indoor:false,gratis:true,preis:"Gratis",
+   reg:false,alter:"Alle",
+   loc:"Nationalparkhaus Wien-Lobau, 1220 Wien",locS:"22. Bezirk",
+   tags:["Natur","Lobau","Waldführung","Gratis"],
+   desc:"Regelmäßige Familienfeste im Nationalpark Donau-Auen mit geführten Waldwanderungen, Naturerlebnispfaden, Picknickwiese. Kostenlos für Kinder und Familien.",
+   link:"https://www.donauauen.at"},
+
+  {id:"s20",cat:"Festival",title:"Blumengärten Hirschstetten – Frühling",
+   sub:"Ringelspiel, Hüpfburg, Küken und Lämmer streicheln",
+   dateFrom:"2026-04-04",dateTo:"2026-04-06",
+   time:"10:00–18:00",
+   indoor:false,gratis:true,preis:"Eintritt gratis",
+   reg:false,alter:"Alle",
+   loc:"Blumengärten Hirschstetten, 1220 Wien",locS:"22. Bezirk",
+   tags:["Frühling","Küken","Blumen","Ringelspiel","Gratis"],
+   desc:"Die Blumengärten Hirschstetten erwachen im Frühling! Ringelspiel, Hüpfburg, Küken und Lämmer streicheln. Wunderschöne Gartenanlage als Ausflugsziel zu Ostern.",
+   link:"https://www.wien.gv.at/blumengaerten"},
+
+  {id:"s21",cat:"Festival",title:"Kinderfilmfestival Wien",
+   sub:"Internationales Kino für Kinder, diverse Altersgruppen",
+   dateFrom:"2026-06-01",dateTo:"2026-06-14",
+   time:"Diverse Vorstellungszeiten",
+   indoor:true,gratis:false,preis:"Ca. € 5–8/Kind",
+   reg:false,alter:"Ab 3 J.",
+   loc:"Diverse Kinos Wien",locS:"Diverse Bezirke",
+   tags:["Kino","Festival","Kinderfilm","International"],
+   desc:"Internationales Kinderfilmfestival mit Filmen für alle Altersgruppen, von Kurzfilmen für die Kleinsten bis zu abendfüllenden Familienfilmen. Diverse Spielorte in ganz Wien.",
+   link:"https://www.kinderfilmfestival.at"}
 ];
 
-var CAT_COLOR={Theater:"#7c3aed",Museum:"#2563a8",Natur:"#1a9e5f",Sport:"#e8411e",Musik:"#db2477",Kreativ:"#c47d0e",Kino:"#0891b2",Spielen:"#65a30d",Saisonal:"#dc2626"};
-var CAT_EMOJI={Theater:"🎭",Museum:"🏛",Natur:"🌿",Sport:"⚽",Musik:"🎵",Kreativ:"🎨",Kino:"🎬",Spielen:"🧸",Saisonal:"🎪"};
-var state={cat:"all",extra:null,q:"",view:"grid"};
+// ════════════════════════════════════════
+//  DATA: REGULAR EVENTS (Entdecken)
+// ════════════════════════════════════════
+var REG=[
+{id:1,cat:"Museum",title:"ZOOM Ozean",sub:"Sinneserfahrung und freies Spiel, 75 Min.",loc:"MuseumsQuartier, 1070",locS:"7. Bez.",indoor:true,gratis:false,preis:"€ 6,50",reg:true,alter:"8 Mon.–6 J.",freq:"Di–So, Slots",tags:["Wasser","Spielen","Kleinkind"],desc:"Kleinkind-Spielbereich im ZOOM. Wasserelemente, Sandlandschaft, Kletterstrukturen, 75 Min. Online-Buchung 10 Tage vorher.",link:"https://www.kindermuseum.at"},
+{id:2,cat:"Museum",title:"ZOOM Atelier",sub:"Bildnerisches Atelier mit Künstlerinnen",loc:"MuseumsQuartier, 1070",locS:"7. Bez.",indoor:true,gratis:false,preis:"€ 8,50",reg:true,alter:"3–12 J.",freq:"Di–So",tags:["Malen","Ton","Kreativ"],desc:"Angeleitetes Kreativ-Atelier. Filzen, Ton, Farbe, Papier – wechselnde Themen. Professionelle Anleitung.",link:"https://www.kindermuseum.at"},
+{id:3,cat:"Museum",title:"TM: mini + miniXplore",sub:"Kleinkindbereich + 30 MINT-Stationen",loc:"Mariahilfer Str. 212, 1140",locS:"14. Bez.",indoor:true,gratis:false,preis:"€ 2,50 (Eintritt gratis)",reg:true,alter:"1,5–8 J.",freq:"Täglich",tags:["Experimentieren","Rutsche","MINT"],desc:"mini: Dreiräder, Feuerwehrauto. miniXplore: 30 interaktive Stationen, Rutsche, Windkanal.",link:"https://www.technischesmuseum.at"},
+{id:4,cat:"Museum",title:"NHM: Eiszeitkinder + Führungen",sub:"Gratis-Ausstellung + Kids-Führungen",loc:"Burgring 7, 1010",locS:"1. Bez.",indoor:true,gratis:true,preis:"Eintritt gratis (Führung € 6)",reg:false,alter:"Ab 3 J.",freq:"Dauerhaft",tags:["Steinzeit","Fossilien","Natur"],desc:"Interaktive Steinzeit-Höhle dauerhaft gratis. Kids-Führungen mit Fossilien anfassen an ausgewählten Wochenenden.",link:"https://www.nhm-wien.ac.at"},
+{id:5,cat:"Museum",title:"KHM: Offenes Atelier",sub:"Monatliches Kreativangebot",loc:"Maria-Theresien-Platz, 1010",locS:"1. Bez.",indoor:true,gratis:false,preis:"€ 4,50 (Eintritt gratis)",reg:true,alter:"3–10 J.",freq:"Letzter So/Monat",tags:["Kunst","Malen","KHM"],desc:"Von Meisterwerken inspiriertes Kreativatelier, Material gestellt.",link:"https://www.khm.at"},
+{id:6,cat:"Museum",title:"Haus der Musik",sub:"4 Stockwerke Klangerlebnis",loc:"Seilerstätte 30, 1010",locS:"1. Bez.",indoor:true,gratis:false,preis:"Kinder € 7",reg:false,alter:"Ab 4 J.",freq:"Täglich 10–22",tags:["Musik","Dirigieren","Interaktiv"],desc:"Klangtreppe, Philharmoniker dirigieren, Walzer-Würfelspiel. Stundenlang ohne Langeweile.",link:"https://www.hdm.at"},
+{id:7,cat:"Museum",title:"Haus des Meeres",sub:"10.000 Tiere auf 11 Stockwerken",loc:"Fritz-Grünbaum-Platz 1, 1060",locS:"6. Bez.",indoor:true,gratis:false,preis:"Kinder 3–5 J.: € 6,50",reg:false,alter:"Alle",freq:"Täglich 9–20",tags:["Haie","Tropenhaus","Affen"],desc:"Haibecken, freilaufende Affen, Koi-Streichelbecken, Regenwald.",link:"https://www.haus-des-meeres.at"},
+{id:8,cat:"Museum",title:"Kindermuseum Schönbrunn",sub:"Barockgewänder, kaiserliches Leben",loc:"Schloss Schönbrunn, 1130",locS:"13. Bez.",indoor:true,gratis:false,preis:"€ 12/Person",reg:true,alter:"3–12 J.",freq:"Täglich",tags:["Schönbrunn","Verkleiden","Geschichte"],desc:"Kaiserliche Kostüme anlegen, Fächersprache, Festbankett. Geschichte spielerisch erleben.",link:"https://www.kindermuseumschoenbrunn.at"},
+{id:9,cat:"Museum",title:"MAK: MAK4Family",sub:"Kostenlose Kreativwerkstatt",loc:"Stubenring 5, 1010",locS:"1. Bez.",indoor:true,gratis:true,preis:"GRATIS",reg:false,alter:"Ab 4 J.",freq:"2. + 4. Sa/Mo.",tags:["Kunst","Handwerk","Gratis"],desc:"Samstag-Workshops im MAK. Saisonal wechselnde Themen, Material inklusive. Kein Eintritt.",link:"https://www.mak.at/kinder"},
+{id:10,cat:"Museum",title:"Planetarium: Kindershows",sub:"Kuppelkino: Elsa und der Große Bär",loc:"Oswald-Thomas-Platz 1, 1020",locS:"2. Bez.",indoor:true,gratis:false,preis:"€ 6–13",reg:true,alter:"4–7 J.",freq:"Lt. Spielplan",tags:["Sterne","Weltraum","Kino"],desc:"Kuppelprojektionen des Sternenhimmels, 30–45 Min., kindgerechte Rahmengeschichten.",link:"https://www.vhs.at/planetarium"},
+{id:11,cat:"Theater",title:"Dschungel Wien",sub:"Theaterhaus für junges Publikum im MQ",loc:"MuseumsQuartier, 1070",locS:"7. Bez.",indoor:true,gratis:false,preis:"Kinder € 9",reg:true,alter:"Ab 2–4 J.",freq:"Täglich, Sept.–Juni",tags:["Theater","Tanz","Figuren"],desc:"~50 Produktionen/Saison. Familienvorstellungen Sa/So nachmittags. Altersangabe je Stück.",link:"https://www.dschungelwien.at"},
+{id:12,cat:"Theater",title:"Figurentheater Lilarum",sub:"Puppentheater – perfekt für 4–6 J.",loc:"Göllnergasse 8, 1030",locS:"3. Bez.",indoor:true,gratis:false,preis:"Ca. € 10–12",reg:true,alter:"Ab 3 J.",freq:"370+ Vorst./Jahr",tags:["Puppentheater","Märchen","Figuren"],desc:"Finn Flosse, Koko mit dem Zauberschirm. Liebevolle Figurentheater-Stücke für die Kleinen.",link:"https://www.lilarum.at"},
+{id:13,cat:"Theater",title:"Marionettentheater Schönbrunn",sub:"Klassiker als Marionettenspiel",loc:"Schloss Schönbrunn, 1130",locS:"13. Bez.",indoor:true,gratis:false,preis:"Ab € 15",reg:true,alter:"Ab 2 J.",freq:"400 Vorst./Jahr",tags:["Marionetten","Mozart","Märchen"],desc:"Kinderzauberflöte, Hänsel und Gretel, Aladdin. International ausgezeichnet.",link:"https://www.marionettentheater.at"},
+{id:14,cat:"Theater",title:"Volkstheater: Familienstücke",sub:"Pettersson und Findus, Pippi u.a.",loc:"Arthur-Schnitzler-Platz 1, 1070",locS:"7. Bez.",indoor:true,gratis:false,preis:"Kinder € 8",reg:true,alter:"Ab 5 J.",freq:"Saisonal",tags:["Theater","Familienstück"],desc:"Professionelle Inszenierungen bekannter Kinderbuchstoffe in wunderschönem Theater.",link:"https://www.volkstheater.at"},
+{id:15,cat:"Musik",title:"Agathes Wunderkoffer",sub:"Musikverein: Kammerkonzerte für Kinder",loc:"Musikvereinsplatz 1, 1010",locS:"1. Bez.",indoor:true,gratis:false,preis:"Ca. € 14",reg:true,alter:"Ab 3 J.",freq:"4× pro Saison",tags:["Konzert","Kammermusik","Klassik"],desc:"Professionelle Kammermusik im Metallenen Saal. Wechselnde Themen.",link:"https://www.musikverein.at/kinder"},
+{id:16,cat:"Musik",title:"Grossundklein Mitmachkonzerte",sub:"Live-Konzerte an ungewöhnlichen Orten",loc:"Diverse Spielorte",locS:"Diverse Bez.",indoor:true,gratis:false,preis:"Ca. € 11",reg:true,alter:"Ab 2 J.",freq:"Mehrmals/Monat",tags:["Mitmachkonzert","Interaktiv"],desc:"Kinder mitsingen, mitklatschen, auf die Bühne. Stets wechselndes Programm.",link:"https://www.grossundklein.info"},
+{id:17,cat:"Musik",title:"Musikschulen Wien",sub:"Wöchentliche musikalische Frühförderung",loc:"Alle Bezirke",locS:"Alle Bez.",indoor:true,gratis:false,preis:"€ 100/Semester",reg:true,alter:"4–6 J.",freq:"Wöchentlich",tags:["Musikerziehung","Singen","Rhythmus"],desc:"Ganzheitliche Frühförderung. Singen, Bewegen, Trommeln. Günstigster Semesterbeitrag.",link:"https://musikschulen.wien.gv.at"},
+{id:18,cat:"Natur",title:"Tiergarten Schönbrunn",sub:"Kinder unter 6 Jahren GRATIS",loc:"Schönbrunner Tiergarten, 1130",locS:"13. Bez.",indoor:false,gratis:true,preis:"Kinder unter 6 J.: GRATIS",reg:false,alter:"Alle",freq:"365 Tage",tags:["Zoo","Tiere","Elefanten"],desc:"Ältester Zoo der Welt. 600 Tierarten. Kinder unter 6 zahlen keinen Eintritt.",link:"https://www.zoovienna.at"},
+{id:19,cat:"Natur",title:"Landgut Wien Cobenzl",sub:"Erlebnisbauernhof mit 100 Tieren",loc:"Am Cobenzl 96a, 1190",locS:"19. Bez.",indoor:false,gratis:false,preis:"Kinder € 8,90",reg:false,alter:"Ab 2 J.",freq:"Täglich ab März",tags:["Bauernhof","Tiere","Brotbacken"],desc:"Pferde, Schafe, Ziegen, Brotbacken, Bauerngolf. Traumhafter Ausblick.",link:"https://www.landgutcobenzl.at"},
+{id:20,cat:"Natur",title:"Lainzer Tiergarten",sub:"Gratis, Wildtiere, 6 Waldspielplätze",loc:"Lainzer Tor, 1130",locS:"13. Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Ganzjährig",tags:["Wildschweine","Waldspielplatz","Natur"],desc:"2.450 Hektar Urwald. Wildschweine frei beobachten, 6 Waldspielplätze, Naturlehrpfad.",link:"https://www.lainzer-tiergarten.at"},
+{id:21,cat:"Natur",title:"Donauinsel Wasserspielplatz",sub:"5.000 m² – Sommer-Highlight gratis",loc:"Donauinsel, 1220",locS:"22. Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Mai–Sept.",tags:["Wasser","Sommer","Floß"],desc:"Spiel-Bach, Floß, Hängebrücke. Kleinkindbereich mit sehr geringer Wassertiefe.",link:"https://www.wien.gv.at"},
+{id:22,cat:"Natur",title:"Waldschule Wien",sub:"Geführte Walderlebnisse mit Förster gratis",loc:"Ottakring / Lobau",locS:"16./22. Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:true,alter:"Ab 4 J.",freq:"Ganzjährig",tags:["Wald","Förster","Lernen"],desc:"Revierförster führen Familien. Tierspuren lesen, Pilze bestimmen. Kostenlos.",link:"https://www.wien.gv.at/umwelt/wald"},
+{id:23,cat:"Natur",title:"Motorikpark Donaustadt",sub:"23 kostenlose Bewegungsstationen",loc:"Süßenbrunner Str. 101, 1220",locS:"22. Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Ganzjährig",tags:["Motorik","Klettern","Trampoline"],desc:"Balancierpfad, Trampoline, Kletterparadies. Für aktive Kinder ideal.",link:"https://www.wien.gv.at"},
+{id:24,cat:"Natur",title:"Wiener Prater + Liliputbahn",sub:"Vergnügungspark + Dampfbahn",loc:"Prater, 1020",locS:"2. Bez.",indoor:false,gratis:false,preis:"Gelände gratis, Bahn ca. € 5",reg:false,alter:"Ab 0 J.",freq:"März–Okt.",tags:["Karussell","Liliputbahn","Riesenrad"],desc:"Wurstelprater, Liliputbahn durch den Grünen Prater, Riesenrad.",link:"https://www.praterwien.com"},
+{id:25,cat:"Sport",title:"Kinderturnen ASKÖ/SPORTUNION",sub:"Polysportives Turnen wöchentlich",loc:"Diverse Turnsäle",locS:"Alle Bez.",indoor:true,gratis:false,preis:"€ 60–150/Semester",reg:true,alter:"3–6 J.",freq:"Wöchentlich",tags:["Turnen","Bewegung","Koordination"],desc:"Wöchentliches Kinderturnen in 50+ Vereinen. Bewegungslandschaften, Geräteturnen.",link:"https://askoe-fit.at"},
+{id:26,cat:"Sport",title:"Kindertanz Kreadance",sub:"Ballet, HipHop, 20 Standorte",loc:"20+ Standorte Wien",locS:"Alle Bez.",indoor:true,gratis:false,preis:"Ca. € 200/Semester",reg:true,alter:"Ab 3 J.",freq:"Wöchentlich",tags:["Tanzen","Ballet","HipHop"],desc:"Größte Kinder-Tanzschule Wiens. Schnupperstunden möglich.",link:"https://kreadance.com"},
+{id:27,cat:"Sport",title:"Kletterzwerge Naturfreunde",sub:"Schnupperklettern ab 4 Jahren",loc:"Erzherzog-Karl-Str. 108, 1220",locS:"22. Bez.",indoor:true,gratis:false,preis:"€ 16–22 Schnupperstunde",reg:true,alter:"Ab 4 J.",freq:"Wochenende",tags:["Klettern","Kletterhalle","Sport"],desc:"Spielerisch Klettern lernen. Kleine Wände, keine Vorkenntnisse nötig.",link:"https://www.kletterhallewien.at"},
+{id:28,cat:"Kreativ",title:"Kleine Gestalten: KUNSTWERK",sub:"Atelierworkshops Sa/So",loc:"6./18. Bezirk",locS:"6./18. Bez.",indoor:true,gratis:false,preis:"Semesterkurs",reg:true,alter:"Ab 2,5 J.",freq:"Wöchentlich",tags:["Malen","Ton","Collage"],desc:"Freies Gestalten mit Farbe, Ton, Papier. Künstlerisch angeleitete Atmosphäre.",link:"https://kleinegestalten.at"},
+{id:29,cat:"Kreativ",title:"VHS Wien: Kreativkurse",sub:"Diverse Kurse in allen 23 Bezirken",loc:"Alle VHS-Standorte",locS:"Alle Bez.",indoor:true,gratis:false,preis:"€ 16–65/Kurs",reg:true,alter:"3–6 J.",freq:"Semesterweise",tags:["Basteln","Malen","Musik"],desc:"Malen, Basteln, Tanz, Musik. Günstige Tarife, 23 Bezirke.",link:"https://www.vhs.at/kinder"},
+{id:30,cat:"Kreativ",title:"Zirkusworkshops KAOS",sub:"Akrobatik, Jonglieren, Clownerie",loc:"Wien, diverse",locS:"Diverse Bez.",indoor:true,gratis:false,preis:"Kursgebühr",reg:true,alter:"Ab 4 J.",freq:"Semesterkurse",tags:["Zirkus","Akrobatik","Jonglieren"],desc:"Echte Zirkusdisziplinen. Kleine Aufführungen für Eltern am Ende des Kurses.",link:"https://www.kaos.at"},
+{id:31,cat:"Kino",title:"WIENXTRA Cinemagic",sub:"Bilderbuchkino mit Live-Erzählerin",loc:"Diverse Spielorte",locS:"Diverse Bez.",indoor:true,gratis:false,preis:"€ 4–6",reg:false,alter:"Ab 3 J.",freq:"Wochenende + Ferien",tags:["Kino","Bilderbuch","Erzähler"],desc:"Leinwand plus Live-Erzählerin und Musik statt Ton. Anders als Zuhause vorlesen.",link:"https://wienxtra.at/cinemagic"},
+{id:32,cat:"Kino",title:"Admiralkino: Kino für die Kleinsten",sub:"Kuratierte Filme ab 3 Jahren",loc:"Burggasse 71, 1070",locS:"7. Bez.",indoor:true,gratis:false,preis:"Variabel",reg:false,alter:"Ab 3 J.",freq:"Regelmäßig",tags:["Kino","Kleinkind","Arthouse"],desc:"Spezielles Kinderkino-Programm im Admiralkino für die Kleinsten. Handverlesene Filme.",link:"https://www.admiralkino.at"},
+{id:33,cat:"Spielen",title:"Büchereien Wien: Bilderbuchkino",sub:"Gratis Vorlese-Events in 39 Filialen",loc:"39 Zweigstellen Wien",locS:"Alle Bez.",indoor:true,gratis:true,preis:"GRATIS",reg:false,alter:"Ab 4 J.",freq:"Wöchentlich",tags:["Bücherei","Vorlesen","Gratis"],desc:"Vorlestunden, Kamishibai, mehrsprachig. Einfach auftauchen. Kinderkarte gratis.",link:"https://buechereien.wien.gv.at"},
+{id:34,cat:"Spielen",title:"Family Fun Indoor-Spielplatz",sub:"8.000 m² Wiens größter",loc:"Breitenleerstr. 77, 1220",locS:"22. Bez.",indoor:true,gratis:false,preis:"Mo–Fr € 14,90 / Sa–So € 18,90",reg:false,alter:"0–12 J.",freq:"Täglich",tags:["Indoor","Spielplatz","Rutschen"],desc:"Klettergerüste, Riesen-Rutschen, Bällebad, Trampoline, Kleinkindecke.",link:"https://familyfun.at"},
+{id:35,cat:"Spielen",title:"Playworld Indoor-Spielplatz",sub:"5.500 m², 3 Etagen",loc:"Himberger Str. 2, 1100",locS:"10. Bez.",indoor:true,gratis:false,preis:"Di–Do € 14 / Fr–So € 17",reg:false,alter:"0–16 J.",freq:"Täglich (Mo Ruhetag)",tags:["Indoor","Spielplatz","3 Etagen"],desc:"Dreigeschossige Spielwelt mit Café für Eltern.",link:"https://playworld-wien.at"},
+{id:36,cat:"Spielen",title:"Gratis-Spielräume der Stadt",sub:"Betreute kostenlose Indoor-Spielräume",loc:"Diverse Bezirke",locS:"Diverse Bez.",indoor:true,gratis:true,preis:"GRATIS",reg:false,alter:"0–6 J.",freq:"Regelm. Öffnungszeiten",tags:["Spielraum","Gratis","Betreut"],desc:"Pusteblume (1070), Indoor Jojo (1080) u.a. Mit Freizeitpädagoginnen. Kostenlos.",link:"https://www.wien.gv.at/freizeit"},
+{id:37,cat:"Spielen",title:"Kinderfreunde: Parkbetreuung",sub:"Kostenlose betreute Spielnachmittage",loc:"Alle 23 Bezirke",locS:"Alle Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Sommer täglich",tags:["Park","Basteln","Gratis"],desc:"Parkbetreuung in hunderten Parks: Basteln, Schminken, Großspiele. Spielbus zu Festen.",link:"https://wien.kinderfreunde.at"},
+{id:38,cat:"Saisonal",title:"Ostermarkt Wien (alle)",sub:"Diverse Ostermärkte mit Kinderprogramm",loc:"Freyung, Schönbrunn u.a.",locS:"1./13. Bez.",indoor:false,gratis:true,preis:"Eintritt meist gratis",reg:false,alter:"Alle",freq:"März–April",tags:["Ostern","Basteln","Märkte"],desc:"Mehrere Wiener Ostermärkte mit Kinderprogramm, Basteln, Kasperl, Eier bemalen.",link:"https://www.wien.info/ostermarkt"},
+{id:39,cat:"Saisonal",title:"Donauinselfest",sub:"Europas größtes Freiluftfestival",loc:"Donauinsel",locS:"2./22. Bez.",indoor:false,gratis:true,preis:"GRATIS",reg:false,alter:"Alle",freq:"Juni, 3 Tage",tags:["Festival","Musik","Sommer"],desc:"3 Tage Mega-Festival. Große Kinderzone. 3 Millionen Besucher. Alles gratis.",link:"https://www.donauinselfest.at"},
+{id:40,cat:"Saisonal",title:"Christkindlmarkt Rathaus",sub:"Bastelhuette + Karussell im Advent",loc:"Rathausplatz, 1010",locS:"1. Bez.",indoor:false,gratis:false,preis:"Eintritt gratis, Basteln € 5–10",reg:false,alter:"Alle",freq:"Nov.–Dez.",tags:["Weihnachten","Advent","Basteln"],desc:"Bastelhuette für Kinder, Kinderkarussell, Traumstadt-Beleuchtung.",link:"https://www.christkindlmarkt.at"},
+{id:41,cat:"Saisonal",title:"Weihnachtsmarkt Schönbrunn",sub:"Glice-Eisbahn GRATIS",loc:"Schloss Schönbrunn, 1130",locS:"13. Bez.",indoor:false,gratis:true,preis:"Eisbahn GRATIS",reg:false,alter:"Alle",freq:"Nov.–Jan.",tags:["Weihnachten","Eisbahn","Schönbrunn"],desc:"Kunsteis-Glice-Bahn kostenlos. Märchenstunde, Weihnachtsbäckerei.",link:"https://www.weihnachtsmarkt-schoenbrunn.at"},
+{id:42,cat:"Saisonal",title:"Wiener Eistraum (Kinderfläche)",sub:"Kindereisfläche gratis, Pinguine",loc:"Rathausplatz, 1010",locS:"1. Bez.",indoor:false,gratis:true,preis:"Kinderfläche GRATIS",reg:false,alter:"Alle",freq:"Jän.–März",tags:["Eislaufen","Winter","Gratis"],desc:"Kindereisfläche mit Pinguinen und Eisbajonetten gratis. Hauptfläche: Kinder ca. € 7,40.",link:"https://www.wienereistraum.com"},
+{id:43,cat:"Natur",title:"Schmetterlinghaus Burggarten",sub:"Tropisches Schmetterlingshaus",loc:"Josefsplatz 1, 1010",locS:"1. Bez.",indoor:true,gratis:false,preis:"Kinder ca. € 4",reg:false,alter:"Alle",freq:"Ganzjährig",tags:["Schmetterlinge","Tropisch","Natur"],desc:"400 freifliegende tropische Schmetterlinge im historischen Palmenhaus.",link:"https://www.schmetterlinghaus.at"},
+{id:44,cat:"Museum",title:"Haus der Musik: Mitmachkonzerte",sub:"Marko Simsa und andere Live-Konzerte",loc:"Seilerstätte 30, 1010",locS:"1. Bez.",indoor:true,gratis:false,preis:"Ca. € 11",reg:true,alter:"Ab 2 J.",freq:"Saisonal lt. Plan",tags:["Konzert","Mitmachen","Singen"],desc:"Mitmachkonzerte für die Kleinsten im Haus der Musik. Immer ausverkauft – früh buchen!",link:"https://www.hdm.at"},
+{id:45,cat:"Theater",title:"WUK KinderKultur",sub:"Improtheater, Zirkus, Tanz",loc:"Währinger Str. 59, 1090",locS:"9. Bez.",indoor:true,gratis:false,preis:"Variabel",reg:false,alter:"Ab 3 J.",freq:"Regelmäßig",tags:["Improtheater","Zirkus","Tanz"],desc:"Alternatives Kulturzentrum. Neue Zirkusformen, Improvisationstheater, Tanzperformances.",link:"https://www.wuk.at/kinder"},
+{id:46,cat:"Kino",title:"Votiv Kino: Kinderkino",sub:"Kuratierte Filme am Wochenende",loc:"Währinger Str. 12, 1090",locS:"9. Bez.",indoor:true,gratis:false,preis:"Variabel",reg:false,alter:"Ab 4 J.",freq:"Wochenende",tags:["Kino","Film","Arthouse"],desc:"Handverlesene Kinderfilme am Wochenende. Gemütliches Filmhaus-Ambiente.",link:"https://www.votivkino.at"}
+];
 
-function filtered(){
-  return EV.filter(function(e){
-    if(state.cat!=="all"&&e.cat!==state.cat)return false;
-    if(state.extra==="indoor"&&e.indoor!==true)return false;
-    if(state.extra==="outdoor"&&e.indoor!==false)return false;
-    if(state.extra==="gratis"&&e.gratis!==true)return false;
-    if(state.extra==="anmeldung"&&e.reg!==true)return false;
-    if(state.q){var q=state.q.toLowerCase();var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||e.cat.toLowerCase().indexOf(q)>=0;if(!ok){for(var i=0;i<e.tags.length;i++){if(e.tags[i].toLowerCase().indexOf(q)>=0){ok=true;break;}}}if(!ok)return false;}
+// ════════════════════════════════════════
+//  HELPERS + STATE
+// ════════════════════════════════════════
+var MDE=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+var TODAY=new Date("2026-03-15");
+var curMonth=3; // April (0-based)
+var mFilter=null;
+var disState={cat:"all",extra:null,q:""};
+var curTab="week";
+
+function pd(s){return new Date(s+"T00:00:00")}
+function fmtDate(d){return d.getDate()+". "+MDE[d.getMonth()].substring(0,3)}
+function isNowRunning(e){
+  var f=pd(e.dateFrom),t=pd(e.dateTo);
+  return TODAY>=f&&TODAY<=t;
+}
+function getWeekNum(d){
+  var dom=d.getDate();
+  return Math.min(Math.ceil(dom/7),5);
+}
+function weekLabel(wn,m){
+  var ends=[[7],[14],[21],[28],[31]];
+  var s=(wn-1)*7+1;
+  var en=ends[wn-1]||[31];
+  var lastDay=new Date(2026,m+1,0).getDate();
+  return s+". – "+Math.min(en[0],lastDay)+". "+MDE[m];
+}
+
+// ── BADGES ──
+function badgesHtml(e,isSpecial){
+  var ib=e.indoor?'<span class="b b-in">🏠</span>':'<span class="b b-out">🌳</span>';
+  var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 '+e.preis+'</span>';
+  var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
+  var hot=isSpecial?'<span class="b b-hot">🔥 Special</span>':'';
+  var now=isSpecial&&isNowRunning(e)?'<span class="b b-now">● Läuft</span>':'';
+  var tags=e.tags.slice(0,2).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
+  return hot+now+ib+pb+rb+tags;
+}
+
+// ════════════════════════════════════════
+//  TAB SWITCH
+// ════════════════════════════════════════
+function switchTab(t){
+  curTab=t;
+  ["week","dis"].forEach(function(id){
+    document.getElementById("v-"+id).classList.toggle("on",id===t);
+    document.getElementById("t-"+id).classList.toggle("on",id===t);
+  });
+}
+
+// ════════════════════════════════════════
+//  WOCHENPLANER
+// ════════════════════════════════════════
+function toggleMF(btn){
+  var f=btn.getAttribute("data-mf");
+  var was=btn.classList.contains("on");
+  document.querySelectorAll(".mfb").forEach(function(b){b.classList.remove("on")});
+  mFilter=was?null:f;
+  if(!was)btn.classList.add("on");
+  renderTimeline();
+}
+
+function jumpMonth(m){curMonth=m;renderTimeline();}
+
+function getMonthEvents(){
+  var mStart=new Date(2026,curMonth,1);
+  var mEnd=new Date(2026,curMonth+1,0);
+  var evs=SP.filter(function(e){
+    var f=pd(e.dateFrom),t=pd(e.dateTo);
+    return f<=mEnd&&t>=mStart;
+  });
+  if(mFilter==="gratis")evs=evs.filter(function(e){return e.gratis});
+  if(mFilter==="indoor")evs=evs.filter(function(e){return e.indoor});
+  if(mFilter==="outdoor")evs=evs.filter(function(e){return !e.indoor});
+  if(mFilter==="anmeldung")evs=evs.filter(function(e){return e.reg});
+  return evs;
+}
+
+function tcCard(e){
+  var f=pd(e.dateFrom),t=pd(e.dateTo);
+  var single=e.dateFrom===e.dateTo;
+  var mStart=new Date(2026,curMonth,1);
+  var dispDate=f<mStart?mStart:f;
+  var day=String(dispDate.getDate()).padStart(2,"0");
+  var mon=MDE[dispDate.getMonth()].substring(0,3);
+  var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
+  var badges=badgesHtml(e,true);
+
+  return '<div class="tc" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
+    '<div class="tc-stripe"></div>'+
+    '<div class="tc-body">'+
+      '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div></div>'+
+      '<div class="tc-info">'+
+        '<div class="tc-title">'+e.title+'</div>'+
+        '<div class="tc-sub">'+e.sub+'</div>'+
+        rangeHtml+
+        '<div class="tc-badges">'+badges+'</div>'+
+      '</div>'+
+      '<div class="tc-arr">▾</div>'+
+    '</div>'+
+    '<div class="tc-det">'+
+      '<div class="det-desc">'+e.desc+'</div>'+
+      '<div class="det-grid">'+
+        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?fmtDate(f)+' 2026':fmtDate(f)+" – "+fmtDate(t)+" 2026")+'</div></div>'+
+        '<div><div class="det-k">Uhrzeit</div><div class="det-v">'+e.time+'</div></div>'+
+        '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
+        '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja – bitte vorbuchen":"❌ Nicht nötig")+'</div></div>'+
+        '<div><div class="det-k">Ort</div><div class="det-v">'+e.loc+'</div></div>'+
+        '<div><div class="det-k">Alter</div><div class="det-v">'+e.alter+'</div></div>'+
+      '</div>'+
+      '<a href="'+e.link+'" target="_blank" class="det-link" onclick="event.stopPropagation()">🔗 Website öffnen</a>'+
+    '</div>'+
+  '</div>';
+}
+
+function renderTimeline(){
+  // update month pills
+  var pillsHtml="";
+  for(var i=2;i<=11;i++){
+    pillsHtml+='<button class="mpill'+(i===curMonth?" on":"")+'" onclick="jumpMonth('+i+')">'+MDE[i]+'</button>';
+  }
+  document.getElementById("month-pills").innerHTML=pillsHtml;
+
+  var evs=getMonthEvents();
+  document.getElementById("tb-week").textContent=SP.length;
+  var content=document.getElementById("tl-content");
+
+  if(evs.length===0){
+    content.innerHTML='<div class="tl-empty"><div style="font-size:2rem;margin-bottom:8px">📭</div><p>Keine Events in '+MDE[curMonth]+' mit diesem Filter.</p></div>';
+    return;
+  }
+
+  // Group by week
+  var weeks={};
+  var mStart=new Date(2026,curMonth,1);
+  evs.forEach(function(e){
+    var f=pd(e.dateFrom);
+    var eff=f<mStart?mStart:f;
+    var wn=getWeekNum(eff);
+    if(!weeks[wn])weeks[wn]=[];
+    weeks[wn].push(e);
+  });
+
+  var nowWeek=getWeekNum(TODAY);
+  var nowMonth=TODAY.getMonth();
+  var html="";
+  Object.keys(weeks).sort(function(a,b){return a-b}).forEach(function(wn){
+    var evList=weeks[wn];
+    var isCurrent=curMonth===nowMonth&&parseInt(wn)===nowWeek;
+    var chipClass=isCurrent?"wk-chip current":"wk-chip";
+    var chipLabel=isCurrent?"Diese Woche":"Woche";
+    html+='<div class="wk-section">'+
+      '<div class="wk-label">'+
+        '<span class="'+chipClass+'">'+chipLabel+'</span>'+
+        '<span class="wk-title">'+weekLabel(parseInt(wn),curMonth)+'</span>'+
+        '<span class="wk-count">'+evList.length+' Event'+(evList.length>1?"s":"")+'</span>'+
+      '</div>'+
+      '<div class="ev-list">'+evList.map(tcCard).join('')+'</div>'+
+    '</div>';
+  });
+  content.innerHTML=html;
+
+  // attach click handlers
+  content.querySelectorAll(".tc").forEach(function(el){
+    el.addEventListener("click",function(){
+      var was=el.classList.contains("open");
+      content.querySelectorAll(".tc.open").forEach(function(o){o.classList.remove("open")});
+      if(!was)el.classList.add("open");
+    });
+  });
+}
+
+// ════════════════════════════════════════
+//  ENTDECKEN
+// ════════════════════════════════════════
+function filteredReg(){
+  return REG.filter(function(e){
+    if(disState.cat!=="all"&&e.cat!==disState.cat)return false;
+    if(disState.extra==="indoor"&&!e.indoor)return false;
+    if(disState.extra==="outdoor"&&e.indoor)return false;
+    if(disState.extra==="gratis"&&!e.gratis)return false;
+    if(disState.extra==="anmeldung"&&!e.reg)return false;
+    if(disState.q){
+      var q=disState.q.toLowerCase();
+      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||e.cat.toLowerCase().indexOf(q)>=0;
+      if(!ok)for(var i=0;i<e.tags.length;i++){if(e.tags[i].toLowerCase().indexOf(q)>=0){ok=true;break;}}
+      if(!ok)return false;
+    }
     return true;
   });
 }
 
-function card(e){
+var CAT_COLOR={Museum:"#1e5fa8",Theater:"#6d28d9",Musik:"#be185d",Natur:"#1a9e5f",Sport:"#d94f1e",Kreativ:"#b87010",Kino:"#0e7490",Spielen:"#4d7c0f",Saisonal:"#b91c1c"};
+var CAT_EMOJI={Museum:"🏛",Theater:"🎭",Musik:"🎵",Natur:"🌿",Sport:"⚽",Kreativ:"🎨",Kino:"🎬",Spielen:"🧸",Saisonal:"🎪"};
+
+function ecCard(e){
   var ib=e.indoor?'<span class="b b-in">🏠 Indoor</span>':'<span class="b b-out">🌳 Outdoor</span>';
   var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 Kostenpflichtig</span>';
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
   var tags=e.tags.slice(0,3).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
-  var freq=e.freq.length>18?e.freq.substring(0,16)+'…':e.freq;
-  return '<div class="ec" data-cat="'+e.cat+'" data-id="'+e.id+'">'+
+  var freq=e.freq.length>18?e.freq.substring(0,16)+"…":e.freq;
+  return '<div class="ec" data-cat="'+e.cat+'" data-id="reg-'+e.id+'">'+
     '<div class="ec-stripe"></div>'+
     '<div class="ec-hdr">'+
       '<div class="ec-top"><div class="ec-title">'+e.title+'</div><div class="ec-arr">▾</div></div>'+
@@ -300,7 +958,7 @@ function card(e){
       '<div class="det-desc">'+e.desc+'</div>'+
       '<div class="det-grid">'+
         '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
-        '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?'✅ Ja, erforderlich':'❌ Nicht nötig')+'</div></div>'+
+        '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja":"❌ Nein")+'</div></div>'+
         '<div><div class="det-k">Adresse</div><div class="det-v">'+e.loc+'</div></div>'+
         '<div><div class="det-k">Häufigkeit</div><div class="det-v">'+e.freq+'</div></div>'+
       '</div>'+
@@ -309,73 +967,65 @@ function card(e){
   '</div>';
 }
 
-function render(){
-  var evs=filtered();
-  document.getElementById('vc').textContent=evs.length;
-  var wrap=document.getElementById('wrap');
-  if(evs.length===0){wrap.innerHTML='<div class="egrid"><div class="empty"><div class="empty-em">🔍</div><p>Keine Events gefunden.</p></div></div>';return;}
-  var lv=state.view==='list'?' lv':'';
-  var showCats=state.cat==='all'&&!state.extra&&!state.q;
-  if(showCats){
+function renderDiscover(){
+  var evs=filteredReg();
+  document.getElementById("vc").textContent=evs.length;
+  var wrap=document.getElementById("dis-wrap");
+  var showCats=disState.cat==="all"&&!disState.extra&&!disState.q;
+  var html="";
+  if(evs.length===0){
+    html='<div class="egrid"><div class="empty"><div class="empty-em">🔍</div><p>Nichts gefunden.</p></div></div>';
+  } else if(showCats){
     var cats=[];evs.forEach(function(e){if(cats.indexOf(e.cat)<0)cats.push(e.cat);});
-    var html='';
     cats.forEach(function(cat){
       var ces=evs.filter(function(e){return e.cat===cat;});
-      var col=CAT_COLOR[cat]||'#888';var em=CAT_EMOJI[cat]||'';
-      html+='<div class="cat-sec">'+
-        '<div class="cat-hdr"><div class="cat-dot" style="background:'+col+'"></div>'+
-        '<h2>'+em+' '+cat+'</h2><span class="cat-cnt">'+ces.length+' Events</span></div>'+
-        '<div class="egrid'+lv+'">'+ces.map(card).join('')+'</div></div>';
+      var col=CAT_COLOR[cat]||"#888";var em=CAT_EMOJI[cat]||"";
+      html+='<div class="cat-sec"><div class="cat-hdr"><div class="cat-dot" style="background:'+col+'"></div>'+
+        '<h2>'+em+" "+cat+'</h2><span class="cat-cnt">'+ces.length+'</span></div>'+
+        '<div class="egrid">'+ces.map(ecCard).join('')+'</div></div>';
     });
-    wrap.innerHTML=html;
   } else {
-    wrap.innerHTML='<div class="egrid'+lv+'">'+evs.map(card).join('')+'</div>';
+    html='<div class="egrid">'+evs.map(ecCard).join('')+'</div>';
   }
-  // attach click handlers
-  wrap.querySelectorAll('.ec').forEach(function(el){
-    el.addEventListener('click',function(){
-      var id=parseInt(el.getAttribute('data-id'));
-      var wasOpen=el.classList.contains('open');
-      wrap.querySelectorAll('.ec.open').forEach(function(o){o.classList.remove('open');});
-      if(!wasOpen)el.classList.add('open');
+  wrap.innerHTML=html;
+  wrap.querySelectorAll(".ec").forEach(function(el){
+    el.addEventListener("click",function(){
+      var was=el.classList.contains("open");
+      wrap.querySelectorAll(".ec.open").forEach(function(o){o.classList.remove("open")});
+      if(!was)el.classList.add("open");
     });
   });
 }
 
-function setView(v){
-  state.view=v;
-  document.getElementById('vg').classList.toggle('on',v==='grid');
-  document.getElementById('vl').classList.toggle('on',v==='list');
-  render();
-}
-
-// Cat filter buttons
-document.querySelectorAll('.fb[data-f]').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.fb[data-f]').forEach(function(b){b.classList.remove('on');});
-    btn.classList.add('on');
-    state.cat=btn.getAttribute('data-f');
-    render();
+// Discover filter buttons
+document.querySelectorAll(".fb[data-f]").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    document.querySelectorAll(".fb[data-f]").forEach(function(b){b.classList.remove("on")});
+    btn.classList.add("on");disState.cat=btn.getAttribute("data-f");renderDiscover();
   });
 });
-
-// Extra filter buttons
-document.querySelectorAll('.fb[data-x]').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var x=btn.getAttribute('data-x');
-    var wasOn=btn.classList.contains('on');
-    document.querySelectorAll('.fb[data-x]').forEach(function(b){b.classList.remove('on');});
-    if(!wasOn){btn.classList.add('on');state.extra=x;}
-    else{state.extra=null;}
-    render();
+document.querySelectorAll(".fb[data-x]").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    var x=btn.getAttribute("data-x");var was=btn.classList.contains("on");
+    document.querySelectorAll(".fb[data-x]").forEach(function(b){b.classList.remove("on")});
+    disState.extra=was?null:x;if(!was)btn.classList.add("on");renderDiscover();
   });
 });
+document.getElementById("sq").addEventListener("input",function(){disState.q=this.value;renderDiscover();});
 
-// Search
-document.getElementById('sq').addEventListener('input',function(){state.q=this.value;render();});
+// Update stats
+document.getElementById("sn-total").textContent=SP.length+REG.length;
+document.getElementById("sn-sp").textContent=SP.length;
+document.getElementById("tb-dis").textContent=REG.length;
 
-// Initial render
-render();
+// Hero week label
+var wd=["So","Mo","Di","Mi","Do","Fr","Sa"];
+var we=new Date("2026-03-15"); we.setDate(we.getDate()+(7-we.getDay())%7+5);
+document.getElementById("hero-week").textContent="Woche "+we.getDate()+". – "+(we.getDate()+1)+". März 2026";
+
+// INIT
+renderTimeline();
+renderDiscover();
 </script>
 </body>
 </html>
