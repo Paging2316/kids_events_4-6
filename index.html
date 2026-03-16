@@ -104,6 +104,8 @@ h1 em{color:var(--accent);font-style:normal}
 }
 .mpill:hover{border-color:var(--ink);color:var(--ink)}
 .mpill.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.mpill.past{opacity:.4;font-style:italic}
+.mpill.cur:not(.on){border-color:var(--accent);color:var(--accent)}
 .month-filter-btns{display:flex;gap:6px}
 .mfb{
   padding:5px 12px;border-radius:20px;
@@ -140,6 +142,8 @@ h1 em{color:var(--accent);font-style:normal}
   display:grid;grid-template-columns:auto 1fr;
 }
 .tc:hover{box-shadow:0 4px 18px rgba(23,19,15,.1);transform:translateY(-1px)}
+.tc.past-ev{opacity:.55}
+.tc.past-ev:hover{opacity:.8}
 .tc.open{border-color:var(--ink);box-shadow:0 4px 18px rgba(23,19,15,.1)}
 .tc-stripe{
   width:4px;
@@ -212,7 +216,8 @@ h1 em{color:var(--accent);font-style:normal}
 .b-reg{background:#fee2e2;color:#991b1b}
 .b-tag{background:#f3f4f6;color:#374151}
 .b-hot{background:#fff1f2;color:#9f1239;border:1px solid #fecdd3}
-.b-now{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.b-now{background:#f0fdf4;color:#166634;border:1px solid #bbf7d0}
+.b-past{background:#f5f5f5;color:#9ca3af;border:1px solid #e5e7eb}
 
 /* EMPTY */
 .tl-empty{text-align:center;padding:40px;color:var(--muted)}
@@ -597,17 +602,6 @@ var SP=[
    desc:"Interkulturelles Straßenfest mit Musik, Gesang und Tanz aus verschiedenen Ländern. Kulinarik, Kunsthandwerk, kulturelle Vielfalt hautnah. Kinderfreundliche Atmosphäre.",
    link:"https://www.prosi.at"},
 
-  {id:"s14",cat:"Festival",title:"Donauinselfest 2026",
-   sub:"Europas größtes Freiluftfestival – Kinderzone gratis",
-   dateFrom:"2026-06-19",dateTo:"2026-06-21",
-   time:"Ganztags",
-   indoor:false,gratis:true,preis:"GRATIS",
-   reg:false,alter:"Alle",
-   loc:"Donauinsel Wien",locS:"2. + 22. Bezirk",
-   tags:["Festival","Musik","Sommer","Gratis","Kinderzone"],
-   desc:"3 Tage Open-Air-Megafestival mit eigener großer Kinderzone. Live-Musik auf vielen Bühnen, Mitmachaktionen, Riesenspielgeräte, Bewegungsangebote. Über 3 Millionen Besucher:innen jährlich. Eintritt für alle gratis.",
-   link:"https://www.donauinselfest.at"},
-
   // ── HERBST ──
   {id:"s15",cat:"Zirkus",title:"Circus Roncalli – 50-Jahr-Jubiläum",
    sub:"Der legendäre Zirkus ohne Tiere – Weltklasse-Artistik",
@@ -842,6 +836,228 @@ var SP=[
    tags:["Gratis","Flohmarkt","Familie","Mitmachen"],
    desc:"Die Stadt Wien laedt zum jaehrlichen Mistfest: Kinderflohmarkt, Buehnenangebote fuer Klein und Gross, Informationsstaende. Feuerwehrautos und Muellfahrzeuge zum Anschauen. Eintritt frei.",
    link:"https://www.wien.gv.at/umwelt/mistfest"}
+,
+
+  {id:"s36",cat:"Festival",title:"Spielefest Wien",
+   sub:"Oesterreichs groesstes Brettspiel-Event – Kinder mitmachen",
+   dateFrom:"2026-07-11",dateTo:"2026-07-12",
+   time:"10:00 bis 20:00",
+   indoor:true,gratis:false,preis:"Tagesticket ca. 15 Euro, Kinder guenstiger",
+   reg:false,alter:"Alle, Kinder unter 14 mit Erw.",
+   loc:"Austria Center Vienna, 1220 Wien",locS:"22. Bezirk",
+   tags:["Brettspiele","Spielen","Familie","Testen"],
+   desc:"Oesterreichs groesstes Spielefest: 1.500 Spieletische, riesige Spielothek zum kostenlosen Ausleihen, Autoren-Tische, Turniere. Hunderte Spiele testen bevor man kauft. Idealer Ausflug fuer spielbegeisterte Familien.",
+   link:"https://spielefest.wien"},
+
+  {id:"s37",cat:"Festival",title:"Vorhang auf im Park",
+   sub:"WIENXTRA: Theater, Musik und Zirkus gratis in Wiener Parks",
+   dateFrom:"2026-07-04",dateTo:"2026-08-31",
+   time:"Nachmittags, diverse Parks",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Ab 3 J.",
+   loc:"Diverse Parks, alle Bezirke",locS:"Alle Bezirke",
+   tags:["Gratis","Theater","Zirkus","Musik","Park"],
+   desc:"WIENXTRA bringt Theater, Musik und Zirkus in die Parks der Stadt. Professionelle Kuenstlerinnen spielen unter freiem Himmel. Einfach in den naechsten Park und zuschauen. Aktuelle Termine: wienxtra.at",
+   link:"https://wienxtra.at/kinderaktiv"},
+
+  {id:"s38",cat:"Ausstellung",title:"Wiener Sängerknaben im MuTh",
+   sub:"Friday Afternoon Konzerte fuer die ganze Familie",
+   dateFrom:"2026-04-10",dateTo:"2026-06-19",
+   time:"Freitags ca. 15:00",
+   indoor:true,gratis:false,preis:"Ab ca. 15 Euro, Kinder ermaessigt",
+   reg:true,alter:"Alle",
+   loc:"MuTh Konzertsaal, Am Augartenspitz 1, 1020",locS:"2. Bezirk",
+   tags:["Konzert","Saengerknaben","Klassik","MuTh"],
+   desc:"Die Wiener Saengerknaben praesentieren freitagnachmittags ihr aktuelles Repertoire: von Weltmusik ueber Pop bis Kinderoper. Intimer Konzertsaal mit 413 Plaetzen, ideal fuer Kinder. Auch sonntags Messen in der Hofburgkapelle gratis.",
+   link:"https://muth.at"},
+
+  {id:"s39",cat:"Ausstellung",title:"Volksoper: Familienvorstellungen",
+   sub:"Musiktheater fuer Kinder, Kinder unter 15 zahlen 25%",
+   dateFrom:"2026-04-01",dateTo:"2026-06-30",
+   time:"Sa/So 11:00, weitere Termine",
+   indoor:true,gratis:false,preis:"Kinder unter 15: 25% vom Normalpreis",
+   reg:true,alter:"Ab 4-5 J.",
+   loc:"Volksoper, Waehringerstr. 78, 1090",locS:"9. Bezirk",
+   tags:["Oper","Musical","Ballett","Familie","Volksoper"],
+   desc:"Wiens groesstes Haus fuer Oper, Operette, Musical und Ballett. Kinder- und Familienvorstellungen mit kindgerechten Einfuehrungen. Kinder unter 15 zahlen nur 25% des Normalpreises – oft unter 10 Euro.",
+   link:"https://www.volksoper.at/kinder"},
+
+  {id:"s40",cat:"Ausstellung",title:"Wiener Sängerknaben Ausstellung 100 Jahre",
+   sub:"Gratis-Ausstellung im MuTh bis Sommer 2026",
+   dateFrom:"2026-02-16",dateTo:"2026-07-31",
+   time:"Taeglich geoeffnet",
+   indoor:true,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"MuTh, Am Augartenspitz 1, 1020",locS:"2. Bezirk",
+   tags:["Ausstellung","Saengerknaben","Geschichte","Gratis"],
+   desc:"100 Jahre Tourneen der Wiener Saengerknaben. Faszinierende Ausstellung ueber Geschichte, Touren und Musikkultur. Kostenlos besuchen, ideal als kurzer Stopp im Augarten-Spaziergang kombiniert.",
+   link:"https://muth.at"},
+
+  {id:"s41",cat:"Fest",title:"Afrika Tage Wien",
+   sub:"Groesstes Afrika-Festival Europas mit Kinderprogramm gratis",
+   dateFrom:"2026-08-20",dateTo:"2026-08-30",
+   time:"Taeglich ab 14:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Donauinsel Wien",locS:"2. und 22. Bezirk",
+   tags:["Festival","Afrika","Musik","Tanz","Gratis","Kinderprogramm"],
+   desc:"Europas groesstes Afrika-Festival mit Konzerten, Tanz, Kulinarik und grossem Kinderprogramm. Gratis zugaenglich, bunte Atmosphaere. Kinder lernen afrikanische Musik und Tanz kennen.",
+   link:"https://www.afrika-tage.at"},
+
+  {id:"s42",cat:"Festival",title:"Lange Nacht der Museen",
+   sub:"200 Museen bis Mitternacht – Kinder unter 12 GRATIS",
+   dateFrom:"2026-10-03",dateTo:"2026-10-03",
+   time:"18:00 bis 24:00",
+   indoor:true,gratis:false,preis:"Erw. ca. 19 Euro, Kinder unter 12 GRATIS",
+   reg:false,alter:"Alle, Kinder unter 12 gratis",
+   loc:"200+ Museen in ganz Wien",locS:"Alle Bezirke",
+   tags:["Museen","Nacht","Kinder","Spezialsprogramm","Kinderpass"],
+   desc:"Ein Ticket fuer alle Wiener Museen von 18 bis 24 Uhr. Kinder unter 12 Jahren gratis. 60 Museen bieten Kinderprogramm mit Bastelstationen und Fuehrungen. Kinderpass sammeln und Geschenk erhalten. Shuttlebusse inkludiert.",
+   link:"https://langenacht.orf.at"},
+
+  {id:"s43",cat:"Fest",title:"Jüdisches Straßenfest Judenplatz",
+   sub:"Koscheres Essen, Livemusik, Volkstanz, Kinderprogramm gratis",
+   dateFrom:"2026-06-14",dateTo:"2026-06-14",
+   time:"12:00 bis 20:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Judenplatz, 1010 Wien",locS:"1. Bezirk",
+   tags:["Straßenfest","Jüdisch","Kultur","Musik","Kinderprogramm"],
+   desc:"Jaehrliches juedisches Kulturfest am Judenplatz. Koscheres Essen, Livemusik, Volkstanz, Kunsthandwerk und Kinderprogramm. Einzigartige Atmosphaere im historischen Wien. Gratis fuer alle.",
+   link:"https://www.ikg-wien.at"},
+
+  {id:"s44",cat:"Fest",title:"Regenbogenparade Wien",
+   sub:"Buntes Stadtfest fuer die ganze Familie",
+   dateFrom:"2026-06-13",dateTo:"2026-06-13",
+   time:"Ab 13:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Wiener Ringstrasse",locS:"1. Bezirk",
+   tags:["Parade","Bunt","Festlich","Gratis","Familie"],
+   desc:"Bunteste Parade Wiens: Hunderttausende Menschen auf der Ringstrasse. Farbenfrohes Spektakel mit Musik, Kostuemen und festlicher Stimmung. Ideal zum Vorbeischauen mit Kindern. Danach Pride Village am Rathausplatz.",
+   link:"https://www.viennapride.at"},
+
+  {id:"s45",cat:"Festival",title:"Ferienspiel Startfest Donaupark",
+   sub:"Grosses Ferienstart-Fest WIENXTRA 200 Mitmach-Stationen",
+   dateFrom:"2026-07-04",dateTo:"2026-07-05",
+   time:"14:00 bis 19:00",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Donaupark, 1220 Wien",locS:"22. Bezirk",
+   tags:["Ferienspiel","Gratis","Sommer","200 Stationen","Mitmachen"],
+   desc:"Grosses zweitaegiges Startfest des Wiener Ferienspiels im Donaupark. 200+ Mitmach-Stationen: Basteln, Jonglieren, Forschen, Sport, Musik. Kein Eintritt, einfach vorbeikommen. Kick-off fuer hunderte gratis Sommer-Aktionen.",
+   link:"https://wienxtra.at/kinderaktiv"}
+,
+
+  {id:"s46",cat:"Festival",title:"Wiener Eistraum",
+   sub:"Europas groesster mobiler Eislaufplatz am Rathausplatz",
+   dateFrom:"2026-01-22",dateTo:"2026-03-08",
+   time:"Taeglich 10:00 bis 22:00 Uhr",
+   indoor:false,gratis:false,preis:"Kinder € 7,40 / ab 21:30 Uhr GRATIS",
+   reg:false,alter:"Ab ca. 3 J.",
+   loc:"Rathausplatz, 1010 Wien",locS:"1. Bezirk",
+   tags:["Eislaufen","Winter","Rathausplatz","Kinderfläche","Sky Rink"],
+   desc:"Europas groesster mobiler Eislaufplatz: 10.000 m² Eisflaeche auf zwei Ebenen inkl. spektakulaerem Sky Rink im 1. Stock. Gratis Kinderübungsflaeche (140 m²), kostenlose Helme und Doppelkufen fuer Kleinkinder (Gr. 21–25). Ab 21:30 Uhr Eislaufen gratis! Schuhe ab Gr. 23 leihbar.",
+   link:"https://www.wiener-eistraum.com"},
+
+  {id:"s47",cat:"Festival",title:"WIENXTRA Semesterferienspiel",
+   sub:"Gratis Ferienprogramm 31 Jaenner bis 8 Februar, Spieltage im Rathaus",
+   dateFrom:"2026-01-31",dateTo:"2026-02-08",
+   time:"Taeglich, diverse Orte",
+   indoor:true,gratis:true,preis:"GRATIS (mit Ferienspiel-Pass)",
+   reg:false,alter:"6 bis 13 J.",
+   loc:"Wiener Rathaus + viele Orte in Wien",locS:"Alle Bezirke",
+   tags:["Ferienspiel","Gratis","Semesterferien","Rathaus","Spieltage"],
+   desc:"Hunderte kostenlose Aktionen in den Semesterferien. Highlight: Spieltage im Wiener Rathaus mit Brettspiel-Oase, Game-Zonen, Kreativstationen und Experimenten. Auch verguenstigtes Eislaufen beim Eistraum mit Pass. Ferienspiel-Pass in allen Wiener Schulen oder bei WIENXTRA-Kinderinfo abholen.",
+   link:"https://wienxtra.at/kinderaktiv"},
+
+  {id:"s48",cat:"Fest",title:"Kinderfreunde Faschingsumzug Prater",
+   sub:"Gratis Faschingsumzug durch den Wurstelprater mit Animation",
+   dateFrom:"2026-02-08",dateTo:"2026-02-08",
+   time:"14:00 bis 16:00 Uhr",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Riesenradplatz, Prater, 1020 Wien",locS:"2. Bezirk",
+   tags:["Fasching","Umzug","Prater","Gratis","Kostüm"],
+   desc:"Grosser Faschingsumzug der Wiener Kinderfreunde durch den Wurstelprater. Treffpunkt 14:00 Uhr am Riesenradplatz: Kinderanimation, Aktivstationen, Luftballons, Buttons basteln. Ab 14:20 Uhr Umzug mit Trommelgruppe Batala Austria. Abschluss ca. 15:30 Uhr mit Konzert und Krapfen fuer Kinder. Kostueme erwünscht!",
+   link:"https://kinderfreunde.at/veranstaltungen/faschingsumzug"},
+
+  {id:"s49",cat:"Fest",title:"Familienparty Rathaus – Fasching",
+   sub:"Groesste Faschingsfeier Wiens im Rathaus, Kinder € 6",
+   dateFrom:"2026-02-15",dateTo:"2026-02-15",
+   time:"14:30 Uhr (Vorprogramm), 15:00 Uhr Eroeffnung",
+   indoor:true,gratis:false,preis:"Kinder € 6, Erwachsene € 8 (nur Vorverkauf!)",
+   reg:true,alter:"Alle, Kleinkindersaal ab 0 J.",
+   loc:"Wiener Rathaus, Eingang Lichtenfelsgasse 2, 1010",locS:"1. Bezirk",
+   tags:["Fasching","Rathaus","Buehne","Huepfburg","Disco","Familie"],
+   desc:"Die groesste Faschingsfeier Wiens: Buehnenprogramm mit Musik, Tanz und Shows, Kinderdisco, Huepfburg, Kinderschminken, Bällebad und Kleinkindersaal. Verlosung mit Hauptpreisen (jede Kinder-Eintrittskarte = 1 Los). Tickets NUR im Vorverkauf – frühzeitig kaufen! Kostueme sehr willkommen.",
+   link:"https://kinderfreunde.at/veranstaltungen/familienparty"},
+
+  {id:"s50",cat:"Ausstellung",title:"Kindermuseum Schönbrunn: Fasching",
+   sub:"Faschingsmasken-Werkstatt in den Semesterferien, täglich",
+   dateFrom:"2026-02-02",dateTo:"2026-02-08",
+   time:"Taeglich 11:00 bis 17:00 Uhr",
+   indoor:true,gratis:false,preis:"€ 12 (Museumseintritt inkl.)",
+   reg:true,alter:"Ab 4 J.",
+   loc:"Kindermuseum Schönbrunn, Schloßstr. 47, 1130",locS:"13. Bezirk",
+   tags:["Fasching","Masken","Basteln","Schönbrunn","Semesterferien"],
+   desc:"In den Semesterferien koennen Kinder in Poldis Bastelwerkstatt ihre ganz persoenliche Faschingsmaske gestalten: bunt bemalen, mit Federn, Glitzersteinen und Papier verzieren. Am 4.2. besucht Schlossgeist Poldi persoenlich die Werkstatt und verteilt Autogrammkarten. Tickets im Vorverkauf empfohlen.",
+   link:"https://kindermuseum.at"},
+
+  {id:"s51",cat:"Fest",title:"Halloween im Kindermuseum Schönbrunn",
+   sub:"Gruselparcours: Ausbildung zur Geisterjaegerin, Raetselrallye",
+   dateFrom:"2026-10-29",dateTo:"2026-10-31",
+   time:"Taeglich 10:00 bis 17:00 Uhr",
+   indoor:true,gratis:false,preis:"Museumseintritt ca. € 12",
+   reg:true,alter:"Ab 4 J.",
+   loc:"Kindermuseum Schönbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Halloween","Gruseln","Schönbrunn","Basteln","Raetsel"],
+   desc:"Gruselparcours im Kindermuseum: Kinder absolvieren ihre Ausbildung zur Geisterjaegerin und erhalten danach eine Urkunde. Dazu laeuft eine Halloween-Raetselrallye durch das ganze Museum. Poldi treibt sein spukhaftes Unwesen. Jaehrliches Highlight in den Herbstferien.",
+   link:"https://kindermuseum.at"},
+
+  {id:"s52",cat:"Fest",title:"Halloween Böhmischer Prater",
+   sub:"Zaubershows, Kuerbis schnitzen, Kinderschminken gratis",
+   dateFrom:"2026-10-30",dateTo:"2026-10-31",
+   time:"Ab 13:00 Uhr",
+   indoor:false,gratis:true,preis:"GRATIS (Eintritt frei)",
+   reg:false,alter:"Alle",
+   loc:"Böhmischer Prater, Laaer Wald 216, 1100 Wien",locS:"10. Bezirk",
+   tags:["Halloween","Gratis","Kuerbis","Zaubern","Prater","Basteln"],
+   desc:"Halloween im Bohmischen Prater: Zaubershows, Kuerbis schnitzen und bemalen, Kinderschminken. Das beste Kostüm wird praemiert! Herbstferien-Highlight mit freiem Eintritt. Besonderes Ambiente in der historischen Parkanlage.",
+   link:"https://www.bohmischerprater.at"},
+
+  {id:"s53",cat:"Festival",title:"WIENXTRA Herbstferienspiel",
+   sub:"Hunderte gratis Aktionen in den Herbstferien 27 bis 31 Oktober",
+   dateFrom:"2026-10-27",dateTo:"2026-10-31",
+   time:"Taeglich, diverse Orte in ganz Wien",
+   indoor:true,gratis:true,preis:"GRATIS (mit Ferienspiel-Pass)",
+   reg:false,alter:"6 bis 13 J.",
+   loc:"Diverse Orte in Wien",locS:"Alle Bezirke",
+   tags:["Herbstferien","Gratis","Ferienspiel","Nationalfeiertag","Mitmachen"],
+   desc:"Hunderte kostenlose Mitmach-Aktionen in den Wiener Herbstferien: Basteln, Klettern, Kochen, Theater, Sport und mehr. Ferienspiel-Pass mitbringen. Aktionen auch am Nationalfeiertag 26.10. Programm auf ferienspiel.at abrufbar.",
+   link:"https://wienxtra.at/kinderaktiv"},
+
+  {id:"s54",cat:"Fest",title:"Nikolaus im Böhmischen Prater",
+   sub:"Nikolaus verteilt Geschenke an alle Kinder, kostenlos",
+   dateFrom:"2026-12-06",dateTo:"2026-12-06",
+   time:"14:00 bis 15:00 Uhr",
+   indoor:false,gratis:true,preis:"GRATIS",
+   reg:false,alter:"Alle",
+   loc:"Böhmischer Prater / Tivoli, 1100 Wien",locS:"10. Bezirk",
+   tags:["Nikolaus","Dezember","Geschenke","Gratis","Tradition"],
+   desc:"Der Nikolaus kommt persoenlich in den Bohmischen Prater und verteilt Ueberraschungen und Sackerln an alle Kinder. Taeglich ab 14:00 Uhr im Tivoli-Bereich. Kein Eintritt, einfach vorbeikommen. Klassisches Wiener Brauchtum fuer die Kleinen.",
+   link:"https://www.bohmischerprater.at"},
+
+  {id:"s55",cat:"Fest",title:"Weihnachtsprogramm Schönbrunn",
+   sub:"Nikolaustag, Bastelworkshops, Eisbahn gratis, Advent",
+   dateFrom:"2026-12-01",dateTo:"2026-12-23",
+   time:"Taeglich 10:00 bis 21:00 Uhr",
+   indoor:false,gratis:false,preis:"Eisbahn GRATIS, Workshops ca. € 5–12",
+   reg:false,alter:"Alle",
+   loc:"Schloss Schönbrunn, 1130 Wien",locS:"13. Bezirk",
+   tags:["Weihnachten","Advent","Schönbrunn","Nikolaus","Eisbahn","Basteln"],
+   desc:"Dezember-Highlight im Schönbrunn: Am 6.12. verwandelt sich der Weihnachtsmarkt in ein Nikolaus-Erlebnis mit Spielzeug-Spenden-Aktion. Kostenlose Glice-Eisbahn fuer Kinder, Bastelworkshops, Kinderkarussell, Riesenrad. Taeglich magisches Adventflair direkt vor dem Schloss.",
+   link:"https://www.schoenbrunn.at"}
 ];
 
 // ════════════════════════════════════════
@@ -900,8 +1116,8 @@ var REG=[
 //  HELPERS + STATE
 // ════════════════════════════════════════
 var MDE=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
-var TODAY=new Date("2026-03-15");
-var curMonth=3; // April (0-based)
+var TODAY=new Date(); TODAY.setHours(0,0,0,0);
+var curMonth=TODAY.getMonth();
 var mFilter=null;
 var disState={cat:"all",extra:null,q:""};
 var curTab="week";
@@ -982,9 +1198,15 @@ function tcCard(e){
   var day=String(dispDate.getDate()).padStart(2,"0");
   var mon=MDE[dispDate.getMonth()].substring(0,3);
   var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
+  var eFrom=pd(e.dateFrom),eTo=pd(e.dateTo);
+  var isPast=eTo<TODAY;
+  var isNow=eFrom<=TODAY&&eTo>=TODAY;
   var badges=badgesHtml(e,true);
+  if(isNow)badges='<span class="b b-now">▶ Läuft</span>'+badges;
+  if(isPast)badges='<span class="b b-past">✓ Vorbei</span>'+badges;
 
-  return '<div class="tc" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
+  var pastCls=isPast?' past-ev':'';
+  return '<div class="tc'+pastCls+'" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
     '<div class="tc-stripe"></div>'+
     '<div class="tc-body">'+
       '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div></div>'+
@@ -1014,7 +1236,8 @@ function tcCard(e){
 function renderTimeline(){
   // update month pills
   var pillsHtml="";
-  for(var i=2;i<=11;i++){
+  var startM=Math.min(TODAY.getMonth(),11);
+  for(var i=0;i<=11;i++){
     pillsHtml+='<button class="mpill'+(i===curMonth?" on":"")+'" onclick="jumpMonth('+i+')">'+MDE[i]+'</button>';
   }
   document.getElementById("month-pills").innerHTML=pillsHtml;
@@ -1175,8 +1398,13 @@ document.getElementById("tb-dis").textContent=REG.length;
 
 // Hero week label
 var wd=["So","Mo","Di","Mi","Do","Fr","Sa"];
-var we=new Date("2026-03-15"); we.setDate(we.getDate()+(7-we.getDay())%7+5);
-document.getElementById("hero-week").textContent="Woche "+we.getDate()+". – "+(we.getDate()+1)+". März 2026";
+var now2=new Date();
+var dayOfWeek=now2.getDay();
+var monday=new Date(now2);
+monday.setDate(now2.getDate()-(dayOfWeek===0?6:dayOfWeek-1));
+var sunday=new Date(monday);sunday.setDate(monday.getDate()+6);
+var mn=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];
+document.getElementById("hero-week").textContent=monday.getDate()+". – "+sunday.getDate()+". "+mn[now2.getMonth()]+" "+now2.getFullYear();
 
 // INIT
 renderTimeline();
