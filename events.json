@@ -1610,6 +1610,81 @@
       "desc": "Naturforschen als Erlebnis bietet Kindern die Möglichkeit, die Natur hautnah zu erleben und zu erforschen. Ein spannendes Abenteuer für kleine Entdecker.",
       "link": "",
       "addedDate": "2026-03-17T14:44:38.418Z"
+    },
+    {
+      "id": "event1",
+      "cat": "Kreativ",
+      "title": "Flöten Tasten Frühlings-Tanz",
+      "sub": "Ein kreativer Tanzworkshop für Kinder.",
+      "dateFrom": "2026-03-20",
+      "dateTo": "2026-03-20",
+      "time": "ganztägig",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Anmeldung erforderlich",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "TonTanz, 1030 Wien",
+      "locS": "Landstraße",
+      "tags": [
+        "Tanz",
+        "Kreativ",
+        "Musik",
+        "Frühling"
+      ],
+      "desc": "Kinder können in diesem Workshop ihre kreativen Tanzfähigkeiten entdecken und entwickeln. Der Workshop bietet eine spannende Einführung in die Welt des Tanzes.",
+      "link": "https://www.ton-tanz.at",
+      "addedDate": "2026-03-17T16:00:54.423Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Kreativ",
+      "title": "Familienatelier",
+      "sub": "Kreatives Gestalten für die ganze Familie.",
+      "dateFrom": "2026-03-21",
+      "dateTo": "2026-03-21",
+      "time": "ganztägig",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Anmeldung erforderlich",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Künstlerhaus Vereinigung, 1010 Wien",
+      "locS": "Innere Stadt",
+      "tags": [
+        "Kreativ",
+        "Familie",
+        "Kunst",
+        "Gestalten"
+      ],
+      "desc": "Im Familienatelier können Kinder gemeinsam mit ihren Eltern kreativ werden. Es werden verschiedene Materialien und Techniken vorgestellt, um die Fantasie anzuregen.",
+      "link": "https://www.k-haus.at",
+      "addedDate": "2026-03-17T16:00:54.423Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Theater",
+      "title": "Ach wie gut, dass niemand weiß",
+      "sub": "Interaktives Theaterabenteuer für Kinder.",
+      "dateFrom": "2026-03-21",
+      "dateTo": "2026-03-21",
+      "time": "14:00 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Anmeldung erforderlich",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Wiener Theater Schnitzlerei",
+      "locS": "Wien",
+      "tags": [
+        "Theater",
+        "Interaktiv",
+        "Märchen",
+        "Abenteuer"
+      ],
+      "desc": "Dieses interaktive Theaterstück kombiniert Theater und Schnitzeljagd. Kinder erleben ein spannendes Abenteuer, das sie in die Welt der Märchen entführt.",
+      "link": "https://www.theater-schnitzlerei.at",
+      "addedDate": "2026-03-17T16:00:54.423Z"
     }
   ],
   "regular": [
@@ -2578,5 +2653,5 @@
       "link": "https://www.votivkino.at"
     }
   ],
-  "lastUpdated": "2026-03-17T15:01:03.671Z"
+  "lastUpdated": "2026-03-17T16:00:54.423Z"
 }
