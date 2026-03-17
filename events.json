@@ -1710,6 +1710,31 @@
       "desc": "Kinder können in die Welt von Elsa und dem großen Bären eintauchen und ein spannendes Abenteuer erleben. Eine Anmeldung ist erforderlich.",
       "link": "https://wienxtra.at/kinder/veranstaltungen/",
       "addedDate": "2026-03-17T19:00:31.678Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Musik",
+      "title": "Freiheitskonzert",
+      "sub": "Musikalische Freiheit erleben",
+      "dateFrom": "2026-03-21",
+      "dateTo": null,
+      "time": "17:00 Uhr",
+      "indoor": true,
+      "gratis": true,
+      "preis": "kostenlos",
+      "reg": false,
+      "alter": "ab 4 Jahre",
+      "loc": "Mara Kolibri, 1050 Wien",
+      "locS": "5. Margareten",
+      "tags": [
+        "Musik",
+        "Konzert",
+        "Freiheit",
+        "Kinder"
+      ],
+      "desc": "Erleben Sie ein Konzert voller Freiheit und musikalischer Vielfalt. Das Freiheitskonzert lädt Kinder ab 4 Jahren ein, die Welt der Musik zu entdecken.",
+      "link": "https://www.marakolibri.at",
+      "addedDate": "2026-03-17T23:00:58.218Z"
     }
   ],
   "regular": [
@@ -2678,5 +2703,5 @@
       "link": "https://www.votivkino.at"
     }
   ],
-  "lastUpdated": "2026-03-17T22:01:02.855Z"
+  "lastUpdated": "2026-03-17T23:00:58.218Z"
 }
