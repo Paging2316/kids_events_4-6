@@ -217,6 +217,7 @@ h1 em{color:var(--accent);font-style:normal}
 .b-tag{background:#f3f4f6;color:#374151}
 .b-hot{background:#fff1f2;color:#9f1239;border:1px solid #fecdd3}
 .b-now{background:#f0fdf4;color:#166634;border:1px solid #bbf7d0}
+.b-new{background:#fef9c3;color:#854d0e;border:1px solid #fde047;font-weight:700}
 .b-past{background:#f5f5f5;color:#9ca3af;border:1px solid #e5e7eb}
 
 /* EMPTY */
@@ -340,7 +341,7 @@ h1 em{color:var(--accent);font-style:normal}
   <div class="hdr">
     <div class="logo">
       <h1>Wien mit Kindern <em>·</em> 4–6 Jahre</h1>
-      <div class="logo-sub">Ganzjährig &nbsp;·&nbsp; Alle Wochentage &nbsp;·&nbsp; Stand März 2026</div>
+      <div class="logo-sub">Ganzjährig &nbsp;·&nbsp; Alle Wochentage &nbsp;·&nbsp; <span id="last-updated">wird geladen…</span></div>
     </div>
     <div class="hdr-stats">
       <div class="stat"><div class="sn" id="sn-total">81</div><div class="sl">Events</div></div>
@@ -489,6 +490,12 @@ function weekLabel(wn,m){
   return s+". – "+Math.min(en[0],lastDay)+". "+MDE[m];
 }
 
+// ── HELPERS ──
+function isNew(e){
+  if(!e.addedDate)return false;
+  return (new Date()-new Date(e.addedDate))<7*24*60*60*1000;
+}
+
 // ── BADGES ──
 function badgesHtml(e,isSpecial){
   var ib=e.indoor?'<span class="b b-in">🏠</span>':'<span class="b b-out">🌳</span>';
@@ -496,8 +503,9 @@ function badgesHtml(e,isSpecial){
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
   var hot=isSpecial?'<span class="b b-hot">🔥 Special</span>':'';
   var now=isSpecial&&isNowRunning(e)?'<span class="b b-now">● Läuft</span>':'';
+  var neu=isNew(e)?'<span class="b b-new">✨ Neu</span>':'';
   var tags=e.tags.slice(0,2).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
-  return hot+now+ib+pb+rb+tags;
+  return neu+hot+now+ib+pb+rb+tags;
 }
 
 // ════════════════════════════════════════
@@ -667,6 +675,7 @@ function ecCard(e){
   var ib=e.indoor?'<span class="b b-in">🏠 Indoor</span>':'<span class="b b-out">🌳 Outdoor</span>';
   var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 Kostenpflichtig</span>';
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
+  var neu=isNew(e)?'<span class="b b-new">✨ Neu</span>':'';
   var tags=e.tags.slice(0,3).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
   var freq=e.freq.length>18?e.freq.substring(0,16)+"…":e.freq;
   return '<div class="ec" data-cat="'+e.cat+'" data-id="reg-'+e.id+'">'+
@@ -674,7 +683,7 @@ function ecCard(e){
     '<div class="ec-hdr">'+
       '<div class="ec-top"><div class="ec-title">'+e.title+'</div><div class="ec-arr">▾</div></div>'+
       '<div class="ec-sub">'+e.sub+'</div>'+
-      '<div class="badges">'+ib+pb+rb+tags+'</div>'+
+      '<div class="badges">'+neu+ib+pb+rb+tags+'</div>'+
     '</div>'+
     '<div class="qbar">'+
       '<div class="qi"><div class="qi-ic">📍</div><div class="qi-v">'+e.locS+'</div><div class="qi-k">Bezirk</div></div>'+
@@ -750,6 +759,11 @@ fetch('events.json')
     document.getElementById("sn-total").textContent=SP.length+REG.length;
     document.getElementById("sn-sp").textContent=SP.length;
     document.getElementById("tb-dis").textContent=REG.length;
+    if(data.lastUpdated){
+      var d=new Date(data.lastUpdated);
+      var mn=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];
+      document.getElementById("last-updated").textContent="Stand "+d.getDate()+". "+mn[d.getMonth()]+" "+d.getFullYear();
+    }
     renderTimeline();
     renderDiscover();
   })
