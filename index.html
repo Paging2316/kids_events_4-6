@@ -582,10 +582,10 @@ function renderFavs(){
   wrap.innerHTML='<div class="egrid">'+favEvents.map(function(e){
     return e._type==='special'?tcCard(e):ecCard(e);
   }).join('')+'</div>';
-  wrap.querySelectorAll('.ec').forEach(function(el){
+  wrap.querySelectorAll('.ec,.tc').forEach(function(el){
     el.addEventListener('click',function(){
       var was=el.classList.contains('open');
-      wrap.querySelectorAll('.ec.open').forEach(function(o){o.classList.remove('open')});
+      wrap.querySelectorAll('.ec.open,.tc.open').forEach(function(o){o.classList.remove('open')});
       if(!was)el.classList.add('open');
     });
   });
