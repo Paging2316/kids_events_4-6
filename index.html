@@ -218,6 +218,18 @@ h1 em{color:var(--accent);font-style:normal}
 .b-hot{background:#fff1f2;color:#9f1239;border:1px solid #fecdd3}
 .b-now{background:#f0fdf4;color:#166634;border:1px solid #bbf7d0}
 .b-new{background:#fef9c3;color:#854d0e;border:1px solid #fde047;font-weight:700}
+
+/* FAVORITEN */
+.fav-btn{
+  position:absolute;top:10px;right:10px;
+  background:none;border:none;cursor:pointer;
+  font-size:1.2rem;line-height:1;padding:4px;
+  opacity:.4;transition:opacity .15s,transform .15s;z-index:10;
+}
+.fav-btn:hover{opacity:.8}
+.fav-btn.on{opacity:1;transform:scale(1.15)}
+.fav-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.fav-empty-em{font-size:2.5rem;margin-bottom:12px}
 .b-past{background:#f5f5f5;color:#9ca3af;border:1px solid #e5e7eb}
 
 /* EMPTY */
@@ -361,8 +373,19 @@ h1 em{color:var(--accent);font-style:normal}
       🗂 Entdecken
       <span class="tb grey" id="tb-dis">46</span>
     </button>
+    <button class="tab" id="t-fav" onclick="switchTab('fav')">
+      ❤️ Favoriten
+      <span class="tb grey" id="tb-fav">0</span>
+    </button>
   </div>
 </nav>
+
+<!-- ══════════════ FAVORITEN ══════════════ -->
+<div class="view" id="v-fav">
+<div class="week-wrap">
+  <div id="fav-wrap"></div>
+</div>
+</div>
 
 <!-- ══════════════ WOCHENPLANER ══════════════ -->
 <div class="view on" id="v-week">
@@ -511,12 +534,71 @@ function badgesHtml(e,isSpecial){
 // ════════════════════════════════════════
 //  TAB SWITCH
 // ════════════════════════════════════════
+// ════════════════════════════════════════
+//  FAVORITEN (localStorage)
+// ════════════════════════════════════════
+var FAV_KEY='wien-kids-favs';
+function getFavs(){try{return JSON.parse(localStorage.getItem(FAV_KEY)||'[]');}catch(e){return[];}}
+function saveFavs(favs){localStorage.setItem(FAV_KEY,JSON.stringify(favs));}
+function isFav(id){return getFavs().indexOf(String(id))>=0;}
+function toggleFav(id,ev){
+  if(ev)ev.stopPropagation();
+  id=String(id);
+  var favs=getFavs();
+  var idx=favs.indexOf(id);
+  if(idx>=0)favs.splice(idx,1); else favs.push(id);
+  saveFavs(favs);
+  updateFavBtns();
+  updateFavCount();
+  if(curTab==='fav')renderFavs();
+}
+function updateFavBtns(){
+  document.querySelectorAll('.fav-btn').forEach(function(btn){
+    var id=btn.getAttribute('data-fav-id');
+    var active=isFav(id);
+    btn.classList.toggle('on',active);
+    btn.textContent=active?'❤️':'🤍';
+  });
+}
+function updateFavCount(){
+  document.getElementById('tb-fav').textContent=getFavs().length;
+}
+function renderFavs(){
+  var favs=getFavs();
+  var wrap=document.getElementById('fav-wrap');
+  if(favs.length===0){
+    wrap.innerHTML='<div class="fav-empty"><div class="fav-empty-em">🤍</div><p>Noch keine Favoriten gespeichert.<br>Tippe auf 🤍 bei einem Event um es zu merken.</p></div>';
+    return;
+  }
+  var allEvents=[].concat(
+    SP.map(function(e){return Object.assign({},e,{_type:'special'});}),
+    REG.map(function(e){return Object.assign({},e,{_type:'regular'});})
+  );
+  var favEvents=allEvents.filter(function(e){return favs.indexOf(String(e.id))>=0;});
+  if(favEvents.length===0){
+    wrap.innerHTML='<div class="fav-empty"><div class="fav-empty-em">🤍</div><p>Keine gespeicherten Events gefunden.</p></div>';
+    return;
+  }
+  wrap.innerHTML='<div class="egrid">'+favEvents.map(function(e){
+    return e._type==='special'?tcCard(e):ecCard(e);
+  }).join('')+'</div>';
+  wrap.querySelectorAll('.ec').forEach(function(el){
+    el.addEventListener('click',function(){
+      var was=el.classList.contains('open');
+      wrap.querySelectorAll('.ec.open').forEach(function(o){o.classList.remove('open')});
+      if(!was)el.classList.add('open');
+    });
+  });
+  updateFavBtns();
+}
+
 function switchTab(t){
   curTab=t;
-  ["week","dis"].forEach(function(id){
+  ["week","dis","fav"].forEach(function(id){
     document.getElementById("v-"+id).classList.toggle("on",id===t);
     document.getElementById("t-"+id).classList.toggle("on",id===t);
   });
+  if(t==='fav')renderFavs();
 }
 
 // ════════════════════════════════════════
@@ -573,6 +655,7 @@ function tcCard(e){
         rangeHtml+
         '<div class="tc-badges">'+badges+'</div>'+
       '</div>'+
+      '<button class="fav-btn" data-fav-id="'+e.id+'" onclick="toggleFav(e.id,event)">'+(isFav(e.id)?'❤️':'🤍')+'</button>'+
       '<div class="tc-arr">▾</div>'+
     '</div>'+
     '<div class="tc-det">'+
@@ -681,7 +764,7 @@ function ecCard(e){
   return '<div class="ec" data-cat="'+e.cat+'" data-id="reg-'+e.id+'">'+
     '<div class="ec-stripe"></div>'+
     '<div class="ec-hdr">'+
-      '<div class="ec-top"><div class="ec-title">'+e.title+'</div><div class="ec-arr">▾</div></div>'+
+      '<div class="ec-top"><div class="ec-title">'+e.title+'</div><button class="fav-btn" data-fav-id="'+e.id+'" onclick="toggleFav(e.id,event)">'+(isFav(e.id)?'❤️':'🤍')+'</button><div class="ec-arr">▾</div></div>'+
       '<div class="ec-sub">'+e.sub+'</div>'+
       '<div class="badges">'+neu+ib+pb+rb+tags+'</div>'+
     '</div>'+
@@ -765,6 +848,7 @@ fetch('events.json')
       var hh=String(d.getHours()).padStart(2,'0'),mm=String(d.getMinutes()).padStart(2,'0');
       document.getElementById("last-updated").textContent="Stand "+d.getDate()+". "+mn[d.getMonth()]+" "+d.getFullYear()+" "+hh+":"+mm+" Uhr";
     }
+    updateFavCount();
     renderTimeline();
     renderDiscover();
   })
