@@ -1685,6 +1685,31 @@
       "desc": "Dieses interaktive Theaterstück kombiniert Theater und Schnitzeljagd. Kinder erleben ein spannendes Abenteuer, das sie in die Welt der Märchen entführt.",
       "link": "https://www.theater-schnitzlerei.at",
       "addedDate": "2026-03-17T16:00:54.423Z"
+    },
+    {
+      "id": "event4",
+      "cat": "Kino",
+      "title": "Elsa und der große Bär",
+      "sub": "Ein spannendes Kinoerlebnis für Kinder.",
+      "dateFrom": "2026-03-21",
+      "dateTo": "2026-03-31",
+      "time": "verschiedene Zeiten",
+      "indoor": true,
+      "gratis": true,
+      "preis": "kostenlos",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Planetarium Wien, 1020 Wien",
+      "locS": "Leopoldstadt",
+      "tags": [
+        "Kino",
+        "Kinder",
+        "Film",
+        "Abenteuer"
+      ],
+      "desc": "Kinder können in die Welt von Elsa und dem großen Bären eintauchen und ein spannendes Abenteuer erleben. Eine Anmeldung ist erforderlich.",
+      "link": "https://wienxtra.at/kinder/veranstaltungen/",
+      "addedDate": "2026-03-17T19:00:31.678Z"
     }
   ],
   "regular": [
@@ -2653,5 +2678,5 @@
       "link": "https://www.votivkino.at"
     }
   ],
-  "lastUpdated": "2026-03-17T18:01:00.880Z"
+  "lastUpdated": "2026-03-17T19:00:31.678Z"
 }
