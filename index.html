@@ -762,7 +762,8 @@ fetch('events.json')
     if(data.lastUpdated){
       var d=new Date(data.lastUpdated);
       var mn=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];
-      document.getElementById("last-updated").textContent="Stand "+d.getDate()+". "+mn[d.getMonth()]+" "+d.getFullYear();
+      var hh=String(d.getHours()).padStart(2,'0'),mm=String(d.getMinutes()).padStart(2,'0');
+      document.getElementById("last-updated").textContent="Stand "+d.getDate()+". "+mn[d.getMonth()]+" "+d.getFullYear()+" "+hh+":"+mm+" Uhr";
     }
     renderTimeline();
     renderDiscover();
