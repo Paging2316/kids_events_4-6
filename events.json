@@ -1485,6 +1485,106 @@
       ],
       "desc": "Die Wiener Festwochen bringen internationales Theater, Tanz und Musik nach Wien. Am Rathausplatz gibt es kostenlose Openair-Veranstaltungen fuer die ganze Familie. Das Rahmenprogramm umfasst Kinderspecials und familiengerechte Formate. Aktuelles Programm: festwochen.at.",
       "link": "https://www.festwochen.at"
+    },
+    {
+      "id": "event1",
+      "cat": "Kreativ",
+      "title": "Kunterbunte Kreativwerkstatt",
+      "sub": "Anmeldung erforderlich",
+      "dateFrom": "2023-03-17",
+      "dateTo": "2023-03-17",
+      "time": "Ganztägig",
+      "indoor": true,
+      "gratis": true,
+      "preis": "",
+      "reg": true,
+      "alter": "ab 2 Jahre",
+      "loc": "Wiener Hilfswerk - Nachbarschaftszentrum 7, 1070 Wien",
+      "locS": "7. Neubau",
+      "tags": [
+        "Kreativ",
+        "Kinder",
+        "Anmeldung",
+        "Werkstatt"
+      ],
+      "desc": "In der Kunterbunten Kreativwerkstatt können Kinder ihrer Fantasie freien Lauf lassen. Verschiedene Materialien und Techniken stehen zur Verfügung, um kreative Projekte zu gestalten.",
+      "link": "https://www.wienerhilfswerk.at/kreativwerkstatt",
+      "addedDate": "2026-03-17T14:00:59.907Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Theater",
+      "title": "Wiesenträume",
+      "sub": "Anmeldung erforderlich",
+      "dateFrom": "2023-03-21",
+      "dateTo": "2023-03-21",
+      "time": "Ganztägig",
+      "indoor": true,
+      "gratis": false,
+      "preis": "10 EUR",
+      "reg": true,
+      "alter": "ab 2 Jahre",
+      "loc": "Junge Theater Wien, 1220 Wien",
+      "locS": "22. Donaustadt",
+      "tags": [
+        "Theater",
+        "Kinder",
+        "Anmeldung",
+        "Vorstellung"
+      ],
+      "desc": "Das Stück 'Wiesenträume' entführt die kleinen Zuschauer in eine zauberhafte Welt voller Fantasie und Abenteuer. Ein Erlebnis für die ganze Familie.",
+      "link": "https://www.jungetheaterwien.at/wiesentraeume",
+      "addedDate": "2026-03-17T14:00:59.907Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Kino",
+      "title": "GLANZ.STÜCKE Bilderbuchkino",
+      "sub": "Anmeldung erforderlich",
+      "dateFrom": "2023-03-21",
+      "dateTo": "2023-03-22",
+      "time": "Ganztägig",
+      "indoor": true,
+      "gratis": false,
+      "preis": "5 EUR",
+      "reg": true,
+      "alter": "ab 3 Jahre",
+      "loc": "Filmcasino, 1050 Wien",
+      "locS": "5. Margareten",
+      "tags": [
+        "Kino",
+        "Bilderbuch",
+        "Kinder",
+        "Anmeldung"
+      ],
+      "desc": "Das Bilderbuchkino 'GLANZ.STÜCKE' zeigt spannende Geschichten auf der großen Leinwand. Ein besonderes Kinoerlebnis für die Kleinen.",
+      "link": "https://www.filmcasino.at/glanzstuecke",
+      "addedDate": "2026-03-17T14:00:59.907Z"
+    },
+    {
+      "id": "event4",
+      "cat": "Sport",
+      "title": "Inline Skating",
+      "sub": "Anmeldung erforderlich",
+      "dateFrom": "2023-03-21",
+      "dateTo": "2023-03-21",
+      "time": "Ganztägig",
+      "indoor": false,
+      "gratis": false,
+      "preis": "15 EUR",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "SkateFACTORY, 1220 Wien",
+      "locS": "22. Donaustadt",
+      "tags": [
+        "Sport",
+        "Skating",
+        "Kinder",
+        "Anmeldung"
+      ],
+      "desc": "Beim Inline Skating lernen Kinder spielerisch die Grundlagen des Skatens. Spaß und Bewegung stehen im Vordergrund.",
+      "link": "https://www.skatefactory.at/inlineskating",
+      "addedDate": "2026-03-17T14:00:59.907Z"
     }
   ],
   "regular": [
@@ -2453,5 +2553,5 @@
       "link": "https://www.votivkino.at"
     }
   ],
-  "lastUpdated": "2026-03-17T09:11:04.305Z"
+  "lastUpdated": "2026-03-17T14:00:59.907Z"
 }
