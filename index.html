@@ -655,7 +655,7 @@ function tcCard(e){
         rangeHtml+
         '<div class="tc-badges">'+badges+'</div>'+
       '</div>'+
-      '<button class="fav-btn" data-fav-id="'+e.id+'" onclick="toggleFav('"+e.id+"',event)">'+(isFav(e.id)?'❤️':'🤍')+'</button>'+
+      '<button class="fav-btn" data-fav-id="'+e.id+'" >'+(isFav(e.id)?'❤️':'🤍')+'</button>'+
       '<div class="tc-arr">▾</div>'+
     '</div>'+
     '<div class="tc-det">'+
@@ -764,7 +764,7 @@ function ecCard(e){
   return '<div class="ec" data-cat="'+e.cat+'" data-id="reg-'+e.id+'">'+
     '<div class="ec-stripe"></div>'+
     '<div class="ec-hdr">'+
-      '<div class="ec-top"><div class="ec-title">'+e.title+'</div><button class="fav-btn" data-fav-id="'+e.id+'" onclick="toggleFav('"+e.id+"',event)">'+(isFav(e.id)?'❤️':'🤍')+'</button><div class="ec-arr">▾</div></div>'+
+      '<div class="ec-top"><div class="ec-title">'+e.title+'</div><button class="fav-btn" data-fav-id="'+e.id+'" >'+(isFav(e.id)?'❤️':'🤍')+'</button><div class="ec-arr">▾</div></div>'+
       '<div class="ec-sub">'+e.sub+'</div>'+
       '<div class="badges">'+neu+ib+pb+rb+tags+'</div>'+
     '</div>'+
@@ -856,6 +856,15 @@ fetch('events.json')
     console.error('Failed to load events.json', e);
     document.getElementById("dis-wrap").innerHTML='<div style="padding:40px;text-align:center;color:#666">Events konnten nicht geladen werden. Bitte Seite neu laden.</div>';
   });
+
+// ── FAV BUTTON EVENT DELEGATION ──
+document.addEventListener('click', function(ev){
+  var btn = ev.target.closest ? ev.target.closest('.fav-btn') : null;
+  if(btn){
+    ev.stopPropagation();
+    toggleFav(btn.getAttribute('data-fav-id'));
+  }
+});
 </script>
 </body>
 </html>
