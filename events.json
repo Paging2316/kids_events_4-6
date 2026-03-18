@@ -1735,6 +1735,31 @@
       "desc": "Erleben Sie ein Konzert voller Freiheit und musikalischer Vielfalt. Das Freiheitskonzert lädt Kinder ab 4 Jahren ein, die Welt der Musik zu entdecken.",
       "link": "https://www.marakolibri.at",
       "addedDate": "2026-03-17T23:00:58.218Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Theater",
+      "title": "Finn Flosse räumt das Meer auf",
+      "sub": "Puppentheater über Umweltschutz",
+      "dateFrom": "2026-03-21",
+      "dateTo": null,
+      "time": "14:30",
+      "indoor": true,
+      "gratis": false,
+      "preis": "8 Euro",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Figurentheater Lilarum, 1030 Wien",
+      "locS": "3. Landstraße",
+      "tags": [
+        "Theater",
+        "Umweltschutz",
+        "Puppen",
+        "Kinder"
+      ],
+      "desc": "Finn Flosse und sein Walfreund Theo erleben spannende Abenteuer und lernen, wie wichtig es ist, das Meer vom Plastikmüll zu befreien.",
+      "link": "https://www.lilarum.at/finn-flosse",
+      "addedDate": "2026-03-18T02:00:44.267Z"
     }
   ],
   "regular": [
@@ -2701,7 +2726,32 @@
       ],
       "desc": "Handverlesene Kinderfilme am Wochenende. Gemütliches Filmhaus-Ambiente.",
       "link": "https://www.votivkino.at"
+    },
+    {
+      "id": "event4",
+      "cat": "Natur",
+      "title": "Naturforschen als Erlebnis",
+      "sub": "Entdecke die Natur mit allen Sinnen",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "nach Vereinbarung",
+      "indoor": false,
+      "gratis": true,
+      "preis": "kostenlos",
+      "reg": true,
+      "alter": "ab 3 Jahre",
+      "loc": "Verein Umweltspürnasen-Club, mehrere Standorte in Wien",
+      "locS": "verschiedene Bezirke",
+      "tags": [
+        "Natur",
+        "Erlebnis",
+        "Kinder",
+        "Entdecken"
+      ],
+      "desc": "Kinder können die Natur mit allen Sinnen erleben und erforschen. Verschiedene Standorte in Wien bieten spannende Erlebnisse.",
+      "link": "https://www.umweltspuernasen.at",
+      "addedDate": "2026-03-18T02:00:44.267Z"
     }
   ],
-  "lastUpdated": "2026-03-18T01:00:42.835Z"
+  "lastUpdated": "2026-03-18T02:00:44.267Z"
 }
