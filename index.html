@@ -801,7 +801,7 @@ function ecCard(e){
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
   var neu=isNew(e)?'<span class="b b-new">✨ Neu</span>':'';
   var tags=e.tags.slice(0,3).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
-  var freq=e.freq.length>18?e.freq.substring(0,16)+"…":e.freq;
+  var freq=e.freq?(e.freq.length>18?e.freq.substring(0,16)+"…":e.freq):"–";
   return '<div class="ec" data-cat="'+e.cat+'" data-id="reg-'+e.id+'">'+
     '<div class="ec-stripe"></div>'+
     '<div class="ec-hdr">'+
@@ -820,7 +820,7 @@ function ecCard(e){
         '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
         '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja":"❌ Nein")+'</div></div>'+
         '<div><div class="det-k">Adresse</div><div class="det-v">'+e.loc+'</div></div>'+
-        '<div><div class="det-k">Häufigkeit</div><div class="det-v">'+e.freq+'</div></div>'+
+        '<div><div class="det-k">Häufigkeit</div><div class="det-v">'+(e.freq||'–')+'</div></div>'+
       '</div>'+
       '<a href="'+e.link+'" target="_blank" class="det-link" onclick="event.stopPropagation()">🔗 Website öffnen</a>'+
     '</div>'+
