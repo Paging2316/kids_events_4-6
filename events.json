@@ -2751,7 +2751,32 @@
       "desc": "Kinder können die Natur mit allen Sinnen erleben und erforschen. Verschiedene Standorte in Wien bieten spannende Erlebnisse.",
       "link": "https://www.umweltspuernasen.at",
       "addedDate": "2026-03-18T02:00:44.267Z"
+    },
+    {
+      "id": "event4",
+      "cat": "Museum",
+      "title": "Stille Stunde in der Kinderinfo",
+      "sub": "Ein ruhiger Ort für Kinder und Eltern.",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "ganztägig",
+      "indoor": true,
+      "gratis": true,
+      "preis": "kostenlos",
+      "reg": false,
+      "alter": "ab 4 Jahre",
+      "loc": "WIENXTRA-Kinderinfo, 1070 Wien",
+      "locS": "7. Bezirk",
+      "freq": "Di-So",
+      "tags": [
+        "Ruhe",
+        "Kinder",
+        "Eltern"
+      ],
+      "desc": "Ein Ort der Ruhe und Entspannung für Kinder und Eltern, um dem Trubel des Alltags zu entfliehen.",
+      "link": "https://www.kinderinfowien.at",
+      "addedDate": "2026-03-18T07:00:46.094Z"
     }
   ],
-  "lastUpdated": "2026-03-18T02:00:44.267Z"
+  "lastUpdated": "2026-03-18T07:00:46.094Z"
 }
