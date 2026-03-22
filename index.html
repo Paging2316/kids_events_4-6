@@ -59,7 +59,7 @@ h1 em{color:var(--accent);font-style:normal}
 .tab:hover{color:var(--ink)}
 .tab.on{color:var(--ink);border-bottom-color:var(--accent)}
 .tb{background:var(--accent);color:#fff;font-size:.58rem;font-weight:700;
-  padding:1px 5px;border-radius:8px;min-width:18px;text-align:center}
+  padding:1px 6px;border-radius:8px;min-width:18px;text-align:center;white-space:nowrap}
 .tb.grey{background:#a09285}
 
 /* ── VIEWS ── */
@@ -114,6 +114,7 @@ h1 em{color:var(--accent);font-style:normal}
 .mpill.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .mpill.past{opacity:.4;font-style:italic}
 .mpill.cur:not(.on){border-color:var(--accent);color:var(--accent)}
+.mpill.mpill-today{border-color:var(--accent);color:var(--accent);font-weight:600}
 .month-filter-btns{display:flex;gap:6px}
 .mfb{
   padding:5px 12px;border-radius:20px;
@@ -131,12 +132,21 @@ h1 em{color:var(--accent);font-style:normal}
   margin-bottom:10px;padding-bottom:8px;
   border-bottom:2px solid var(--border);
 }
+.wk-label.past{cursor:pointer;opacity:.55;transition:opacity .15s}
+.wk-label.past:hover{opacity:.8}
+.wk-section.collapsed .wk-label.past{opacity:.45}
+.wk-section.collapsed .wk-label.past:hover{opacity:.7}
+.wk-section.collapsed .ev-list{display:none}
+.wk-arr{display:inline-block;font-size:.7rem;color:var(--muted);
+  transition:transform .2s;margin-left:2px}
+.wk-section.collapsed .wk-arr{transform:rotate(-90deg)}
 .wk-chip{
   background:var(--ink);color:#fff;
   font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
   padding:3px 10px;border-radius:20px;
 }
 .wk-chip.current{background:var(--accent)}
+.wk-chip.past{background:var(--muted)}
 .wk-title{font-family:'Fraunces',serif;font-size:.95rem;font-weight:700;flex:1}
 .wk-count{font-size:.68rem;color:var(--muted)}
 
@@ -176,13 +186,23 @@ h1 em{color:var(--accent);font-style:normal}
   background:var(--bg);border-radius:8px;
   padding:5px 10px;min-width:50px;
 }
+.tc-dow{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
 .tc-day{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;line-height:1;color:var(--ink)}
 .tc-mon{font-size:.58rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
 .tc-time{font-size:.62rem;color:var(--muted);margin-top:1px}
+.tc-end{font-size:.58rem;font-weight:600;color:var(--a4);margin-top:3px;white-space:nowrap}
+.tc-dur{font-size:.58rem;font-weight:600;margin-top:2px;white-space:nowrap}
+.tc-dur.running{color:var(--accent)}
+.tc-dur.upcoming{color:var(--muted)}
 .tc-info{flex:1;min-width:0}
 .tc-title{font-family:'Fraunces',serif;font-size:.93rem;font-weight:700;line-height:1.2;margin-bottom:2px}
 .tc-sub{font-size:.7rem;color:var(--muted);line-height:1.4;margin-bottom:5px}
-.tc-range{font-size:.65rem;color:var(--muted);font-style:italic;margin-bottom:4px}
+.tc-range{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.65rem;font-weight:600;color:var(--muted);
+  background:var(--bg);border-radius:4px;
+  padding:2px 6px;margin-bottom:5px;
+}
 .tc-badges{display:flex;flex-wrap:wrap;gap:4px}
 .tc-arr{flex-shrink:0;font-size:.72rem;color:var(--muted);transition:transform .2s}
 .tc.open .tc-arr{transform:rotate(180deg)}
@@ -420,7 +440,7 @@ h1 em{color:var(--accent);font-style:normal}
     <div class="hdr-stats">
       <div class="stat"><div class="sn" id="sn-total">81</div><div class="sl">Events</div></div>
       <div class="stat"><div class="sn" id="sn-sp">35</div><div class="sl">Specials</div></div>
-      <div class="stat"><div class="sn">20</div><div class="sl">Gratis</div></div>
+      <div class="stat"><div class="sn" id="sn-gratis">–</div><div class="sl">Gratis</div></div>
     </div>
   </div>
 </header>
@@ -551,6 +571,7 @@ var REG=[];
 //  HELPERS + STATE
 // ════════════════════════════════════════
 var MDE=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+var DOW=["So","Mo","Di","Mi","Do","Fr","Sa"];
 var TODAY=new Date(); TODAY.setHours(0,0,0,0);
 var curYear=TODAY.getFullYear();
 var curMonth=TODAY.getMonth();
@@ -558,11 +579,16 @@ var mFilter=null;
 var disState={cat:"all",extra:null,q:""};
 var curTab="week";
 
-function pd(s){return new Date(s+"T00:00:00")}
+function pd(s){return s?new Date(s+"T00:00:00"):null}
 function fmtDate(d){return d.getDate()+". "+MDE[d.getMonth()].substring(0,3)}
+function fmtTime(s){
+  // Extract first actual time (HH:MM) from complex strings like "Mo+Do 16:00 / Fr+Sa 15+19"
+  var m=s.match(/\d{1,2}[:\.]\d{2}/);
+  return m?m[0]:s.split('/')[0].trim();
+}
 function isNowRunning(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
-  return TODAY>=f&&TODAY<=t;
+  return f&&t&&TODAY>=f&&TODAY<=t;
 }
 function getWeekNum(d){
   var dom=d.getDate();
@@ -588,10 +614,9 @@ function badgesHtml(e,isSpecial){
   var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 '+e.preis+'</span>';
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
   var hot=isSpecial?'<span class="b b-hot">🔥 Special</span>':'';
-  var now=isSpecial&&isNowRunning(e)?'<span class="b b-now">● Läuft</span>':'';
   var neu=isNew(e)?'<span class="b b-new">✨ Neu</span>':'';
   var tags=e.tags.slice(0,2).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
-  return neu+hot+now+ib+pb+rb+tags;
+  return neu+hot+ib+pb+rb+tags;
 }
 
 // ════════════════════════════════════════
@@ -683,7 +708,7 @@ function getMonthEvents(){
   var mEnd=new Date(curYear,curMonth+1,0);
   var evs=SP.filter(function(e){
     var f=pd(e.dateFrom),t=pd(e.dateTo);
-    return f<=mEnd&&t>=mStart;
+    return f&&t&&f<=mEnd&&t>=mStart;
   });
   if(mFilter==="gratis")evs=evs.filter(function(e){return e.gratis});
   if(mFilter==="indoor")evs=evs.filter(function(e){return e.indoor});
@@ -696,13 +721,35 @@ function tcCard(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
   var single=e.dateFrom===e.dateTo;
   var mStart=new Date(curYear,curMonth,1);
-  var dispDate=f<mStart?mStart:f;
+  var dispDate=(f&&f<mStart)?mStart:(f||mStart);
   var day=String(dispDate.getDate()).padStart(2,"0");
   var mon=MDE[dispDate.getMonth()].substring(0,3);
-  var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
-  var eFrom=pd(e.dateFrom),eTo=pd(e.dateTo);
-  var isPast=eTo<TODAY;
-  var isNow=eFrom<=TODAY&&eTo>=TODAY;
+  var dow=DOW[dispDate.getDay()];
+  var isPast=t&&t<TODAY;
+  var isNow=f&&t&&f<=TODAY&&t>=TODAY;
+
+  // Date box: bottom section differs for single vs multi-day
+  var dateBoxBottom='';
+  if(single){
+    dateBoxBottom='<div class="tc-time">'+fmtTime(e.time)+'</div>';
+  } else if(f&&t){
+    var durDays=Math.round((t-f)/(1000*60*60*24));
+    var endHtml='<div class="tc-end">bis '+fmtDate(t)+'</div>';
+    var durHtml='';
+    if(isNow){
+      var remDays=Math.round((t-TODAY)/(1000*60*60*24));
+      durHtml='<div class="tc-dur running">noch '+remDays+' T.</div>';
+    } else if(!isPast){
+      durHtml='<div class="tc-dur upcoming">'+durDays+' Tage</div>';
+    }
+    dateBoxBottom=endHtml+durHtml;
+  }
+
+  // Range line: show full span for multi-day
+  var rangeHtml=single?'':('<div class="tc-range">'+
+    '<span>'+fmtDate(f)+'</span><span>→</span><span>'+fmtDate(t)+'</span>'+
+  '</div>');
+
   var badges=badgesHtml(e,true);
   if(isNow)badges='<span class="b b-now">▶ Läuft</span>'+badges;
   if(isPast)badges='<span class="b b-past">✓ Vorbei</span>'+badges;
@@ -711,7 +758,12 @@ function tcCard(e){
   return '<div class="tc'+pastCls+'" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
     '<div class="tc-stripe"></div>'+
     '<div class="tc-body">'+
-      '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div></div>'+
+      '<div class="tc-date-box">'+
+        '<div class="tc-dow">'+dow+'</div>'+
+        '<div class="tc-day">'+day+'</div>'+
+        '<div class="tc-mon">'+mon+'</div>'+
+        dateBoxBottom+
+      '</div>'+
       '<div class="tc-info">'+
         '<div class="tc-title">'+e.title+'</div>'+
         '<div class="tc-sub">'+e.sub+'</div>'+
@@ -724,7 +776,7 @@ function tcCard(e){
     '<div class="tc-det">'+
       '<div class="det-desc">'+e.desc+'</div>'+
       '<div class="det-grid">'+
-        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?fmtDate(f)+' '+f.getFullYear():fmtDate(f)+" – "+fmtDate(t)+" "+t.getFullYear())+'</div></div>'+
+        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?DOW[f.getDay()]+', '+fmtDate(f)+' '+f.getFullYear():fmtDate(f)+" – "+fmtDate(t)+" "+t.getFullYear())+'</div></div>'+
         '<div><div class="det-k">Uhrzeit</div><div class="det-v">'+e.time+'</div></div>'+
         '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
         '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja – bitte vorbuchen":"❌ Nicht nötig")+'</div></div>'+
@@ -737,16 +789,23 @@ function tcCard(e){
 }
 
 function renderTimeline(){
+  // update hero pill with current month
+  var todayMonth=TODAY.getMonth();
+  var heroLabel=curMonth===todayMonth?'Diese Woche · '+MDE[curMonth]:MDE[curMonth]+' '+curYear;
+  document.getElementById("hero-week").textContent=heroLabel;
+
   // update month pills
   var pillsHtml="";
-  var startM=Math.min(TODAY.getMonth(),11);
+  if(curMonth!==todayMonth){
+    pillsHtml+='<button class="mpill mpill-today" onclick="jumpMonth('+todayMonth+')">↩ Heute</button>';
+  }
   for(var i=0;i<=11;i++){
     pillsHtml+='<button class="mpill'+(i===curMonth?" on":"")+'" onclick="jumpMonth('+i+')">'+MDE[i]+'</button>';
   }
   document.getElementById("month-pills").innerHTML=pillsHtml;
 
   var evs=getMonthEvents();
-  document.getElementById("tb-week").textContent=SP.length;
+  document.getElementById("tb-week").textContent=evs.length+' · '+MDE[curMonth].substring(0,3);
   var content=document.getElementById("tl-content");
 
   if(evs.length===0){
@@ -759,32 +818,59 @@ function renderTimeline(){
   var mStart=new Date(curYear,curMonth,1);
   evs.forEach(function(e){
     var f=pd(e.dateFrom);
-    var eff=f<mStart?mStart:f;
-    var wn=getWeekNum(eff);
+    var eff=f&&f<mStart?mStart:f;
+    var wn=getWeekNum(eff||mStart);
     if(!weeks[wn])weeks[wn]=[];
     weeks[wn].push(e);
   });
-
   var nowWeek=getWeekNum(TODAY);
   var nowMonth=TODAY.getMonth();
+
+  // Sort within each week: for current week put past events last;
+  // for all weeks sort by effective start date
+  Object.keys(weeks).forEach(function(wn){
+    var isCurWk=curMonth===nowMonth&&parseInt(wn)===nowWeek;
+    weeks[wn].sort(function(a,b){
+      if(isCurWk){
+        var aPast=pd(a.dateTo)&&pd(a.dateTo)<TODAY?1:0;
+        var bPast=pd(b.dateTo)&&pd(b.dateTo)<TODAY?1:0;
+        if(aPast!==bPast)return aPast-bPast;
+      }
+      var fa=pd(a.dateFrom),fb=pd(b.dateFrom);
+      var ea=fa&&fa<mStart?mStart:fa||mStart;
+      var eb=fb&&fb<mStart?mStart:fb||mStart;
+      return ea-eb;
+    });
+  });
+
   var html="";
   Object.keys(weeks).sort(function(a,b){return a-b}).forEach(function(wn){
     var evList=weeks[wn];
     var isCurrent=curMonth===nowMonth&&parseInt(wn)===nowWeek;
-    var chipClass=isCurrent?"wk-chip current":"wk-chip";
-    var chipLabel=isCurrent?"Diese Woche":"Woche";
-    html+='<div class="wk-section">'+
-      '<div class="wk-label">'+
+    var isPastWk=curMonth<nowMonth||(curMonth===nowMonth&&parseInt(wn)<nowWeek);
+    var chipClass=isCurrent?"wk-chip current":isPastWk?"wk-chip past":"wk-chip";
+    var chipLabel=isCurrent?"Diese Woche":isPastWk?"Vorbei":"Woche";
+    var sectionCls='wk-section'+(isPastWk?' collapsed':'')+(isCurrent?' current-week':'');
+    html+='<div class="'+sectionCls+'">'+
+      '<div class="wk-label'+(isPastWk?' past':'')+'">'+
         '<span class="'+chipClass+'">'+chipLabel+'</span>'+
         '<span class="wk-title">'+weekLabel(parseInt(wn),curMonth)+'</span>'+
         '<span class="wk-count">'+evList.length+' Event'+(evList.length>1?"s":"")+'</span>'+
+        (isPastWk?'<span class="wk-arr">▾</span>':'')+
       '</div>'+
       '<div class="ev-list">'+evList.map(tcCard).join('')+'</div>'+
     '</div>';
   });
   content.innerHTML=html;
 
-  // attach click handlers
+  // Collapse/expand past weeks on label click
+  content.querySelectorAll(".wk-label.past").forEach(function(lbl){
+    lbl.addEventListener("click",function(){
+      lbl.closest(".wk-section").classList.toggle("collapsed");
+    });
+  });
+
+  // Card expand/collapse
   content.querySelectorAll(".tc").forEach(function(el){
     el.addEventListener("click",function(){
       var was=el.classList.contains("open");
@@ -792,6 +878,16 @@ function renderTimeline(){
       if(!was)el.classList.add("open");
     });
   });
+
+  // Auto-scroll to current week (only when viewing current month)
+  if(curMonth===nowMonth){
+    var curSection=content.querySelector(".current-week");
+    if(curSection){
+      setTimeout(function(){
+        curSection.scrollIntoView({behavior:"smooth",block:"start"});
+      },80);
+    }
+  }
 }
 
 // ════════════════════════════════════════
@@ -806,7 +902,10 @@ function filteredReg(){
     if(disState.extra==="anmeldung"&&!e.reg)return false;
     if(disState.q){
       var q=disState.q.toLowerCase();
-      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||e.cat.toLowerCase().indexOf(q)>=0;
+      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||
+             e.cat.toLowerCase().indexOf(q)>=0||
+             (e.desc&&e.desc.toLowerCase().indexOf(q)>=0)||
+             (e.locS&&e.locS.toLowerCase().indexOf(q)>=0);
       if(!ok)for(var i=0;i<e.tags.length;i++){if(e.tags[i].toLowerCase().indexOf(q)>=0){ok=true;break;}}
       if(!ok)return false;
     }
@@ -910,6 +1009,8 @@ fetch('events.json')
     document.getElementById("sn-total").textContent=SP.length+REG.length;
     document.getElementById("sn-sp").textContent=SP.length;
     document.getElementById("tb-dis").textContent=REG.length;
+    var gratisCount=SP.filter(function(e){return e.gratis;}).length+REG.filter(function(e){return e.gratis;}).length;
+    document.getElementById("sn-gratis").textContent=gratisCount;
     if(data.lastUpdated){
       var d=new Date(data.lastUpdated);
       var mn=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];
