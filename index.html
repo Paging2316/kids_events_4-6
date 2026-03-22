@@ -186,16 +186,23 @@ h1 em{color:var(--accent);font-style:normal}
   background:var(--bg);border-radius:8px;
   padding:5px 10px;min-width:50px;
 }
+.tc-dow{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:2px}
 .tc-day{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;line-height:1;color:var(--ink)}
 .tc-mon{font-size:.58rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
 .tc-time{font-size:.62rem;color:var(--muted);margin-top:1px}
-.tc-dur{font-size:.58rem;font-weight:600;margin-top:3px;white-space:nowrap}
+.tc-end{font-size:.58rem;font-weight:600;color:var(--a4);margin-top:3px;white-space:nowrap}
+.tc-dur{font-size:.58rem;font-weight:600;margin-top:2px;white-space:nowrap}
 .tc-dur.running{color:var(--accent)}
 .tc-dur.upcoming{color:var(--muted)}
 .tc-info{flex:1;min-width:0}
 .tc-title{font-family:'Fraunces',serif;font-size:.93rem;font-weight:700;line-height:1.2;margin-bottom:2px}
 .tc-sub{font-size:.7rem;color:var(--muted);line-height:1.4;margin-bottom:5px}
-.tc-range{font-size:.65rem;color:var(--muted);font-style:italic;margin-bottom:4px}
+.tc-range{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.65rem;font-weight:600;color:var(--muted);
+  background:var(--bg);border-radius:4px;
+  padding:2px 6px;margin-bottom:5px;
+}
 .tc-badges{display:flex;flex-wrap:wrap;gap:4px}
 .tc-arr{flex-shrink:0;font-size:.72rem;color:var(--muted);transition:transform .2s}
 .tc.open .tc-arr{transform:rotate(180deg)}
@@ -564,6 +571,7 @@ var REG=[];
 //  HELPERS + STATE
 // ════════════════════════════════════════
 var MDE=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+var DOW=["So","Mo","Di","Mi","Do","Fr","Sa"];
 var TODAY=new Date(); TODAY.setHours(0,0,0,0);
 var curYear=TODAY.getFullYear();
 var curMonth=TODAY.getMonth();
@@ -573,6 +581,11 @@ var curTab="week";
 
 function pd(s){return s?new Date(s+"T00:00:00"):null}
 function fmtDate(d){return d.getDate()+". "+MDE[d.getMonth()].substring(0,3)}
+function fmtTime(s){
+  // Extract first actual time (HH:MM) from complex strings like "Mo+Do 16:00 / Fr+Sa 15+19"
+  var m=s.match(/\d{1,2}[:\.]\d{2}/);
+  return m?m[0]:s.split('/')[0].trim();
+}
 function isNowRunning(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
   return f&&t&&TODAY>=f&&TODAY<=t;
@@ -711,19 +724,32 @@ function tcCard(e){
   var dispDate=(f&&f<mStart)?mStart:(f||mStart);
   var day=String(dispDate.getDate()).padStart(2,"0");
   var mon=MDE[dispDate.getMonth()].substring(0,3);
-  var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
+  var dow=DOW[dispDate.getDay()];
   var isPast=t&&t<TODAY;
   var isNow=f&&t&&f<=TODAY&&t>=TODAY;
-  var durHtml='';
-  if(!single&&f&&t){
+
+  // Date box: bottom section differs for single vs multi-day
+  var dateBoxBottom='';
+  if(single){
+    dateBoxBottom='<div class="tc-time">'+fmtTime(e.time)+'</div>';
+  } else if(f&&t){
     var durDays=Math.round((t-f)/(1000*60*60*24));
+    var endHtml='<div class="tc-end">bis '+fmtDate(t)+'</div>';
+    var durHtml='';
     if(isNow){
       var remDays=Math.round((t-TODAY)/(1000*60*60*24));
       durHtml='<div class="tc-dur running">noch '+remDays+' T.</div>';
-    } else if(!isPast&&durDays>1){
+    } else if(!isPast){
       durHtml='<div class="tc-dur upcoming">'+durDays+' Tage</div>';
     }
+    dateBoxBottom=endHtml+durHtml;
   }
+
+  // Range line: show full span for multi-day
+  var rangeHtml=single?'':('<div class="tc-range">'+
+    '<span>'+fmtDate(f)+'</span><span>→</span><span>'+fmtDate(t)+'</span>'+
+  '</div>');
+
   var badges=badgesHtml(e,true);
   if(isNow)badges='<span class="b b-now">▶ Läuft</span>'+badges;
   if(isPast)badges='<span class="b b-past">✓ Vorbei</span>'+badges;
@@ -732,7 +758,12 @@ function tcCard(e){
   return '<div class="tc'+pastCls+'" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
     '<div class="tc-stripe"></div>'+
     '<div class="tc-body">'+
-      '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div>'+durHtml+'</div>'+
+      '<div class="tc-date-box">'+
+        '<div class="tc-dow">'+dow+'</div>'+
+        '<div class="tc-day">'+day+'</div>'+
+        '<div class="tc-mon">'+mon+'</div>'+
+        dateBoxBottom+
+      '</div>'+
       '<div class="tc-info">'+
         '<div class="tc-title">'+e.title+'</div>'+
         '<div class="tc-sub">'+e.sub+'</div>'+
@@ -745,7 +776,7 @@ function tcCard(e){
     '<div class="tc-det">'+
       '<div class="det-desc">'+e.desc+'</div>'+
       '<div class="det-grid">'+
-        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?fmtDate(f)+' '+f.getFullYear():fmtDate(f)+" – "+fmtDate(t)+" "+t.getFullYear())+'</div></div>'+
+        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?DOW[f.getDay()]+', '+fmtDate(f)+' '+f.getFullYear():fmtDate(f)+" – "+fmtDate(t)+" "+t.getFullYear())+'</div></div>'+
         '<div><div class="det-k">Uhrzeit</div><div class="det-v">'+e.time+'</div></div>'+
         '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
         '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja – bitte vorbuchen":"❌ Nicht nötig")+'</div></div>'+
