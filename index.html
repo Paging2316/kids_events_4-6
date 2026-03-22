@@ -59,7 +59,7 @@ h1 em{color:var(--accent);font-style:normal}
 .tab:hover{color:var(--ink)}
 .tab.on{color:var(--ink);border-bottom-color:var(--accent)}
 .tb{background:var(--accent);color:#fff;font-size:.58rem;font-weight:700;
-  padding:1px 5px;border-radius:8px;min-width:18px;text-align:center}
+  padding:1px 6px;border-radius:8px;min-width:18px;text-align:center;white-space:nowrap}
 .tb.grey{background:#a09285}
 
 /* ── VIEWS ── */
@@ -180,6 +180,9 @@ h1 em{color:var(--accent);font-style:normal}
 .tc-day{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;line-height:1;color:var(--ink)}
 .tc-mon{font-size:.58rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
 .tc-time{font-size:.62rem;color:var(--muted);margin-top:1px}
+.tc-dur{font-size:.58rem;font-weight:600;margin-top:3px;white-space:nowrap}
+.tc-dur.running{color:var(--accent)}
+.tc-dur.upcoming{color:var(--muted)}
 .tc-info{flex:1;min-width:0}
 .tc-title{font-family:'Fraunces',serif;font-size:.93rem;font-weight:700;line-height:1.2;margin-bottom:2px}
 .tc-sub{font-size:.7rem;color:var(--muted);line-height:1.4;margin-bottom:5px}
@@ -702,6 +705,16 @@ function tcCard(e){
   var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
   var isPast=t&&t<TODAY;
   var isNow=f&&t&&f<=TODAY&&t>=TODAY;
+  var durHtml='';
+  if(!single&&f&&t){
+    var durDays=Math.round((t-f)/(1000*60*60*24));
+    if(isNow){
+      var remDays=Math.round((t-TODAY)/(1000*60*60*24));
+      durHtml='<div class="tc-dur running">noch '+remDays+' T.</div>';
+    } else if(!isPast&&durDays>1){
+      durHtml='<div class="tc-dur upcoming">'+durDays+' Tage</div>';
+    }
+  }
   var badges=badgesHtml(e,true);
   if(isNow)badges='<span class="b b-now">▶ Läuft</span>'+badges;
   if(isPast)badges='<span class="b b-past">✓ Vorbei</span>'+badges;
@@ -710,7 +723,7 @@ function tcCard(e){
   return '<div class="tc'+pastCls+'" data-id="'+e.id+'" data-cat="'+e.cat+'">'+
     '<div class="tc-stripe"></div>'+
     '<div class="tc-body">'+
-      '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div></div>'+
+      '<div class="tc-date-box"><div class="tc-day">'+day+'</div><div class="tc-mon">'+mon+'</div><div class="tc-time">'+e.time.split('/')[0].split(' ')[0]+'</div>'+durHtml+'</div>'+
       '<div class="tc-info">'+
         '<div class="tc-title">'+e.title+'</div>'+
         '<div class="tc-sub">'+e.sub+'</div>'+
@@ -736,9 +749,13 @@ function tcCard(e){
 }
 
 function renderTimeline(){
+  // update hero pill with current month
+  var todayMonth=TODAY.getMonth();
+  var heroLabel=curMonth===todayMonth?'Diese Woche · '+MDE[curMonth]:MDE[curMonth]+' '+curYear;
+  document.getElementById("hero-week").textContent=heroLabel;
+
   // update month pills
   var pillsHtml="";
-  var todayMonth=TODAY.getMonth();
   if(curMonth!==todayMonth){
     pillsHtml+='<button class="mpill mpill-today" onclick="jumpMonth('+todayMonth+')">↩ Heute</button>';
   }
@@ -748,7 +765,7 @@ function renderTimeline(){
   document.getElementById("month-pills").innerHTML=pillsHtml;
 
   var evs=getMonthEvents();
-  document.getElementById("tb-week").textContent=evs.length;
+  document.getElementById("tb-week").textContent=evs.length+' · '+MDE[curMonth].substring(0,3);
   var content=document.getElementById("tl-content");
 
   if(evs.length===0){
@@ -761,10 +778,19 @@ function renderTimeline(){
   var mStart=new Date(curYear,curMonth,1);
   evs.forEach(function(e){
     var f=pd(e.dateFrom);
-    var eff=f<mStart?mStart:f;
-    var wn=getWeekNum(eff);
+    var eff=f&&f<mStart?mStart:f;
+    var wn=getWeekNum(eff||mStart);
     if(!weeks[wn])weeks[wn]=[];
     weeks[wn].push(e);
+  });
+  // Sort within each week by effective start date
+  Object.keys(weeks).forEach(function(wn){
+    weeks[wn].sort(function(a,b){
+      var fa=pd(a.dateFrom),fb=pd(b.dateFrom);
+      var ea=fa&&fa<mStart?mStart:fa||mStart;
+      var eb=fb&&fb<mStart?mStart:fb||mStart;
+      return ea-eb;
+    });
   });
 
   var nowWeek=getWeekNum(TODAY);
