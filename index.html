@@ -322,8 +322,13 @@ h1 em{color:var(--accent);font-style:normal}
 /* CATEGORY SECTION */
 .cat-sec{margin-bottom:28px}
 .cat-hdr{display:flex;align-items:center;gap:8px;margin-bottom:9px;padding-bottom:7px;border-bottom:2px solid var(--border)}
-.cat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.cat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;align-self:flex-start;margin-top:5px}
 .cat-hdr h2{font-family:'Fraunces',serif;font-size:.98rem;font-weight:700}
+.cat-sub{font-size:.68rem;color:var(--muted);margin-top:1px}
+.dis-sep{margin:20px 0 16px;display:flex;align-items:center;gap:10px}
+.dis-sep span{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);white-space:nowrap}
+.dis-sep::before,.dis-sep::after{content:'';flex:1;height:1px;background:var(--border)}
+.dis-sep::before{display:none}
 .cat-cnt{font-size:.66rem;color:var(--muted);background:var(--border);padding:2px 7px;border-radius:9px}
 .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
 
@@ -551,7 +556,7 @@ h1 em{color:var(--accent);font-style:normal}
     </div>
   </div>
   <div class="dis-content">
-    <div class="rc">Zeige <strong id="vc">46</strong> reguläre Angebote</div>
+    <div class="rc">Zeige <strong id="vc">–</strong> Angebote &nbsp;·&nbsp; <span id="rc-hint">Zeitlich begrenzte Highlights + Dauerangebote</span></div>
     <div id="dis-wrap"></div>
   </div>
 </div>
@@ -1025,16 +1030,24 @@ function renderDiscover(){
   var wrap=document.getElementById("dis-wrap");
   var showCats=disState.cat==="all"&&!disState.extra&&!disState.q;
   var html="";
-  // "Läuft gerade" section for long-running specials (always at top)
+  // ── Zeitlich begrenzte Highlights (60+ Tage laufend) ──
   if(longEvs.length>0){
     html+='<div class="cat-sec">'+
-      '<div class="cat-hdr"><div class="cat-dot" style="background:#b45309"></div>'+
-      '<h2>📅 Läuft gerade</h2><span class="cat-cnt">'+longEvs.length+'</span></div>'+
+      '<div class="cat-hdr">'+
+        '<div class="cat-dot" style="background:#b45309"></div>'+
+        '<div>'+
+          '<h2>🗓 Zeitlich begrenzte Highlights</h2>'+
+          '<div class="cat-sub">Laufen noch – aber nicht ewig. Jetzt besuchen!</div>'+
+        '</div>'+
+        '<span class="cat-cnt">'+longEvs.length+'</span>'+
+      '</div>'+
       '<div class="egrid">'+longEvs.map(lcCard).join('')+'</div></div>';
   }
   if(evs.length===0&&longEvs.length===0){
     html='<div class="egrid"><div class="empty"><div class="empty-em">🔍</div><p>Nichts gefunden.</p></div></div>';
-  } else if(showCats){
+  } else if(showCats&&evs.length>0){
+    // ── Dauerangebote ──
+    html+='<div class="dis-sep"><span>🔄 Immer verfügbar – Dauerangebote</span></div>';
     var cats=[];evs.forEach(function(e){if(cats.indexOf(e.cat)<0)cats.push(e.cat);});
     cats.forEach(function(cat){
       var ces=evs.filter(function(e){return e.cat===cat;});
