@@ -813,15 +813,24 @@ function renderTimeline(){
     return;
   }
 
-  // Group by week
+  // Group by week – multi-week events appear in every week they overlap with
   var weeks={};
   var mStart=new Date(curYear,curMonth,1);
+  var mEnd=new Date(curYear,curMonth+1,0);
   evs.forEach(function(e){
-    var f=pd(e.dateFrom);
-    var eff=f&&f<mStart?mStart:f;
-    var wn=getWeekNum(eff||mStart);
-    if(!weeks[wn])weeks[wn]=[];
-    weeks[wn].push(e);
+    var f=pd(e.dateFrom),t=pd(e.dateTo);
+    var eff=f&&f<mStart?new Date(mStart):(f?new Date(f):new Date(mStart));
+    var effEnd=t&&t>mEnd?new Date(mEnd):(t?new Date(t):new Date(eff));
+    var seen={};
+    var cur=new Date(eff);
+    while(cur<=effEnd){
+      var wn=getWeekNum(cur);
+      if(!seen[wn]){seen[wn]=true;if(!weeks[wn])weeks[wn]=[];weeks[wn].push(e);}
+      cur.setDate(cur.getDate()+7);
+    }
+    // ensure the final week is always included
+    var lastWn=getWeekNum(effEnd);
+    if(!seen[lastWn]){if(!weeks[lastWn])weeks[lastWn]=[];weeks[lastWn].push(e);}
   });
   var nowWeek=getWeekNum(TODAY);
   var nowMonth=TODAY.getMonth();
