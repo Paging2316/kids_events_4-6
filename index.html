@@ -590,6 +590,11 @@ function isNowRunning(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
   return f&&t&&TODAY>=f&&TODAY<=t;
 }
+function eventDays(e){
+  var f=pd(e.dateFrom),t=pd(e.dateTo);
+  return f&&t?Math.round((t-f)/(1000*60*60*24)):0;
+}
+var LONG_EVT_DAYS=60; // Events >= 60 Tage → Entdecken statt Wochenplaner
 function getWeekNum(d){
   var dom=d.getDate();
   return Math.min(Math.ceil(dom/7),5);
@@ -708,7 +713,7 @@ function getMonthEvents(){
   var mEnd=new Date(curYear,curMonth+1,0);
   var evs=SP.filter(function(e){
     var f=pd(e.dateFrom),t=pd(e.dateTo);
-    return f&&t&&f<=mEnd&&t>=mStart;
+    return f&&t&&f<=mEnd&&t>=mStart&&eventDays(e)<LONG_EVT_DAYS;
   });
   if(mFilter==="gratis")evs=evs.filter(function(e){return e.gratis});
   if(mFilter==="indoor")evs=evs.filter(function(e){return e.indoor});
@@ -957,13 +962,77 @@ function ecCard(e){
   '</div>';
 }
 
+function filteredLong(){
+  return SP.filter(function(e){
+    if(eventDays(e)<LONG_EVT_DAYS)return false;
+    var t=pd(e.dateTo);
+    if(!t||t<TODAY)return false;
+    if(disState.extra==="indoor"&&!e.indoor)return false;
+    if(disState.extra==="outdoor"&&e.indoor)return false;
+    if(disState.extra==="gratis"&&!e.gratis)return false;
+    if(disState.extra==="anmeldung"&&!e.reg)return false;
+    if(disState.q){
+      var q=disState.q.toLowerCase();
+      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||
+             (e.tags&&e.tags.some(function(tg){return tg.toLowerCase().indexOf(q)>=0}));
+      if(!ok)return false;
+    }
+    return true;
+  });
+}
+
+function lcCard(e){
+  var t=pd(e.dateTo);
+  var ib=e.indoor?'<span class="b b-in">🏠 Indoor</span>':'<span class="b b-out">🌳 Outdoor</span>';
+  var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 '+e.preis+'</span>';
+  var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
+  var tags=e.tags.slice(0,3).map(function(tg){return'<span class="b b-tag">'+tg+'</span>';}).join('');
+  var runBadge=isNowRunning(e)?'<span class="b b-now">▶ Läuft</span>':'';
+  var remDays=t?Math.round((t-TODAY)/(1000*60*60*24)):0;
+  var untilStr=t?'bis '+fmtDate(t):'';
+  var remStr=remDays>0?'noch '+remDays+' T.':'';
+  return '<div class="ec" data-cat="'+e.cat+'" data-id="'+e.id+'">'+
+    '<div class="ec-stripe"></div>'+
+    '<div class="ec-hdr">'+
+      '<div class="ec-top"><div class="ec-title">'+e.title+'</div>'+
+      '<button class="fav-btn" data-fav-id="'+e.id+'">'+(isFav(e.id)?'❤️':'🤍')+'</button>'+
+      '<div class="ec-arr">▾</div></div>'+
+      '<div class="ec-sub">'+e.sub+'</div>'+
+      '<div class="badges">'+runBadge+ib+pb+rb+tags+'</div>'+
+    '</div>'+
+    '<div class="qbar">'+
+      '<div class="qi"><div class="qi-ic">📍</div><div class="qi-v">'+e.locS+'</div><div class="qi-k">Bezirk</div></div>'+
+      '<div class="qi"><div class="qi-ic">📅</div><div class="qi-v">'+untilStr+'</div><div class="qi-k">Läuft bis</div></div>'+
+      '<div class="qi"><div class="qi-ic">⏳</div><div class="qi-v">'+remStr+'</div><div class="qi-k">Restlaufzeit</div></div>'+
+    '</div>'+
+    '<div class="ec-det">'+
+      '<div class="det-desc">'+e.desc+'</div>'+
+      '<div class="det-grid">'+
+        '<div><div class="det-k">Zeitraum</div><div class="det-v">'+fmtDate(pd(e.dateFrom))+" – "+fmtDate(t)+'</div></div>'+
+        '<div><div class="det-k">Öffnung</div><div class="det-v">'+e.time+'</div></div>'+
+        '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
+        '<div><div class="det-k">Adresse</div><div class="det-v">'+e.loc+'</div></div>'+
+      '</div>'+
+      (e.link?'<a href="'+e.link+'" target="_blank" class="det-link" onclick="event.stopPropagation()">🔗 Website öffnen</a>':'')+
+    '</div>'+
+  '</div>';
+}
+
 function renderDiscover(){
+  var longEvs=filteredLong();
   var evs=filteredReg();
-  document.getElementById("vc").textContent=evs.length;
+  document.getElementById("vc").textContent=longEvs.length+evs.length;
   var wrap=document.getElementById("dis-wrap");
   var showCats=disState.cat==="all"&&!disState.extra&&!disState.q;
   var html="";
-  if(evs.length===0){
+  // "Läuft gerade" section for long-running specials (always at top)
+  if(longEvs.length>0){
+    html+='<div class="cat-sec">'+
+      '<div class="cat-hdr"><div class="cat-dot" style="background:#b45309"></div>'+
+      '<h2>📅 Läuft gerade</h2><span class="cat-cnt">'+longEvs.length+'</span></div>'+
+      '<div class="egrid">'+longEvs.map(lcCard).join('')+'</div></div>';
+  }
+  if(evs.length===0&&longEvs.length===0){
     html='<div class="egrid"><div class="empty"><div class="empty-em">🔍</div><p>Nichts gefunden.</p></div></div>';
   } else if(showCats){
     var cats=[];evs.forEach(function(e){if(cats.indexOf(e.cat)<0)cats.push(e.cat);});
@@ -974,8 +1043,8 @@ function renderDiscover(){
         '<h2>'+em+" "+cat+'</h2><span class="cat-cnt">'+ces.length+'</span></div>'+
         '<div class="egrid">'+ces.map(ecCard).join('')+'</div></div>';
     });
-  } else {
-    html='<div class="egrid">'+evs.map(ecCard).join('')+'</div>';
+  } else if(evs.length>0){
+    html+='<div class="egrid">'+evs.map(ecCard).join('')+'</div>';
   }
   wrap.innerHTML=html;
   wrap.querySelectorAll(".ec").forEach(function(el){
@@ -1015,9 +1084,11 @@ fetch('events.json')
   .then(function(data){
     SP = data.special || [];
     REG = data.regular || [];
+    var shortSP=SP.filter(function(e){return eventDays(e)<LONG_EVT_DAYS;});
+    var longSP=SP.filter(function(e){return eventDays(e)>=LONG_EVT_DAYS;});
     document.getElementById("sn-total").textContent=SP.length+REG.length;
-    document.getElementById("sn-sp").textContent=SP.length;
-    document.getElementById("tb-dis").textContent=REG.length;
+    document.getElementById("sn-sp").textContent=shortSP.length;
+    document.getElementById("tb-dis").textContent=REG.length+longSP.length;
     var gratisCount=SP.filter(function(e){return e.gratis;}).length+REG.filter(function(e){return e.gratis;}).length;
     document.getElementById("sn-gratis").textContent=gratisCount;
     if(data.lastUpdated){
