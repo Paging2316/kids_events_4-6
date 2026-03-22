@@ -114,6 +114,7 @@ h1 em{color:var(--accent);font-style:normal}
 .mpill.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .mpill.past{opacity:.4;font-style:italic}
 .mpill.cur:not(.on){border-color:var(--accent);color:var(--accent)}
+.mpill.mpill-today{border-color:var(--accent);color:var(--accent);font-weight:600}
 .month-filter-btns{display:flex;gap:6px}
 .mfb{
   padding:5px 12px;border-radius:20px;
@@ -420,7 +421,7 @@ h1 em{color:var(--accent);font-style:normal}
     <div class="hdr-stats">
       <div class="stat"><div class="sn" id="sn-total">81</div><div class="sl">Events</div></div>
       <div class="stat"><div class="sn" id="sn-sp">35</div><div class="sl">Specials</div></div>
-      <div class="stat"><div class="sn">20</div><div class="sl">Gratis</div></div>
+      <div class="stat"><div class="sn" id="sn-gratis">–</div><div class="sl">Gratis</div></div>
     </div>
   </div>
 </header>
@@ -558,11 +559,11 @@ var mFilter=null;
 var disState={cat:"all",extra:null,q:""};
 var curTab="week";
 
-function pd(s){return new Date(s+"T00:00:00")}
+function pd(s){return s?new Date(s+"T00:00:00"):null}
 function fmtDate(d){return d.getDate()+". "+MDE[d.getMonth()].substring(0,3)}
 function isNowRunning(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
-  return TODAY>=f&&TODAY<=t;
+  return f&&t&&TODAY>=f&&TODAY<=t;
 }
 function getWeekNum(d){
   var dom=d.getDate();
@@ -588,10 +589,9 @@ function badgesHtml(e,isSpecial){
   var pb=e.gratis?'<span class="b b-free">💚 Gratis</span>':'<span class="b b-paid">💰 '+e.preis+'</span>';
   var rb=e.reg?'<span class="b b-reg">⚠ Anmeldung</span>':'';
   var hot=isSpecial?'<span class="b b-hot">🔥 Special</span>':'';
-  var now=isSpecial&&isNowRunning(e)?'<span class="b b-now">● Läuft</span>':'';
   var neu=isNew(e)?'<span class="b b-new">✨ Neu</span>':'';
   var tags=e.tags.slice(0,2).map(function(t){return'<span class="b b-tag">'+t+'</span>';}).join('');
-  return neu+hot+now+ib+pb+rb+tags;
+  return neu+hot+ib+pb+rb+tags;
 }
 
 // ════════════════════════════════════════
@@ -683,7 +683,7 @@ function getMonthEvents(){
   var mEnd=new Date(curYear,curMonth+1,0);
   var evs=SP.filter(function(e){
     var f=pd(e.dateFrom),t=pd(e.dateTo);
-    return f<=mEnd&&t>=mStart;
+    return f&&t&&f<=mEnd&&t>=mStart;
   });
   if(mFilter==="gratis")evs=evs.filter(function(e){return e.gratis});
   if(mFilter==="indoor")evs=evs.filter(function(e){return e.indoor});
@@ -696,13 +696,12 @@ function tcCard(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
   var single=e.dateFrom===e.dateTo;
   var mStart=new Date(curYear,curMonth,1);
-  var dispDate=f<mStart?mStart:f;
+  var dispDate=(f&&f<mStart)?mStart:(f||mStart);
   var day=String(dispDate.getDate()).padStart(2,"0");
   var mon=MDE[dispDate.getMonth()].substring(0,3);
   var rangeHtml=single?'':('<div class="tc-range">'+fmtDate(f)+" – "+fmtDate(t)+'</div>');
-  var eFrom=pd(e.dateFrom),eTo=pd(e.dateTo);
-  var isPast=eTo<TODAY;
-  var isNow=eFrom<=TODAY&&eTo>=TODAY;
+  var isPast=t&&t<TODAY;
+  var isNow=f&&t&&f<=TODAY&&t>=TODAY;
   var badges=badgesHtml(e,true);
   if(isNow)badges='<span class="b b-now">▶ Läuft</span>'+badges;
   if(isPast)badges='<span class="b b-past">✓ Vorbei</span>'+badges;
@@ -739,14 +738,17 @@ function tcCard(e){
 function renderTimeline(){
   // update month pills
   var pillsHtml="";
-  var startM=Math.min(TODAY.getMonth(),11);
+  var todayMonth=TODAY.getMonth();
+  if(curMonth!==todayMonth){
+    pillsHtml+='<button class="mpill mpill-today" onclick="jumpMonth('+todayMonth+')">↩ Heute</button>';
+  }
   for(var i=0;i<=11;i++){
     pillsHtml+='<button class="mpill'+(i===curMonth?" on":"")+'" onclick="jumpMonth('+i+')">'+MDE[i]+'</button>';
   }
   document.getElementById("month-pills").innerHTML=pillsHtml;
 
   var evs=getMonthEvents();
-  document.getElementById("tb-week").textContent=SP.length;
+  document.getElementById("tb-week").textContent=evs.length;
   var content=document.getElementById("tl-content");
 
   if(evs.length===0){
@@ -806,7 +808,10 @@ function filteredReg(){
     if(disState.extra==="anmeldung"&&!e.reg)return false;
     if(disState.q){
       var q=disState.q.toLowerCase();
-      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||e.cat.toLowerCase().indexOf(q)>=0;
+      var ok=e.title.toLowerCase().indexOf(q)>=0||e.sub.toLowerCase().indexOf(q)>=0||
+             e.cat.toLowerCase().indexOf(q)>=0||
+             (e.desc&&e.desc.toLowerCase().indexOf(q)>=0)||
+             (e.locS&&e.locS.toLowerCase().indexOf(q)>=0);
       if(!ok)for(var i=0;i<e.tags.length;i++){if(e.tags[i].toLowerCase().indexOf(q)>=0){ok=true;break;}}
       if(!ok)return false;
     }
@@ -910,6 +915,8 @@ fetch('events.json')
     document.getElementById("sn-total").textContent=SP.length+REG.length;
     document.getElementById("sn-sp").textContent=SP.length;
     document.getElementById("tb-dis").textContent=REG.length;
+    var gratisCount=SP.filter(function(e){return e.gratis;}).length+REG.filter(function(e){return e.gratis;}).length;
+    document.getElementById("sn-gratis").textContent=gratisCount;
     if(data.lastUpdated){
       var d=new Date(data.lastUpdated);
       var mn=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"];
