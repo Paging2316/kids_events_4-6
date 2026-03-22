@@ -1487,7 +1487,7 @@
       "link": "https://www.festwochen.at"
     },
     {
-      "id": "event1",
+      "id": "s62",
       "cat": "Kreativ",
       "title": "Kunterbunte Kreativwerkstatt",
       "sub": "Anmeldung erforderlich",
@@ -1512,7 +1512,7 @@
       "addedDate": "2026-03-17T14:00:59.907Z"
     },
     {
-      "id": "event2",
+      "id": "s63",
       "cat": "Theater",
       "title": "Wiesenträume",
       "sub": "Anmeldung erforderlich",
@@ -1537,7 +1537,7 @@
       "addedDate": "2026-03-17T14:00:59.907Z"
     },
     {
-      "id": "event3",
+      "id": "s64",
       "cat": "Kino",
       "title": "GLANZ.STÜCKE Bilderbuchkino",
       "sub": "Anmeldung erforderlich",
@@ -1562,7 +1562,7 @@
       "addedDate": "2026-03-17T14:00:59.907Z"
     },
     {
-      "id": "event4",
+      "id": "s65",
       "cat": "Sport",
       "title": "Inline Skating",
       "sub": "Anmeldung erforderlich",
@@ -1587,7 +1587,7 @@
       "addedDate": "2026-03-17T14:00:59.907Z"
     },
     {
-      "id": "5",
+      "id": "s66",
       "cat": "Natur",
       "title": "Naturforschen als Erlebnis",
       "sub": "Naturerlebnis für Kinder",
@@ -1612,7 +1612,7 @@
       "addedDate": "2026-03-17T14:44:38.418Z"
     },
     {
-      "id": "event1",
+      "id": "s67",
       "cat": "Kreativ",
       "title": "Flöten Tasten Frühlings-Tanz",
       "sub": "Ein kreativer Tanzworkshop für Kinder.",
@@ -1637,7 +1637,7 @@
       "addedDate": "2026-03-17T16:00:54.423Z"
     },
     {
-      "id": "event2",
+      "id": "s68",
       "cat": "Kreativ",
       "title": "Familienatelier",
       "sub": "Kreatives Gestalten für die ganze Familie.",
@@ -1662,7 +1662,7 @@
       "addedDate": "2026-03-17T16:00:54.423Z"
     },
     {
-      "id": "event3",
+      "id": "s69",
       "cat": "Theater",
       "title": "Ach wie gut, dass niemand weiß",
       "sub": "Interaktives Theaterabenteuer für Kinder.",
@@ -1687,7 +1687,7 @@
       "addedDate": "2026-03-17T16:00:54.423Z"
     },
     {
-      "id": "event4",
+      "id": "s70",
       "cat": "Kino",
       "title": "Elsa und der große Bär",
       "sub": "Ein spannendes Kinoerlebnis für Kinder.",
@@ -1712,12 +1712,12 @@
       "addedDate": "2026-03-17T19:00:31.678Z"
     },
     {
-      "id": "event3",
+      "id": "s71",
       "cat": "Musik",
       "title": "Freiheitskonzert",
       "sub": "Musikalische Freiheit erleben",
       "dateFrom": "2026-03-21",
-      "dateTo": null,
+      "dateTo": "2026-03-21",
       "time": "17:00 Uhr",
       "indoor": true,
       "gratis": true,
@@ -1737,7 +1737,7 @@
       "addedDate": "2026-03-17T23:00:58.218Z"
     },
     {
-      "id": "event2",
+      "id": "s72",
       "cat": "Theater",
       "title": "Finn Flosse räumt das Meer auf",
       "sub": "Puppentheater über Umweltschutz",
@@ -1762,7 +1762,7 @@
       "addedDate": "2026-03-18T02:00:44.267Z"
     },
     {
-      "id": "event3",
+      "id": "s73",
       "cat": "Kino",
       "title": "Neues von Pettersson und Findus",
       "sub": "Filmvorführung für Kinder.",
@@ -1783,7 +1783,7 @@
         "Pettersson und Findus"
       ],
       "desc": "Kinder ab 4 Jahren können sich auf die Abenteuer von Pettersson und Findus freuen. Keine Anmeldung erforderlich.",
-      "link": "https://example.com/event3",
+      "link": "https://www.filmarchiv.at",
       "addedDate": "2026-03-20T07:01:06.131Z"
     }
   ],
@@ -2753,7 +2753,7 @@
       "link": "https://www.votivkino.at"
     },
     {
-      "id": "event4",
+      "id": 47,
       "cat": "Natur",
       "title": "Naturforschen als Erlebnis",
       "sub": "Entdecke die Natur mit allen Sinnen",
@@ -2775,10 +2775,11 @@
       ],
       "desc": "Kinder können die Natur mit allen Sinnen erleben und erforschen. Verschiedene Standorte in Wien bieten spannende Erlebnisse.",
       "link": "https://www.umweltspuernasen.at",
-      "addedDate": "2026-03-18T02:00:44.267Z"
+      "addedDate": "2026-03-18T02:00:44.267Z",
+      "freq": "nach Vereinbarung"
     },
     {
-      "id": "event4",
+      "id": 48,
       "cat": "Museum",
       "title": "Stille Stunde in der Kinderinfo",
       "sub": "Ein ruhiger Ort für Kinder und Eltern.",
@@ -2803,7 +2804,7 @@
       "addedDate": "2026-03-18T07:00:46.094Z"
     },
     {
-      "id": "event4",
+      "id": 49,
       "cat": "Kreativ",
       "title": "KaleidosKids",
       "sub": "Kreative Workshops für Kinder.",
@@ -2824,7 +2825,7 @@
         "Kinder"
       ],
       "desc": "KaleidosKids bietet kreative Workshops für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://example.com/event4",
+      "link": "https://www.weltmuseumwien.at/de/bildung/kinder-und-jugendliche",
       "addedDate": "2026-03-20T07:01:06.131Z"
     }
   ],

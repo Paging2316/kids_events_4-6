@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wien mit Kindern · 4–6 Jahre · 2026</title>
+<title>Wien mit Kindern · 4–6 Jahre</title>
 <style>
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dmsans-normal-400.woff2') format('woff2')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/dmsans-normal-500.woff2') format('woff2')}
@@ -386,9 +386,30 @@ h1 em{color:var(--accent);font-style:normal}
 }
 .modal-close:hover{color:var(--ink)}
 @media(max-width:480px){.modal-box{padding:24px 18px}}
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;z-index:2000;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  transition:opacity .3s;
+}
+#loader.hidden{opacity:0;pointer-events:none;}
+#loader-spinner{
+  width:40px;height:40px;border-radius:50%;
+  border:4px solid var(--border);border-top-color:var(--accent);
+  animation:spin .8s linear infinite;
+}
+#loader-text{font-size:.85rem;color:var(--muted)}
+@keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
+
+<div id="loader">
+  <div id="loader-spinner"></div>
+  <div id="loader-text">Events werden geladen…</div>
+</div>
 
 <header>
   <div class="hdr">
@@ -531,6 +552,7 @@ var REG=[];
 // ════════════════════════════════════════
 var MDE=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
 var TODAY=new Date(); TODAY.setHours(0,0,0,0);
+var curYear=TODAY.getFullYear();
 var curMonth=TODAY.getMonth();
 var mFilter=null;
 var disState={cat:"all",extra:null,q:""};
@@ -550,7 +572,7 @@ function weekLabel(wn,m){
   var ends=[[7],[14],[21],[28],[31]];
   var s=(wn-1)*7+1;
   var en=ends[wn-1]||[31];
-  var lastDay=new Date(2026,m+1,0).getDate();
+  var lastDay=new Date(curYear,m+1,0).getDate();
   return s+". – "+Math.min(en[0],lastDay)+". "+MDE[m];
 }
 
@@ -657,8 +679,8 @@ function toggleMF(btn){
 function jumpMonth(m){curMonth=m;renderTimeline();}
 
 function getMonthEvents(){
-  var mStart=new Date(2026,curMonth,1);
-  var mEnd=new Date(2026,curMonth+1,0);
+  var mStart=new Date(curYear,curMonth,1);
+  var mEnd=new Date(curYear,curMonth+1,0);
   var evs=SP.filter(function(e){
     var f=pd(e.dateFrom),t=pd(e.dateTo);
     return f<=mEnd&&t>=mStart;
@@ -673,7 +695,7 @@ function getMonthEvents(){
 function tcCard(e){
   var f=pd(e.dateFrom),t=pd(e.dateTo);
   var single=e.dateFrom===e.dateTo;
-  var mStart=new Date(2026,curMonth,1);
+  var mStart=new Date(curYear,curMonth,1);
   var dispDate=f<mStart?mStart:f;
   var day=String(dispDate.getDate()).padStart(2,"0");
   var mon=MDE[dispDate.getMonth()].substring(0,3);
@@ -702,7 +724,7 @@ function tcCard(e){
     '<div class="tc-det">'+
       '<div class="det-desc">'+e.desc+'</div>'+
       '<div class="det-grid">'+
-        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?fmtDate(f)+' 2026':fmtDate(f)+" – "+fmtDate(t)+" 2026")+'</div></div>'+
+        '<div><div class="det-k">Datum</div><div class="det-v">'+(single?fmtDate(f)+' '+f.getFullYear():fmtDate(f)+" – "+fmtDate(t)+" "+t.getFullYear())+'</div></div>'+
         '<div><div class="det-k">Uhrzeit</div><div class="det-v">'+e.time+'</div></div>'+
         '<div><div class="det-k">Preis</div><div class="det-v">'+e.preis+'</div></div>'+
         '<div><div class="det-k">Anmeldung</div><div class="det-v">'+(e.reg?"✅ Ja – bitte vorbuchen":"❌ Nicht nötig")+'</div></div>'+
@@ -734,7 +756,7 @@ function renderTimeline(){
 
   // Group by week
   var weeks={};
-  var mStart=new Date(2026,curMonth,1);
+  var mStart=new Date(curYear,curMonth,1);
   evs.forEach(function(e){
     var f=pd(e.dateFrom);
     var eff=f<mStart?mStart:f;
@@ -871,7 +893,12 @@ document.querySelectorAll(".fb[data-x]").forEach(function(btn){
     disState.extra=was?null:x;if(!was)btn.classList.add("on");renderDiscover();
   });
 });
-document.getElementById("sq").addEventListener("input",function(){disState.q=this.value;renderDiscover();});
+var sqTimer=null;
+document.getElementById("sq").addEventListener("input",function(){
+  disState.q=this.value;
+  clearTimeout(sqTimer);
+  sqTimer=setTimeout(renderDiscover,200);
+});
 
 // Update stats
 // ── LOAD EVENTS ──
@@ -892,9 +919,15 @@ fetch('events.json')
     updateFavCount();
     renderTimeline();
     renderDiscover();
+    var loader=document.getElementById('loader');
+    loader.classList.add('hidden');
+    setTimeout(function(){loader.style.display='none';},350);
   })
   .catch(function(e){
     console.error('Failed to load events.json', e);
+    var loader=document.getElementById('loader');
+    loader.classList.add('hidden');
+    setTimeout(function(){loader.style.display='none';},350);
     document.getElementById("dis-wrap").innerHTML='<div style="padding:40px;text-align:center;color:#666">Events konnten nicht geladen werden. Bitte Seite neu laden.</div>';
   });
 
@@ -911,10 +944,13 @@ document.addEventListener('click', function(ev){
 function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
 function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow='';}
 function closeModalOutside(ev,id){if(ev.target===document.getElementById('modal-'+id))closeModal(id);}
+
+// ── COPYRIGHT YEAR ──
+document.getElementById('copy-year').textContent=curYear;
 </script>
 
 <footer class="site-footer">
-  <span>© 2026 Cedric Mayer</span>
+  <span>© <span id="copy-year"></span> Cedric Mayer</span>
   <span>·</span>
   <a onclick="openModal('impressum')">Impressum</a>
   <span>·</span>
