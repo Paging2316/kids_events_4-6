@@ -2601,7 +2601,33 @@
       "desc": "KaleidosKids bietet kreative Workshops für Kinder ab 3 Jahren. Anmeldung erforderlich.",
       "link": "https://www.weltmuseumwien.at/de/bildung/kinder-und-jugendliche",
       "addedDate": "2026-03-20T07:01:06.131Z"
+    },
+    {
+      "id": "event4",
+      "cat": "Museum",
+      "title": "Donaurauschen und Flussgeflüster",
+      "sub": "Zoom Kindermuseum",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "Freitag, 13:30 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Eintritt erforderlich",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Zoom Kindermuseum, Wien",
+      "locS": "1. Innere Stadt",
+      "freq": "Freitags",
+      "tags": [
+        "Museum",
+        "Ausstellung",
+        "Kinder",
+        "Donau"
+      ],
+      "desc": "Entdecken Sie die Donau und ihre Geschichten in dieser interaktiven Ausstellung. Ideal für Kinder, die mehr über Flüsse und ihre Bedeutung lernen möchten.",
+      "link": "https://wienxtra.at/kinder/veranstaltungen/",
+      "addedDate": "2026-03-27T07:00:29.580Z"
     }
   ],
-  "lastUpdated": "2026-03-26T07:00:50.145Z"
+  "lastUpdated": "2026-03-27T07:00:29.580Z"
 }
