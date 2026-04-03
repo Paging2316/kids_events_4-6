@@ -1559,6 +1559,58 @@
       "desc": "Kinder ab 4 Jahren können sich auf die Abenteuer von Pettersson und Findus freuen. Keine Anmeldung erforderlich.",
       "link": "https://www.filmarchiv.at",
       "addedDate": "2026-03-20T07:01:06.131Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Theater",
+      "title": "Hildas Küken",
+      "sub": "Ein Theaterstück über das Warten auf Ostern.",
+      "dateFrom": "2026-04-03",
+      "dateTo": "2026-04-04",
+      "time": "15:30 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Normalpreis",
+      "reg": false,
+      "alter": "ab 4 Jahre",
+      "loc": "Theater Libelle, 1180 Wien",
+      "locS": "18. Bezirk",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "Kinder",
+        "Ostern",
+        "Familie"
+      ],
+      "desc": "Hilda, die junge Henne, möchte wissen, wann Ostern ist, damit ihr Küken genau am Ostersonntag schlüpfen kann. Ein unterhaltsames Stück für die ganze Familie.",
+      "link": "https://www.theaterlibelle.at",
+      "addedDate": "2026-04-03T06:00:28.700Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Kreativ",
+      "title": "Osterkerzen einmal anders",
+      "sub": "Gestalte deine eigene Kerze mit Hieroglyphen.",
+      "dateFrom": "2026-04-03",
+      "dateTo": "2026-04-03",
+      "time": "10:00 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Normalpreis",
+      "reg": true,
+      "alter": "ab 6 Jahre",
+      "loc": "Österreichische Nationalbibliothek, Papyrusmuseum, Heldenplatz",
+      "locS": "1. Bezirk",
+      "freq": "Einmalig",
+      "tags": [
+        "Kreativ",
+        "Workshop",
+        "Kinder",
+        "Ostern"
+      ],
+      "desc": "Kinder lernen über die Schrift der alten Ägypter und gestalten eine Kerze mit ihrem Namen in Hieroglyphen. Ein kreativer Workshop im Papyrusmuseum.",
+      "link": "https://www.onb.ac.at",
+      "addedDate": "2026-04-03T06:00:28.700Z"
     }
   ],
   "regular": [
@@ -2629,5 +2681,5 @@
       "addedDate": "2026-03-27T07:00:29.580Z"
     }
   ],
-  "lastUpdated": "2026-04-02T06:00:31.175Z"
+  "lastUpdated": "2026-04-03T06:00:28.700Z"
 }
