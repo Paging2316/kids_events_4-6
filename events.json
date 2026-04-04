@@ -1611,6 +1611,31 @@
       "desc": "Kinder lernen über die Schrift der alten Ägypter und gestalten eine Kerze mit ihrem Namen in Hieroglyphen. Ein kreativer Workshop im Papyrusmuseum.",
       "link": "https://www.onb.ac.at",
       "addedDate": "2026-04-03T06:00:28.700Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Natur",
+      "title": "Zu Besuch bei den Trabrennpferden",
+      "sub": "Erlebnis für Kinder",
+      "dateFrom": "2026-04-04",
+      "dateTo": null,
+      "time": null,
+      "indoor": false,
+      "gratis": false,
+      "preis": "Anmeldung erforderlich",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Kreativtheater, 1020 Wien",
+      "locS": "2. Bezirk",
+      "freq": null,
+      "tags": [
+        "Natur",
+        "Pferde",
+        "Kinder"
+      ],
+      "desc": "Ein spannender Besuch bei den Trabrennpferden, bei dem Kinder die Möglichkeit haben, die Pferde hautnah zu erleben. Gruppen sind willkommen.",
+      "link": "https://www.kreativtheater.at/zu-besuch-bei-den-trabrennpferden",
+      "addedDate": "2026-04-04T06:00:25.919Z"
     }
   ],
   "regular": [
@@ -2681,5 +2706,5 @@
       "addedDate": "2026-03-27T07:00:29.580Z"
     }
   ],
-  "lastUpdated": "2026-04-03T06:00:28.700Z"
+  "lastUpdated": "2026-04-04T06:00:25.919Z"
 }
