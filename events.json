@@ -1636,6 +1636,58 @@
       "desc": "Ein spannender Besuch bei den Trabrennpferden, bei dem Kinder die Möglichkeit haben, die Pferde hautnah zu erleben. Gruppen sind willkommen.",
       "link": "https://www.kreativtheater.at/zu-besuch-bei-den-trabrennpferden",
       "addedDate": "2026-04-04T06:00:25.919Z"
+    },
+    {
+      "id": "event1",
+      "cat": "Kino",
+      "title": "Kino für die Kleinsten",
+      "sub": "Filmvorführungen für die Kleinsten",
+      "dateFrom": "2026-04-05",
+      "dateTo": "2026-04-12",
+      "time": "Verschiedene Termine",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Nicht angegeben",
+      "reg": false,
+      "alter": "ab 3 Jahre",
+      "loc": "Stadtkino Filmverleih und Kinobetriebsgesellschaft m.b.H., 1010 Wien",
+      "locS": "Innere Stadt",
+      "freq": null,
+      "tags": [
+        "Kino",
+        "Film",
+        "Kinder",
+        "Familie"
+      ],
+      "desc": "Das Stadtkino bietet spezielle Filmvorführungen für die Kleinsten. Ein Erlebnis für die ganze Familie.",
+      "link": "https://www.stadtkino.at",
+      "addedDate": "2026-04-05T06:00:22.886Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Museum",
+      "title": "Yanni, die Sterne und der Käsemond",
+      "sub": "Astronomische Abenteuer für Kinder",
+      "dateFrom": "2026-04-05",
+      "dateTo": "2026-04-26",
+      "time": "Verschiedene Termine",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Nicht angegeben",
+      "reg": false,
+      "alter": "ab 4 Jahre",
+      "loc": "Planetarium Wien, Kuffner und Urania Sternwarte, 1020 Wien",
+      "locS": "Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Astronomie",
+        "Kinder",
+        "Familie",
+        "Bildung"
+      ],
+      "desc": "Ein spannendes Abenteuer im Planetarium, bei dem Kinder die Sterne und den Käsemond entdecken können.",
+      "link": "https://www.planetarium.wien",
+      "addedDate": "2026-04-05T06:00:22.886Z"
     }
   ],
   "regular": [
@@ -2704,7 +2756,33 @@
       "desc": "Entdecken Sie die Donau und ihre Geschichten in dieser interaktiven Ausstellung. Ideal für Kinder, die mehr über Flüsse und ihre Bedeutung lernen möchten.",
       "link": "https://wienxtra.at/kinder/veranstaltungen/",
       "addedDate": "2026-03-27T07:00:29.580Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Kreativ",
+      "title": "Sonntagsatelier für die ganze Familie",
+      "sub": "Kreative Workshops für Familien",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "Sonntags, 10:15 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Nicht angegeben",
+      "reg": true,
+      "alter": "Keine Altersbeschränkung",
+      "loc": "Mumok – Museum Moderner Kunst Stiftung Ludwig, Wien",
+      "locS": "Innere Stadt",
+      "freq": "Jeden Sonntag",
+      "tags": [
+        "Kreativität",
+        "Kunst",
+        "Familie",
+        "Workshop"
+      ],
+      "desc": "Im Sonntagsatelier können Familien gemeinsam kreativ werden und verschiedene Materialien und Techniken ausprobieren.",
+      "link": "https://www.mumok.at",
+      "addedDate": "2026-04-05T06:00:22.886Z"
     }
   ],
-  "lastUpdated": "2026-04-04T06:00:25.919Z"
+  "lastUpdated": "2026-04-05T06:00:22.886Z"
 }
