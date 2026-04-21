@@ -1792,6 +1792,31 @@
       "desc": "In der Kreativwerkstatt können Kinder ihrer Fantasie freien Lauf lassen. Anmeldung erforderlich.",
       "link": "https://www.hilfswerk.at/kreativwerkstatt",
       "addedDate": "2026-04-20T06:00:25.574Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Sport",
+      "title": "Landhockey",
+      "sub": "Landhockey für Kinder",
+      "dateFrom": "2026-04-23",
+      "dateTo": "2026-04-25",
+      "time": "Nachmittags",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": true,
+      "alter": "ab 4 Jahre",
+      "loc": "Akademischer Hockey- und Tennisclub Wien, 1020 Wien",
+      "locS": "Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Sport",
+        "Hockey",
+        "Kinder"
+      ],
+      "desc": "Kinder können in diesem Kurs die Grundlagen des Landhockeys erlernen. Eine Anmeldung ist erforderlich.",
+      "link": "https://www.hockeyclub.at",
+      "addedDate": "2026-04-21T06:00:29.168Z"
     }
   ],
   "regular": [
@@ -2914,5 +2939,5 @@
       "addedDate": "2026-04-07T06:00:42.543Z"
     }
   ],
-  "lastUpdated": "2026-04-20T06:00:25.574Z"
+  "lastUpdated": "2026-04-21T06:00:29.168Z"
 }
