@@ -1817,6 +1817,84 @@
       "desc": "Kinder können in diesem Kurs die Grundlagen des Landhockeys erlernen. Eine Anmeldung ist erforderlich.",
       "link": "https://www.hockeyclub.at",
       "addedDate": "2026-04-21T06:00:29.168Z"
+    },
+    {
+      "id": "event1",
+      "cat": "Kreativ",
+      "title": "Basteltisch - Klima Biennale Wien",
+      "sub": "Kreatives Basteln im Rahmen der Klima Biennale.",
+      "dateFrom": "2026-04-24",
+      "dateTo": "2026-05-10",
+      "time": "Ganztägig",
+      "indoor": true,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": false,
+      "alter": "ab 3 Jahre",
+      "loc": "KunstHausWien. Museum Hundertwasser, 1040 Wien",
+      "locS": "4. Bezirk",
+      "freq": null,
+      "tags": [
+        "Kreativ",
+        "Umwelt",
+        "Basteln",
+        "Kinder"
+      ],
+      "desc": "Im KunstHausWien können Kinder im Rahmen der Klima Biennale kreativ werden und sich mit dem Thema Umwelt auseinandersetzen.",
+      "link": "https://www.kunsthauswien.com",
+      "addedDate": "2026-04-23T06:00:53.165Z"
+    },
+    {
+      "id": "event2",
+      "cat": "Natur",
+      "title": "Frühlingsfest im Lainzer Tiergarten",
+      "sub": "Ein Fest für die ganze Familie im Lainzer Tiergarten.",
+      "dateFrom": "2026-04-25",
+      "dateTo": "2026-04-25",
+      "time": "Ganztägig",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": false,
+      "alter": "ab 3 Jahre",
+      "loc": "Lainzer Tiergarten, 1130 Wien",
+      "locS": "13. Bezirk",
+      "freq": null,
+      "tags": [
+        "Natur",
+        "Frühling",
+        "Familie",
+        "Outdoor"
+      ],
+      "desc": "Das Frühlingsfest im Lainzer Tiergarten bietet ein buntes Programm für Kinder und Familien mit viel Naturerlebnis.",
+      "link": "https://www.wien.gv.at/umwelt/wald/erholung/lainzer-tiergarten/",
+      "addedDate": "2026-04-23T06:00:53.165Z"
+    },
+    {
+      "id": "event3",
+      "cat": "Musik",
+      "title": "KLASSIK COOL! Vivaldi: Die vier Jahreszeiten",
+      "sub": "Ein klassisches Konzert für Kinder.",
+      "dateFrom": "2026-04-24",
+      "dateTo": "2026-04-24",
+      "time": "16:00 Uhr",
+      "indoor": true,
+      "gratis": false,
+      "preis": "ab 10 Euro",
+      "reg": true,
+      "alter": "ab 2 Jahre",
+      "loc": "kulturverein grossundklein, 1190 Wien",
+      "locS": "19. Bezirk",
+      "freq": null,
+      "tags": [
+        "Musik",
+        "Klassik",
+        "Kinder",
+        "Konzert"
+      ],
+      "desc": "Ein Mitmachkonzert für Kinder, bei dem Vivaldis 'Die vier Jahreszeiten' kindgerecht präsentiert wird.",
+      "link": "https://www.grossundklein.at",
+      "addedDate": "2026-04-23T06:00:53.165Z"
     }
   ],
   "regular": [
@@ -2939,5 +3017,5 @@
       "addedDate": "2026-04-07T06:00:42.543Z"
     }
   ],
-  "lastUpdated": "2026-04-22T06:00:33.757Z"
+  "lastUpdated": "2026-04-23T06:00:53.165Z"
 }
