@@ -1895,6 +1895,56 @@
       "desc": "Ein Mitmachkonzert für Kinder, bei dem Vivaldis 'Die vier Jahreszeiten' kindgerecht präsentiert wird.",
       "link": "https://www.grossundklein.at",
       "addedDate": "2026-04-23T06:00:53.165Z"
+    },
+    {
+      "id": "event1",
+      "cat": "Saisonal",
+      "title": "Eröffnungsfest Bildungsgrätzl Seestadt",
+      "sub": "Feier zur Eröffnung des Bildungsgrätzls in der Seestadt.",
+      "dateFrom": "2026-04-24",
+      "dateTo": null,
+      "time": "Ganztägig",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": false,
+      "alter": "4-6 Jahre",
+      "loc": "WIENXTRA-Stadtbox, 1220 Wien",
+      "locS": "22. Donaustadt",
+      "freq": null,
+      "tags": [
+        "Eröffnung",
+        "Fest",
+        "Familie"
+      ],
+      "desc": "Das Eröffnungsfest im Bildungsgrätzl Seestadt bietet ein buntes Programm für Kinder und Familien. Es gibt verschiedene Aktivitäten und Spiele im Freien.",
+      "link": "https://www.wienxtra.at/stadtbox",
+      "addedDate": "2026-04-24T06:01:00.237Z"
+    },
+    {
+      "id": "event4",
+      "cat": "Sport",
+      "title": "Landhockey Schnuppern",
+      "sub": "Schnupperkurs im Landhockey für Kinder.",
+      "dateFrom": "2026-04-25",
+      "dateTo": null,
+      "time": "10:00 Uhr",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": false,
+      "alter": "4-6 Jahre",
+      "loc": "Hockey Club Wien, 1020 Wien",
+      "locS": "2. Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Sport",
+        "Hockey",
+        "Kinder"
+      ],
+      "desc": "Kinder können beim Landhockey Schnupperkurs erste Erfahrungen mit dem Sport sammeln. Der Kurs ist kostenlos und ohne Anmeldung zugänglich.",
+      "link": "https://www.hockeyclubwien.at",
+      "addedDate": "2026-04-24T06:01:00.237Z"
     }
   ],
   "regular": [
@@ -3017,5 +3067,5 @@
       "addedDate": "2026-04-07T06:00:42.543Z"
     }
   ],
-  "lastUpdated": "2026-04-23T06:00:53.165Z"
+  "lastUpdated": "2026-04-24T06:01:00.237Z"
 }
