@@ -1945,6 +1945,31 @@
       "desc": "Kinder können beim Landhockey Schnupperkurs erste Erfahrungen mit dem Sport sammeln. Der Kurs ist kostenlos und ohne Anmeldung zugänglich.",
       "link": "https://www.hockeyclubwien.at",
       "addedDate": "2026-04-24T06:01:00.237Z"
+    },
+    {
+      "id": "event1",
+      "cat": "Kreativ",
+      "title": "Dein ESC-Fan-Armband",
+      "sub": "Gestalte dein eigenes ESC-Fan-Armband.",
+      "dateFrom": "2026-04-29",
+      "dateTo": "2026-05-13",
+      "time": "Ganztägig",
+      "indoor": true,
+      "gratis": true,
+      "preis": "Kostenlos",
+      "reg": false,
+      "alter": "ab 4 Jahre",
+      "loc": "WIENXTRA-Kinderinfo, 1070 Wien",
+      "locS": "7. Bezirk",
+      "tags": [
+        "Kreativ",
+        "ESC",
+        "Basteln",
+        "Kinder"
+      ],
+      "desc": "Kinder können ihr eigenes ESC-Fan-Armband gestalten. Die Veranstaltung ist kostenlos und ohne Anmeldung zugänglich.",
+      "link": "https://www.wienxtra.at/kinderinfo/veranstaltungen/dein-esc-fan-armband/",
+      "addedDate": "2026-04-28T06:01:09.988Z"
     }
   ],
   "regular": [
@@ -3067,5 +3092,5 @@
       "addedDate": "2026-04-07T06:00:42.543Z"
     }
   ],
-  "lastUpdated": "2026-04-27T06:00:52.201Z"
+  "lastUpdated": "2026-04-28T06:01:09.988Z"
 }
