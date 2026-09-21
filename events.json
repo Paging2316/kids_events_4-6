@@ -189,6 +189,60 @@
       "id": "s-museum-der-illusionen-2026-01-01"
     },
     {
+      "cat": "Kreativ",
+      "title": "Made By You - Keramik selbst bemalen",
+      "sub": "Ihr Ausflugsziel in Wien",
+      "dateFrom": "2026-01-01",
+      "dateTo": "2026-12-31",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "4 bis 6",
+      "loc": "1040 Wien, Wien, Österreich",
+      "locS": "4., Wieden",
+      "freq": null,
+      "tags": [
+        "Kreativ",
+        "Workshop",
+        "Familien",
+        "Basteln"
+      ],
+      "desc": "Bei Made By You können Kinder ab 4 Jahren Keramik selbst bemalen und kreativ werden. Ein schöner Workshop für Familien in Wien.",
+      "link": "https://www.familienausflug.info/wien",
+      "source": "Familienausflug",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-made-by-you-keramik-selbst-bemalen-2026-01-01"
+    },
+    {
+      "cat": "Museum",
+      "title": "Weltmuseum Wien",
+      "sub": "mit Hofjagd- und Rüstkammer & Sammlung alter Musikinstrumente",
+      "dateFrom": "2026-01-01",
+      "dateTo": "2026-12-31",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "4 bis 6",
+      "loc": "1010 Wien, Wien, Österreich",
+      "locS": "1., Innere Stadt",
+      "freq": null,
+      "tags": [
+        "Museum",
+        "Kultur",
+        "Familien",
+        "Lernen"
+      ],
+      "desc": "Das Weltmuseum Wien zeigt spannende Ausstellungen mit Hofjagd- und Rüstkammer sowie einer Sammlung alter Musikinstrumente für Kinder ab 4 Jahren.",
+      "link": "https://www.familienausflug.info/wien",
+      "source": "Familienausflug",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-weltmuseum-wien-2026-01-01"
+    },
+    {
       "cat": "Saisonal",
       "title": "Donauparkbahn",
       "sub": "Fahrt mit der Parkbahn im Donaupark",
@@ -317,6 +371,33 @@
       "link": "https://www.wien.gv.at/freizeit/parks"
     },
     {
+      "cat": "Sport",
+      "title": "Hochseilklettergarten im Gänsehäufelbad",
+      "sub": "Klettern mitten in Wien",
+      "dateFrom": "2026-04-01",
+      "dateTo": "2027-10-26",
+      "time": null,
+      "indoor": false,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "4 bis 6",
+      "loc": "1220 Wien, Wien, Österreich",
+      "locS": "22., Donaustadt",
+      "freq": null,
+      "tags": [
+        "Sport",
+        "Klettern",
+        "Familien",
+        "Outdoor"
+      ],
+      "desc": "Der Hochseilklettergarten im Gänsehäufelbad bietet Kletterspaß für Kinder ab 4 Jahren mitten in Wien. Ein spannendes Outdoor-Erlebnis für Familien.",
+      "link": "https://www.familienausflug.info/wien",
+      "source": "Familienausflug",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-hochseilklettergarten-im-gansehaufelbad-2026-04-01"
+    },
+    {
       "id": "s23",
       "cat": "Saisonal",
       "title": "Hollis Graetzltour Sommer-Aktivraeder",
@@ -340,6 +421,33 @@
       ],
       "desc": "Vier Aktiv-Fahrraeder mit Spielebox, Pedalos, Stelzen, Huepfsaecken und Bastelmaterial touren durch alle 23 Bezirke. Kinder schminken, Experimente, Spiele. Aktuelle Termine: wienxtra.at/hollistour",
       "link": "https://wienxtra.at/hollistour"
+    },
+    {
+      "cat": "Spielen",
+      "title": "Sommerrodelbahn Hohe Wand Wiese",
+      "sub": "Der Spass für die ganze Familie vor den Toren Wiens",
+      "dateFrom": "2026-07-03",
+      "dateTo": "2027-09-05",
+      "time": null,
+      "indoor": false,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "4 bis 6",
+      "loc": "1140 Wien, Wien, Österreich",
+      "locS": "14., Penzing",
+      "freq": null,
+      "tags": [
+        "Freizeitpark",
+        "Sommerrodelbahn",
+        "Familien",
+        "Outdoor"
+      ],
+      "desc": "Die Sommerrodelbahn Hohe Wand Wiese bietet Spaß für Kinder ab 4 Jahren und die ganze Familie. Ein tolles Outdoor-Erlebnis in Wien.",
+      "link": "https://www.familienausflug.info/wien",
+      "source": "Familienausflug",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-sommerrodelbahn-hohe-wand-wiese-2026-07-03"
     },
     {
       "id": "s15",
@@ -366,60 +474,6 @@
       "link": "https://www.roncalli.de"
     },
     {
-      "cat": "Theater",
-      "title": "Circus-Theater Roncalli Wien Jubiläumstournee",
-      "sub": "50 Jahre Roncalli Jubiläumstournee am Rathausplatz",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-10-11",
-      "time": "Di–Fr 10–20 Uhr, Sa 9:30–20 Uhr, So 9:30–18 Uhr, Mo geschlossen",
-      "indoor": true,
-      "gratis": false,
-      "preis": "ab 16,00 € (ermäßigt für Kinder 3-14 Jahre)",
-      "reg": false,
-      "alter": "ab 3",
-      "loc": "Rathausplatz, 1010 Wien",
-      "locS": "1., Innere Stadt",
-      "freq": null,
-      "tags": [
-        "Circus",
-        "Familie",
-        "Kinder",
-        "Show"
-      ],
-      "desc": "Bernhard Pauls Circus-Theater Roncalli feiert 50 Jahre mit einer Jubiläumstournee am Rathausplatz in Wien. Die Show bietet ein buntes Programm mit Clowns, Akrobatik, Illusionen und Live-Musik, ideal für Kinder ab 3 Jahren. Tickets sind ermäßigt für Kinder von 3 bis 14 Jahren erhältlich.",
-      "link": "https://www.roncalli.de/spielorte/wien/",
-      "source": "Circus Roncalli Wien",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-circus-theater-roncalli-wien-jubilaumstournee-2026-09-16"
-    },
-    {
-      "cat": "Saisonal",
-      "title": "Roncalli Genussmeile am Rathausplatz",
-      "sub": "Kulinarische Reise mit Roncalli-Flair",
-      "dateFrom": "2026-09-16",
-      "dateTo": "2026-10-11",
-      "time": "Mo 12–22 Uhr, Di–Fr 12–21 Uhr, Sa 11–21 Uhr, So 11–19 Uhr",
-      "indoor": false,
-      "gratis": true,
-      "preis": "",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Rathausplatz, 1010 Wien",
-      "locS": "1., Innere Stadt",
-      "freq": null,
-      "tags": [
-        "Essen",
-        "Familie",
-        "Freizeit",
-        "Outdoor"
-      ],
-      "desc": "Die Roncalli Genussmeile lädt täglich zu einer kulinarischen Reise mit internationalen und heimischen Spezialitäten ein. Die Veranstaltung ist kostenlos zugänglich und bietet eine entspannte Atmosphäre für Familien mit Kindern ab 4 Jahren.",
-      "link": "https://www.roncalli.de/spielorte/wien/",
-      "source": "Circus Roncalli Wien",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-roncalli-genussmeile-am-rathausplatz-2026-09-16"
-    },
-    {
       "cat": "Kreativ",
       "title": "Elfentanz",
       "sub": "Tanzangebot für Kinder ab 3 Jahren",
@@ -441,7 +495,7 @@
         "Kreativ"
       ],
       "desc": "Elfentanz ist ein Tanzangebot für Kinder ab 3 Jahren, das von DoDo Dance im 9. Bezirk angeboten wird. Die Teilnahme ist gratis, aber eine Anmeldung ist erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7715/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-elfentanz-2026-09-21"
@@ -468,7 +522,7 @@
         "Gratis"
       ],
       "desc": "Taekwondo zum Kennenlernen bietet Kindern ab 4 Jahren die Möglichkeit, diese Kampfkunst kostenlos auszuprobieren. Es findet im 4. Bezirk statt und erfordert keine Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7138/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-taekwondo-zum-kennenlernen-2026-09-21"
@@ -495,7 +549,7 @@
         "Sport"
       ],
       "desc": "Schwertkunst und Bogenschießen ist ein Angebot für Kinder ab 3 Jahren, das im 3. Bezirk stattfindet. Eine Anmeldung ist erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7108/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-schwertkunst-und-bogenschie-en-2026-09-21"
@@ -522,7 +576,7 @@
         "Bewegung"
       ],
       "desc": "Kinderturnen Gymnathlon in der Alxingerstraße bietet Kindern ab 4 Jahren die Möglichkeit, sich sportlich zu betätigen. Die Teilnahme erfordert eine Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7453/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderturnen-gymnathlon-alxingerstra-e-2026-09-21"
@@ -556,33 +610,6 @@
     },
     {
       "cat": "Sport",
-      "title": "Kinderturnen Gymnathlon - Bunte Schule",
-      "sub": "Kinderturnen für 6-Jährige",
-      "dateFrom": "2026-09-21",
-      "dateTo": "2026-09-28",
-      "time": null,
-      "indoor": true,
-      "gratis": false,
-      "preis": "",
-      "reg": true,
-      "alter": "ab 6",
-      "loc": "Gymnathlon SV, 1110 Wien",
-      "locS": "11., Simmering",
-      "freq": null,
-      "tags": [
-        "Kinderturnen",
-        "Sport",
-        "Bewegung",
-        "ab 6"
-      ],
-      "desc": "Kinderturnen speziell für 6-jährige Kinder in der Bunte Schule. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
-      "source": "WienXtra 6J S.1",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-kinderturnen-gymnathlon-bunte-schule-2026-09-21"
-    },
-    {
-      "cat": "Sport",
       "title": "WTplus Tiger im 11. Bezirk",
       "sub": "Wing Tsun für Kinder ab 6 Jahren",
       "dateFrom": "2026-09-21",
@@ -603,7 +630,7 @@
         "ab 6"
       ],
       "desc": "Wing Tsun Kampfkunsttraining für Kinder ab 6 Jahren im 11. Bezirk. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7181/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-wtplus-tiger-im-11-bezirk-2026-09-21"
@@ -630,7 +657,7 @@
         "ab 6"
       ],
       "desc": "Kung Fu Training speziell für Mädchen ab 6 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7408/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kung-fu-fur-madchen-2026-09-21"
@@ -657,7 +684,7 @@
         "ab 6"
       ],
       "desc": "Silat Kampfkunst aus Malaysia für Kinder ab 6 Jahren. Ohne Anmeldung möglich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7351/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-silat-kungfu-aus-malaysia-2026-09-21"
@@ -683,7 +710,7 @@
         "Familie"
       ],
       "desc": "Theaterstück 'Die Düntzer Rhapsodie' im 1. Bezirk. Geeignet für Kinder und Familien.",
-      "link": "https://www.wien.gv.at/veranstaltungen/?kategorie=kinder",
+      "link": "https://www.wien.gv.at/veranstaltungen/die-duentzer-rhapsodie",
       "source": "Wien.gv.at Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-die-duntzer-rhapsodie-2026-09-21"
@@ -717,6 +744,141 @@
     },
     {
       "cat": "Kreativ",
+      "title": "Kostümwerkstätten und Kostümfundus im Theater in der Josefstadt",
+      "sub": "Kinder zwischen 4 und 10 Jahren spielen, basteln und malen mit Künstlern des ZOOM Kindermuseums",
+      "dateFrom": "2026-09-21",
+      "dateTo": "2026-09-21",
+      "time": "Nachmittagsvorstellungen",
+      "indoor": true,
+      "gratis": true,
+      "preis": "",
+      "reg": true,
+      "alter": "4-10",
+      "loc": "Theater in der Josefstadt, 1080 Wien",
+      "locS": "8., Josefstadt",
+      "freq": null,
+      "tags": [
+        "Kreativ",
+        "Theater",
+        "Kinder",
+        "Basteln"
+      ],
+      "desc": "Während Eltern Theateraufführungen genießen, können Kinder zwischen 4 und 10 Jahren gratis die Kostümwerkstätten und den Kostümfundus besuchen und mit Künstlern des ZOOM Kindermuseums spielen, basteln und malen. Anmeldung ist erforderlich.",
+      "link": "https://www.josefstadt.org/theater/spielstaetten/kammerspiele-der-josefstadt.html",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-kostumwerkstatten-und-kostumfundus-im-theater-in-d-2026-09-21"
+    },
+    {
+      "cat": "Museum",
+      "title": "ZOOM Kindermuseum",
+      "sub": "Kinder bis 14 Jahre erkunden die Welt mit allen Sinnen",
+      "dateFrom": "2026-09-21",
+      "dateTo": "2026-09-21",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "ZOOM Kindermuseum, Museumsplatz 1, 1070 Wien",
+      "locS": "7., Neubau",
+      "freq": null,
+      "tags": [
+        "Museum",
+        "Kinder",
+        "Interaktiv",
+        "Kreativ"
+      ],
+      "desc": "Im ZOOM Kindermuseum können Kinder bis 14 Jahre die Welt mit allen Sinnen erkunden. Die Ausstellung lädt zum Spielen, Basteln und Malen ein. Erwachsene Begleiter können mitmachen oder die Zeit für andere Museumsbesuche nutzen.",
+      "link": "https://www.zoom-kindermuseum.at",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-zoom-kindermuseum-2026-09-21"
+    },
+    {
+      "cat": "Museum",
+      "title": "Kinderprogramm im Belvedere",
+      "sub": "Führungen und Workshops für Kinder von 3 bis 12 Jahren",
+      "dateFrom": "2026-09-21",
+      "dateTo": "2026-09-21",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": true,
+      "alter": "3-12",
+      "loc": "Belvedere, Prinz Eugen-Straße 27, 1030 Wien",
+      "locS": "3., Landstraße",
+      "freq": null,
+      "tags": [
+        "Museum",
+        "Workshop",
+        "Kinder",
+        "Kreativ"
+      ],
+      "desc": "Im Belvedere können Kinder von 3 bis 12 Jahren an Führungen und Workshops teilnehmen und im Atelier Pinselstrich selbst kreativ werden. Die Teilnahme von Erwachsenen ist erforderlich.",
+      "link": "https://www.belvedere.at",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-kinderprogramm-im-belvedere-2026-09-21"
+    },
+    {
+      "cat": "Museum",
+      "title": "Haus der Musik",
+      "sub": "Musikalische Erlebniswelt für Groß und Klein",
+      "dateFrom": "2026-09-21",
+      "dateTo": "2026-09-21",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": null,
+      "tags": [
+        "Museum",
+        "Musik",
+        "Interaktiv",
+        "Kinder"
+      ],
+      "desc": "Im Haus der Musik wird Musik mit allen Sinnen erlebbar. Kinder können Rieseninstrumente ausprobieren, mit modernster Technik experimentieren und den virtuellen Dirigenten der Wiener Philharmoniker steuern.",
+      "link": "https://www.hausdermusik.com",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-haus-der-musik-2026-09-21"
+    },
+    {
+      "cat": "Spielen",
+      "title": "Luftburg-Erlebniswelt im Wiener Prater",
+      "sub": "1.000 m² große Luftburg zum Austoben für Kinder",
+      "dateFrom": "2026-09-21",
+      "dateTo": "2026-09-21",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Kolariks Kinderwelt, Prater 10, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Spielen",
+        "Kinder",
+        "Indoor",
+        "Prater"
+      ],
+      "desc": "In der Luftburg-Erlebniswelt im Wiener Prater können Kinder auf 1.000 m² toben und spielen, während die Erwachsenen im Restaurant Luftburg entspannen.",
+      "link": "https://kolarik.at/places/kolariks-kinderwelt/",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-luftburg-erlebniswelt-im-wiener-prater-2026-09-21"
+    },
+    {
+      "cat": "Kreativ",
       "title": "KaleidosKids I (3 - 6jährige)",
       "sub": "Kreativprogramm für Kinder von 3 bis 6 Jahren",
       "dateFrom": "2026-09-22",
@@ -737,7 +899,7 @@
         "Basteln"
       ],
       "desc": "KaleidosKids I ist ein Kreativprogramm für Kinder von 3 bis 6 Jahren im Weltmuseum Wien. Eine Anmeldung ist erforderlich, Gruppen sind willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7343/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kaleidoskids-i-3-6jahrige-2026-09-22"
@@ -764,7 +926,7 @@
         "Gratis"
       ],
       "desc": "Die Stille Stunde in der Kinderinfo bietet Kindern eine ruhige Zeit zum Entspannen. Die Teilnahme ist gratis und ohne Anmeldung möglich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7115/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-stille-stunde-in-der-kinderinfo-2026-09-22"
@@ -791,7 +953,7 @@
         "Bewegung"
       ],
       "desc": "Ballett, Jazzdance und Yoga für Kinder ab 4 Jahren werden bei Susi's Dance and Yoga im 18. Bezirk angeboten. Die Teilnahme ist gratis, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7089/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ballett-jazzdance-yoga-2026-09-22"
@@ -818,7 +980,7 @@
         "Gratis"
       ],
       "desc": "Irish Dance begeistert Kinder ab 3 Jahren und wird von der Irish Dance Company im 17. Bezirk angeboten. Die Teilnahme ist gratis, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7336/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-irish-dance-das-hobby-das-kinder-begeistert-2026-09-22"
@@ -845,7 +1007,7 @@
         "Gratis"
       ],
       "desc": "Spaß voller Ton bietet Kindern ab 5 Jahren die Möglichkeit, kreativ mit Ton zu arbeiten. Das Angebot ist gratis und ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7502/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-spa-voller-ton-2026-09-22"
@@ -872,7 +1034,7 @@
         "Indoor"
       ],
       "desc": "Fechtkurse für Kinder ab 6 Jahren im 19. Bezirk. Ohne Anmeldung möglich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7446/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-fechten-im-19-2026-09-22"
@@ -899,7 +1061,7 @@
         "ab 6"
       ],
       "desc": "Capoeira Training für Kinder ab 6 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7116/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-capoeira-kids-action-2026-09-22"
@@ -926,7 +1088,7 @@
         "ab 6"
       ],
       "desc": "Baseball Training für Kinder ab 6 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7522/",
       "source": "WienXtra 6J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-baseball-2026-09-22"
@@ -952,7 +1114,7 @@
         "Kinder"
       ],
       "desc": "Der Circus Theater Roncalli präsentiert eine familienfreundliche Zirkusshow am Wiener Rathausplatz. Geeignet für Kinder ab 4 Jahren.",
-      "link": "https://all4family.at/veranstaltungen/",
+      "link": "https://all4family.at/veranstaltungen/circus-roncalli-rathausplatz/?gde=2026-09-22",
       "source": "All4Family",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-circus-theater-roncalli-wiener-rathausplatz-2026-09-22"
@@ -979,7 +1141,7 @@
         "Bewegung"
       ],
       "desc": "Kinderyoga-Kurse in der Selbstwertwerkstatt im 7. Bezirk. Geeignet für Kinder ab 4 Jahren.",
-      "link": "https://www.wien.gv.at/veranstaltungen/?kategorie=kinder",
+      "link": "https://www.wien.gv.at/veranstaltungen/kinderyoga-in-der-selbstwertwerkstatt",
       "source": "Wien.gv.at Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderyoga-in-der-selbstwertwerkstatt-2026-09-22"
@@ -1006,7 +1168,7 @@
         "Spielen"
       ],
       "desc": "Der Mini-Treff ist ein offener Treffpunkt für kleine Kinder und ihre Familien bei den Wiener Kinderfreunden im 16. Bezirk. Anmeldung ist nicht erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7233/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-mini-treff-2026-09-23"
@@ -1033,37 +1195,10 @@
         "Gratis"
       ],
       "desc": "Ballett im 3. Bezirk bietet Ballettunterricht für Kinder ab 3 Jahren. Die Teilnahme ist gratis, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7442/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ballett-im-3-2026-09-23"
-    },
-    {
-      "cat": "Kreativ",
-      "title": "Ballett im 6.",
-      "sub": "Ballettunterricht für Kinder ab 3 Jahren",
-      "dateFrom": "2026-09-23",
-      "dateTo": "2026-09-30",
-      "time": null,
-      "indoor": true,
-      "gratis": true,
-      "preis": "",
-      "reg": true,
-      "alter": "ab 3",
-      "loc": "Vereinigte Ballettschulen, 1060 Wien",
-      "locS": "6., Mariahilf",
-      "freq": null,
-      "tags": [
-        "Ballett",
-        "Tanz",
-        "Kinder",
-        "Gratis"
-      ],
-      "desc": "Ballett im 6. Bezirk bietet Ballettunterricht für Kinder ab 3 Jahren. Die Teilnahme ist gratis, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
-      "source": "WienXtra 5J S.1",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-ballett-im-6-2026-09-23"
     },
     {
       "cat": "Theater",
@@ -1087,7 +1222,7 @@
         "Familie"
       ],
       "desc": "Das Theaterstück 'Kasperl und das verzauberte Abenteuer!' richtet sich an Kinder ab 1 ½ Jahren und findet im Nachbarschaftszentrum 8 statt. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7503/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kasperl-und-das-verzauberte-abenteuer-2026-09-23"
@@ -1114,7 +1249,7 @@
         "Bewegung"
       ],
       "desc": "Feldhockey für Kinder ab 4 Jahren wird vom SV Arminen im 17. Bezirk angeboten. Eine Anmeldung ist erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7518/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-feldhockey-2026-09-23"
@@ -1141,7 +1276,7 @@
         "Familien"
       ],
       "desc": "Im Einkaufszentrum huma eleven findet ein kostenloses Kasperltheater statt, ideal für Kinder ab 4 Jahren.",
-      "link": "https://all4family.at/veranstaltungen/",
+      "link": "https://all4family.at/veranstaltungen/kasperl-huma-eleven/?gde=2026-09-23",
       "source": "All4Family",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-gratis-kasperl-huma-eleven-2026-09-23"
@@ -1168,7 +1303,7 @@
         "Kinder"
       ],
       "desc": "Entdecke, wie Forscher, Edelsteinschleifer und Sammler Edelsteine unterschiedlich betrachten. Ein spannender Einblick in die Welt der Edelsteine für Kinder ab 4 Jahren.",
-      "link": "https://www.nhm-wien.ac.at/kinder",
+      "link": "https://www.nhm.at/veranstaltungskalender/fehler_in_edelsteinen_schmutz_oder_schatz",
       "source": "NHM Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-meet-a-scientist-fehler-in-edelsteinen-schmutz-ode-2026-09-23"
@@ -1195,7 +1330,7 @@
         "Kreativ"
       ],
       "desc": "Die Schattenparty ist ein Figurentheater für Kinder ab 4 Jahren im 3. Bezirk. Eine Anmeldung ist erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7225/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-schattenparty-2026-09-24"
@@ -1222,7 +1357,7 @@
         "Gratis"
       ],
       "desc": "Ukukha amanzi – Wasser für alle ist ein Theaterstück für Kinder ab 3 Jahren, das an mehreren Standorten in Wien stattfindet. Die Teilnahme ist gratis und ohne Anmeldung möglich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/8028/",
       "source": "WienXtra 5J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ukukha-amanzi-wasser-fur-alle-2026-09-24"
@@ -1249,64 +1384,10 @@
         "Bewegung"
       ],
       "desc": "Kinderturnen für Kinder ab 2 Jahren in Liesing. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A4+Jahre&tx_solr%5Bpage%5D=1",
+      "link": "https://wienxtra.at/kinder/event/7457/",
       "source": "WienXtra 4J S.1",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderturnen-gymnathlon-liesing-2026-09-24"
-    },
-    {
-      "cat": "Sport",
-      "title": "Kinderturnen Gymnathlon - Rzehakgasse",
-      "sub": "Kinderturnen für Kinder ab 2 Jahren",
-      "dateFrom": "2026-09-24",
-      "dateTo": "2026-09-24",
-      "time": null,
-      "indoor": true,
-      "gratis": false,
-      "preis": "",
-      "reg": true,
-      "alter": "ab 2",
-      "loc": "Gymnathlon SV, 1110 Wien",
-      "locS": "11., Simmering",
-      "freq": null,
-      "tags": [
-        "Sport",
-        "Kinderturnen",
-        "ab2",
-        "Gymnathlon"
-      ],
-      "desc": "Kinderturnen für die Kleinsten, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A4+Jahre&tx_solr%5Bpage%5D=2",
-      "source": "WienXtra 4J S.2",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-kinderturnen-gymnathlon-rzehakgasse-2026-09-24"
-    },
-    {
-      "cat": "Sport",
-      "title": "Kinderturnen Gymnathlon - Karl Löwe",
-      "sub": "Kinderturnen für Kinder ab 2 Jahren",
-      "dateFrom": "2026-09-24",
-      "dateTo": "2026-09-24",
-      "time": null,
-      "indoor": true,
-      "gratis": true,
-      "preis": "Gratis",
-      "reg": true,
-      "alter": "ab 2",
-      "loc": "Gymnathlon SV, 1120 Wien",
-      "locS": "12., Meidling",
-      "freq": null,
-      "tags": [
-        "Sport",
-        "Kinderturnen",
-        "ab2",
-        "Gratis"
-      ],
-      "desc": "Kostenloses Kinderturnen, Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A4+Jahre&tx_solr%5Bpage%5D=2",
-      "source": "WienXtra 4J S.2",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-kinderturnen-gymnathlon-karl-lowe-2026-09-24"
     },
     {
       "cat": "Sport",
@@ -1330,7 +1411,7 @@
         "Bewegung"
       ],
       "desc": "Fechttraining für Kinder ab 6 Jahren in der Fecht-Union Wien. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7445/",
       "source": "WienXtra 6J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-fechten-im-8-2026-09-24"
@@ -1357,7 +1438,7 @@
         "Bewegung"
       ],
       "desc": "Wing Tsun Training für Kinder ab 6 Jahren im 22. Bezirk. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A6+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7184/",
       "source": "WienXtra 6J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-wtplus-tiger-im-22-bezirk-2026-09-24"
@@ -1383,7 +1464,7 @@
         "Kinder"
       ],
       "desc": "Die Longines Global Champions Tour präsentiert die internationale Elite des Springreitens vor der barocken Kulisse von Schloss Schönbrunn. Für Familien geeignet.",
-      "link": "https://all4family.at/veranstaltungen/",
+      "link": "https://all4family.at/veranstaltungen/longines-global-champions-tour-wien/?gde=2026-09-24",
       "source": "All4Family",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-longines-global-champions-tour-wien-2026-09-24"
@@ -1436,7 +1517,7 @@
         "ab4"
       ],
       "desc": "Kinderturnen für Kinder ab 4 Jahren in der Flotowgasse. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7458/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderturnen-gymnathlon-flotowgasse-2026-09-25"
@@ -1463,7 +1544,7 @@
         "ab3"
       ],
       "desc": "Erlebnisreiche Naturforschung für Kinder ab 3 Jahren an verschiedenen Standorten in Wien. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7441/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-naturforschen-als-erlebnis-2026-09-25"
@@ -1490,7 +1571,7 @@
         "ab3"
       ],
       "desc": "Kreatives Atelier für Familien mit Kindern ab 3 Jahren im Dom Museum Wien. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7203/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-familienatelier-kafer-krone-stephansdom-2026-09-25"
@@ -1517,7 +1598,7 @@
         "Familien"
       ],
       "desc": "Theaterstück 'Sag Ja zum NEINhorn' für Kinder ab 3 Jahren im Theater Libelle. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7516/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-sag-ja-zum-neinhorn-2026-09-25"
@@ -1544,7 +1625,7 @@
         "ab2"
       ],
       "desc": "Spiel- und Tanzveranstaltung für Kinder ab 2 Jahren im WUK KinderKultur. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7391/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ball-2026-09-25"
@@ -1571,7 +1652,7 @@
         "ab3"
       ],
       "desc": "Offenes Familienfest im Karl-Wrba-Hof für Kinder ab 3 Jahren. Ohne Anmeldung und gratis.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7513/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-familienfest-im-karl-wrba-hof-2026-09-25"
@@ -1598,7 +1679,7 @@
         "Gratis"
       ],
       "desc": "Kampfkunst Hapkido für Kinder ab 5 Jahren in Wien. Anmeldung erforderlich, gratis Teilnahme.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7111/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-hapkido-2026-09-25"
@@ -1625,7 +1706,7 @@
         "4+"
       ],
       "desc": "Die Musikwerkstatt bietet Kindern ab 4 Jahren die Möglichkeit, musikalisch kreativ zu werden. Anmeldung ist erforderlich.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/musikwerkstatt/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-musikwerkstatt-2026-09-25"
@@ -1652,7 +1733,7 @@
         "ab4"
       ],
       "desc": "Capoeira-Kurs für Eltern und Kinder ab 4 Jahren. Anmeldung erforderlich, gratis Teilnahme.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7164/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-capoeira-eltern-kind-2026-09-26"
@@ -1679,7 +1760,7 @@
         "Indoor"
       ],
       "desc": "Flohmarkt speziell für Kinder im Nachbarschaftszentrum 7. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7290/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kids-flohmarkt-2026-09-26"
@@ -1706,7 +1787,7 @@
         "ab3"
       ],
       "desc": "Bilderbuchkino für Kinder ab 3 Jahren im WIENXTRA-Cinemagic. Anmeldung möglich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7256/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-bilderbuch-kino-2026-09-26"
@@ -1733,7 +1814,7 @@
         "ab4"
       ],
       "desc": "Kinderlesung 'Geschichten aus dem Hut' für Kinder ab 4 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7419/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-geschichten-aus-dem-hut-2026-09-26"
@@ -1760,7 +1841,7 @@
         "ab4"
       ],
       "desc": "Landhockey für Kinder ab 4 Jahren beim Hockey Club Wien. Ohne Anmeldung, gratis Teilnahme.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7095/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-landhockey-2026-09-26"
@@ -1787,7 +1868,7 @@
         "Gruppen"
       ],
       "desc": "Theaterstück 'Zu Besuch bei den Trabrennpferden' für Kinder ab 4 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7519/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-zu-besuch-bei-den-trabrennpferden-2026-09-26"
@@ -1814,7 +1895,7 @@
         "ab4"
       ],
       "desc": "Naturerlebnis mit Gänsen auf dem Landgut Wien Cobenzl für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7140/",
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ganse-auf-dem-landgut-2026-09-26"
@@ -1841,37 +1922,10 @@
         "Gratis"
       ],
       "desc": "Kinderlesung im Döblinger Büchercafe für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A4+Jahre&tx_solr%5Bpage%5D=2",
+      "link": "https://wienxtra.at/kinder/event/7465/",
       "source": "WienXtra 4J S.2",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderlesung-im-doblinger-buchercafe-2026-09-26"
-    },
-    {
-      "cat": "Kreativ",
-      "title": "Kids Flohmarkt im Nachbarschaftszentrum 7",
-      "sub": "Flohmarkt für Kinder im 7. Bezirk",
-      "dateFrom": "2026-09-26",
-      "dateTo": "2026-09-26",
-      "time": "09:00-13:00",
-      "indoor": true,
-      "gratis": true,
-      "preis": "",
-      "reg": null,
-      "alter": "ab 4",
-      "loc": "Schottenfeldgasse 29/2, 1070 Wien",
-      "locS": "7., Neubau",
-      "freq": null,
-      "tags": [
-        "Flohmarkt",
-        "Kinder",
-        "Familie",
-        "Kreativ"
-      ],
-      "desc": "Kids Flohmarkt im Nachbarschaftszentrum 7 im 7. Bezirk. Kostenloser Flohmarkt für Kinder und Familien.",
-      "link": "https://www.wien.gv.at/veranstaltungen/?kategorie=kinder",
-      "source": "Wien.gv.at Kinder",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-kids-flohmarkt-im-nachbarschaftszentrum-7-2026-09-26"
     },
     {
       "cat": "Musik",
@@ -1900,6 +1954,85 @@
       "id": "s-klassik-cool-babykonzerte-klangzauber-2026-09-26"
     },
     {
+      "cat": "Saisonal",
+      "title": "Yanni, die Sterne und der Käsemond",
+      "sub": "Planetarium-Vorstellung für Kinder ab 4 Jahren",
+      "dateFrom": "2026-09-26",
+      "dateTo": "2026-09-26",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": null,
+      "reg": true,
+      "alter": "ab 4",
+      "loc": "Planetarium Wien, Kuffner und Urania Sternwarte - Die Wiener Volkshochschulen GmbH, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Planetarium",
+        "Kinder",
+        "Sterne",
+        "Bildung"
+      ],
+      "desc": "Eine spannende Planetariumsvorstellung für Kinder ab 4 Jahren, die spielerisch die Sterne und den Käsemond entdecken.",
+      "link": "https://wienxtra.at/kinder/event/7206/",
+      "source": "WienXtra 5J S.3",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-yanni-die-sterne-und-der-kasemond-2026-09-26"
+    },
+    {
+      "cat": "Theater",
+      "title": "MONSTERRRR!",
+      "sub": "Theaterstück für Kinder ab 6 Jahren",
+      "dateFrom": "2026-09-26",
+      "dateTo": "2026-09-27",
+      "time": "15:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 6",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "Kinder",
+        "ab 6"
+      ],
+      "desc": "Das Theaterstück MONSTERRRR! richtet sich an Kinder ab 6 Jahren und findet an zwei Tagen im Dschungel Wien statt.",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=736",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-monsterrrr-2026-09-26"
+    },
+    {
+      "cat": "Theater",
+      "title": "KINDER MACHEN THEATER",
+      "sub": "Theaterprojekt für Kinder ab 7 Jahren",
+      "dateFrom": "2026-09-26",
+      "dateTo": "2026-09-27",
+      "time": "15:30, 17:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 7",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "Kinder",
+        "ab 7"
+      ],
+      "desc": "Das Projekt KINDER MACHEN THEATER ist für Kinder ab 7 Jahren und findet an mehreren Terminen im Dschungel Wien statt.",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=736",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-kinder-machen-theater-2026-09-26"
+    },
+    {
       "cat": "Natur",
       "title": "Familienführung im Botanischen Garten",
       "sub": "Geführte Tour für Familien mit Kindern ab 4 Jahren",
@@ -1921,7 +2054,7 @@
         "Führung"
       ],
       "desc": "Eine spannende Familienführung im Botanischen Garten der Universität Wien, geeignet für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/7710/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-familienfuhrung-im-botanischen-garten-2026-09-27"
@@ -1947,36 +2080,91 @@
         "Klassik"
       ],
       "desc": "Eine spannende musikalische Erzählung der Fabel von der Grille und der Ameise, liebevoll inszeniert für kleine Zuhörer.",
-      "link": "https://www.hdm.at/konzerte/",
+      "link": "https://quicket.wien-ticket.at/shop/wt.at/de/121/54654",
       "source": "Haus der Musik Konzerte",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-klassik-cool-die-grille-und-die-ameise-2026-09-27"
     },
     {
-      "cat": "Musik",
-      "title": "KLASSIK COOL! Vivaldi: Die vier Jahreszeiten",
-      "sub": "Mitmach-Konzert für kleine Zuhörer",
+      "cat": "Sport",
+      "title": "9. LebensLauf / Kinderlauf",
+      "sub": "Kinderlauf für Kinder ab 4 Jahren",
       "dateFrom": "2026-09-27",
       "dateTo": "2026-09-27",
-      "time": "16:00",
-      "indoor": true,
+      "time": null,
+      "indoor": false,
       "gratis": false,
-      "preis": "",
+      "preis": null,
       "reg": false,
       "alter": "ab 4",
-      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
-      "locS": "1., Innere Stadt",
+      "loc": "asylkoordination österreich, 1100 Wien",
+      "locS": "10., Favoriten",
+      "freq": null,
       "tags": [
-        "Vivaldi",
-        "Mitmach",
-        "Konzert",
-        "Kinder"
+        "Lauf",
+        "Kinder",
+        "Sport",
+        "Outdoor"
       ],
-      "desc": "Eine mitreißende musikalische Reise durch die Jahreszeiten mit viel Interaktion für Kinder ab 4 Jahren.",
-      "link": "https://www.hdm.at/konzerte/",
-      "source": "Haus der Musik Konzerte",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-klassik-cool-vivaldi-die-vier-jahreszeiten-2026-09-27"
+      "desc": "Der 9. LebensLauf bietet einen Kinderlauf für Kinder ab 4 Jahren, bei dem ohne Anmeldung mitgelaufen werden kann.",
+      "link": "https://wienxtra.at/kinder/event/7113/",
+      "source": "WienXtra 5J S.3",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-9-lebenslauf-kinderlauf-2026-09-27"
+    },
+    {
+      "cat": "Theater",
+      "title": "Die Löwen sind los",
+      "sub": "Theaterstück für Kinder ab 3 Jahren",
+      "dateFrom": "2026-09-27",
+      "dateTo": "2026-09-27",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": null,
+      "reg": true,
+      "alter": "ab 3",
+      "loc": "Österreichische Nationalbibliothek, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "Kinder",
+        "Familie",
+        "Indoor"
+      ],
+      "desc": "Ein Theaterstück für Kinder ab 3 Jahren, das eine Anmeldung erfordert und auch für Gruppen geeignet ist.",
+      "link": "https://wienxtra.at/kinder/event/7126/",
+      "source": "WienXtra 5J S.3",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-die-lowen-sind-los-2026-09-27"
+    },
+    {
+      "cat": "Saisonal",
+      "title": "Mission Weltall 1: Die Planeten",
+      "sub": "Planetariumsvorstellung für Kinder ab 4 Jahren",
+      "dateFrom": "2026-09-27",
+      "dateTo": "2026-09-27",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": null,
+      "reg": true,
+      "alter": "ab 4",
+      "loc": "Planetarium Wien, Kuffner und Urania Sternwarte - Die Wiener Volkshochschulen GmbH, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Planetarium",
+        "Kinder",
+        "Weltall",
+        "Bildung"
+      ],
+      "desc": "Eine spannende Reise durch das Weltall mit Fokus auf die Planeten für Kinder ab 4 Jahren, Anmeldung erforderlich.",
+      "link": "https://wienxtra.at/kinder/event/7207/",
+      "source": "WienXtra 5J S.3",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-mission-weltall-1-die-planeten-2026-09-27"
     },
     {
       "cat": "Kreativ",
@@ -2000,7 +2188,7 @@
         "Info"
       ],
       "desc": "Informationsveranstaltung 'Schul.Start 2027' für Familien mit Kindern im schulpflichtigen Alter.",
-      "link": "https://www.wien.gv.at/veranstaltungen/?kategorie=kinder",
+      "link": "https://www.wien.gv.at/veranstaltungen/schul-start-2027",
       "source": "Wien.gv.at Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-schul-start-2027-2026-09-29"
@@ -2026,7 +2214,7 @@
         "Musik"
       ],
       "desc": "Ein Familienkonzert mit Bluatschink, das Geschichten aus der Kinderwelt über Freundschaft, Familie und Abenteuer erzählt.",
-      "link": "https://www.hdm.at/konzerte/",
+      "link": "https://quicket.wien-ticket.at/shop/wt.at/de/117/50585",
       "source": "Haus der Musik Konzerte",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-der-breitmaulfrosch-und-seine-freunde-familienkonz-2026-10-02"
@@ -2053,7 +2241,7 @@
         "ab 6"
       ],
       "desc": "Eine Performance für Kinder ab 6 Jahren, die an mehreren Terminen im Oktober im Dschungel Wien gezeigt wird.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=800",
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-was-wir-bauen-2026-10-02"
@@ -2105,7 +2293,7 @@
         "Bewegung"
       ],
       "desc": "Eltern-Kind Capoeira Training für Kinder ab 4 Jahren. Anmeldung erforderlich, kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/7365/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-capoeira-eltern-kind-training-2026-10-03"
@@ -2132,7 +2320,7 @@
         "Kreativ"
       ],
       "desc": "Musikalisches Angebot für Kinder ab 5 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/8513/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-klangsterne-2026-10-03"
@@ -2159,7 +2347,7 @@
         "Kreativ"
       ],
       "desc": "Theaterstück 'Traumreise - Unter Wasser' für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/7396/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-traumreise-unter-wasser-2026-10-03"
@@ -2186,7 +2374,7 @@
         "Gratis"
       ],
       "desc": "Kunstworkshop 'Wien Fantasie in die Kunst kam' für Kinder ab 3 Jahren. Anmeldung erforderlich, kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/8456/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-wien-fantasie-in-die-kunst-kam-2026-10-03"
@@ -2213,7 +2401,7 @@
         "Workshop"
       ],
       "desc": "Probestunde im Robbo Club Wien für Kinder von 5 bis 7 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/8249/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-probestunde-robbo-club-wien-5-7-jahre-2026-10-03"
@@ -2240,7 +2428,7 @@
         "Gratis"
       ],
       "desc": "Kinderfilm 'MOLLY MONSTER' für Kinder ab 5 Jahren. Anmeldung möglich, kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/7598/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-molly-monster-2026-10-03"
@@ -2267,7 +2455,7 @@
         "Gratis"
       ],
       "desc": "Herbstliches Laubfest an der Alten Donau für Kinder ab 2 Jahren. Anmeldung erforderlich, kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/8074/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-laubfest-alte-donau-2026-10-03"
@@ -2294,7 +2482,7 @@
         "Gratis"
       ],
       "desc": "Das Theaterstück 'Elsa und der große Bär' findet im Planetarium Wien statt und ist für Kinder ab 4 Jahren geeignet. Eine Anmeldung ist erforderlich, Gruppen sind willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/7756/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-elsa-und-der-gro-e-bar-2026-10-03"
@@ -2321,7 +2509,7 @@
         "Indoor"
       ],
       "desc": "Die Kinderdisco in der Kinderinfo bietet Kindern ab 3 Jahren die Möglichkeit zu tanzen und Spaß zu haben. Keine Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/8121/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderdisco-in-der-kinderinfo-2026-10-03"
@@ -2375,7 +2563,7 @@
         "Indoor"
       ],
       "desc": "Die Sevi-Disco ist eine Veranstaltung der Wiener Kinderfreunde für Kinder ab 3 Jahren. Anmeldung erforderlich, Eintritt frei.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/7841/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-sevi-disco-2026-10-04"
@@ -2429,7 +2617,7 @@
         "Indoor"
       ],
       "desc": "Der Familiensonntag im KunstHausWien bietet ein Programm für Familien mit Kindern ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/8061/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-familiensonntag-2026-10-04"
@@ -2456,7 +2644,7 @@
         "Indoor"
       ],
       "desc": "Das Kino für die Kleinsten im Admiral Kino zeigt Filme für Kinder ab 3 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/7091/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kino-fur-die-kleinsten-2026-10-04"
@@ -2483,7 +2671,7 @@
         "Indoor"
       ],
       "desc": "Das Theaterstück 'DUDU auf Naturschatzsuche' findet im Theater Olé statt und ist für Kinder ab 3 Jahren geeignet. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/7978/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-dudu-auf-naturschatzsuche-2026-10-04"
@@ -2510,10 +2698,37 @@
         "Kreativ"
       ],
       "desc": "Das Theaterstück 'GENIE' wird im DSCHUNGEL WIEN gezeigt und richtet sich an Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/8100/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-genie-2026-10-04"
+    },
+    {
+      "cat": "Saisonal",
+      "title": "Mission Weltall 2: Sonne, Mond & Sterne",
+      "sub": "Planetariumsvorstellung für Kinder ab 5 Jahren",
+      "dateFrom": "2026-10-04",
+      "dateTo": "2026-10-27",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": true,
+      "alter": "ab 5",
+      "loc": "Planetarium Wien, Kuffner und Urania Sternwarte - Die Wiener Volkshochschulen GmbH, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Planetarium",
+        "Kinder",
+        "Wissen",
+        "Sonne"
+      ],
+      "desc": "Spannende Planetariumsvorstellung über Sonne, Mond und Sterne für Kinder ab 5 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
+      "link": "https://wienxtra.at/kinder/event/7758/",
+      "source": "WienXtra 5J S.4",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-mission-weltall-2-sonne-mond-sterne-2026-10-04"
     },
     {
       "cat": "Sport",
@@ -2537,10 +2752,37 @@
         "Indoor"
       ],
       "desc": "Das Kinderturnen Gymnathlon in der Alxingergasse ist für Kinder ab 4 Jahren geeignet. Anmeldung erforderlich, kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=4",
+      "link": "https://wienxtra.at/kinder/event/8007/",
       "source": "WienXtra 5J S.4",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderturnen-gymnathlon-alxingergasse-2026-10-05"
+    },
+    {
+      "cat": "Kreativ",
+      "title": "Englischwerkstatt",
+      "sub": "Englisch lernen für Kinder ab 3 Jahren",
+      "dateFrom": "2026-10-05",
+      "dateTo": "2026-10-19",
+      "time": null,
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": true,
+      "alter": "ab 3",
+      "loc": "Wiener Hilfswerk - Nachbarschaftszentrum 2, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Kreativ",
+        "Englisch",
+        "Kinder",
+        "Lernen"
+      ],
+      "desc": "Englischwerkstatt für Kinder ab 3 Jahren im Wiener Hilfswerk. Anmeldung erforderlich.",
+      "link": "https://wienxtra.at/kinder/event/7789/",
+      "source": "WienXtra 5J S.4",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-englischwerkstatt-2026-10-05"
     },
     {
       "cat": "Theater",
@@ -2564,7 +2806,7 @@
         "Regenbogen"
       ],
       "desc": "Ein buntes Theatererlebnis für Kinder ab 3 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8521/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-tanz-auf-dem-regenbogen-2026-10-07"
@@ -2591,7 +2833,7 @@
         "Aktivitäten"
       ],
       "desc": "RausZeit bietet Familien mit Kindern ab 4 Jahren abwechslungsreiche Nachmittage mit verschiedenen Aktivitäten. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/7916/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-rauszeit-familiennachmittag-2026-10-07"
@@ -2618,7 +2860,7 @@
         "Kunst"
       ],
       "desc": "Eine spezielle Vernissage für Kinder ab 5 Jahren in der Albertina. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/7954/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinder-vernissage-shara-hughes-2026-10-08"
@@ -2645,7 +2887,7 @@
         "Kikeriki"
       ],
       "desc": "Ein Theaterstück für Kinder ab 5 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8531/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-kopf-in-den-wolken-2026-10-09"
@@ -2672,7 +2914,7 @@
         "3+"
       ],
       "desc": "In der Farben-Werkstatt können Kinder ab 3 Jahren kreativ malen. Anmeldung ist erforderlich.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/farben-werkstatt/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-farben-werkstatt-2026-10-09"
@@ -2699,7 +2941,7 @@
         "Turnen"
       ],
       "desc": "Gemeinsames Workout für Eltern und Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8116/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-eltern-workout-kinder-turnen-2026-10-10"
@@ -2726,7 +2968,7 @@
         "MusikTheater"
       ],
       "desc": "Theaterprogramm für Kinder ab 4 Jahren ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/7122/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-samstag-im-theater-2026-10-10"
@@ -2753,7 +2995,7 @@
         "Filmarchiv"
       ],
       "desc": "Filmvorführung von Tom und Jerry für Kinder ab 5 Jahren ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8082/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-tom-und-jerry-der-film-2026-10-10"
@@ -2806,7 +3048,7 @@
         "Bibliothek"
       ],
       "desc": "Eine spannende Führung für Kinder ab 3 Jahren in der Nationalbibliothek. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8083/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-auf-der-suche-nach-dem-einhorn-2026-10-11"
@@ -2833,7 +3075,7 @@
         "Junge Theater"
       ],
       "desc": "Ein Theaterstück für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8034/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-umami-2026-10-11"
@@ -2860,7 +3102,7 @@
         "Kikeriki"
       ],
       "desc": "Ein Theaterstück für Kinder ab 4 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8532/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-wenn-ich-gro-bin-bin-ich-tiger-2026-10-12"
@@ -2887,7 +3129,7 @@
         "Kürbis"
       ],
       "desc": "Ein lustiges Theaterstück für Kinder ab 2 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/7876/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kasperl-und-der-verzauberte-kurbis-2026-10-13"
@@ -2914,7 +3156,7 @@
         "Kikeriki"
       ],
       "desc": "Ein Theaterstück für Kinder ab 3 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=5",
+      "link": "https://wienxtra.at/kinder/event/8533/",
       "source": "WienXtra 5J S.5",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-wach-bis-mitternacht-2026-10-14"
@@ -2941,7 +3183,7 @@
         "Schischule"
       ],
       "desc": "Winterfit für Kinder ab 3 Jahre mit 10 Terminen in der Schischule Ötscher Hohe Wand Wiese. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/7870/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-winterfit-fur-kinder-2026-10-15"
@@ -2967,7 +3209,7 @@
         "Atelier"
       ],
       "desc": "Familienatelier im Dom Museum Wien für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8039/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-familienatelier-2026-10-16"
@@ -2993,7 +3235,7 @@
         "Kinder"
       ],
       "desc": "Figurentheaterstück 'Koko und der weiße Vogel' für Kinder ab 3 Jahren im Figurentheater LILARUM. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/7909/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-koko-und-der-wei-e-vogel-2026-10-16"
@@ -3020,7 +3262,7 @@
         "Kinder"
       ],
       "desc": "Theaterstück 'Kikeriki: Auf leisen Pfoten' in Deutsch und ÖGS für Kinder ab 5 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8534/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-auf-leisen-pfoten-deutsch-ogs-2026-10-16"
@@ -3046,7 +3288,7 @@
         "Kinder"
       ],
       "desc": "Nähworkshop 'Nähen für Alle' für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/7771/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-nahen-fur-alle-2026-10-16"
@@ -3072,7 +3314,7 @@
         "Kinder"
       ],
       "desc": "Kunstworkshop 'Kunststrolche: Elisabeth von Samsonow' für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8455/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kunststrolche-elisabeth-von-samsonow-2026-10-17"
@@ -3098,7 +3340,7 @@
         "Kinder"
       ],
       "desc": "Kasperltheater der Wiener Kinderfreunde für Kinder ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8240/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kasperltheater-der-wiener-kinderfreunde-2026-10-17"
@@ -3124,7 +3366,7 @@
         "Filmcasino"
       ],
       "desc": "Kinderfilm 'Mumbo Jumbo' im Filmcasino für Kinder ab 3 Jahren. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8391/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-mumbo-jumbo-2026-10-17"
@@ -3149,7 +3391,7 @@
         "Kinder"
       ],
       "desc": "Theaterstück 'Immer dieser Heinrich' für Kinder ab 3 Jahren im Theater Libelle. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8084/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-immer-dieser-heinrich-2026-10-17"
@@ -3174,7 +3416,7 @@
         "Kinder"
       ],
       "desc": "Theaterstück 'Kikeriki: Verflixt, verdreht und zugenäht' für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8535/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kikeriki-verflixt-verdreht-und-zugenaht-2026-10-19"
@@ -3200,7 +3442,7 @@
         "Kinder"
       ],
       "desc": "Halloweenfest für Kinder ab 4 Jahren im Wiener Hilfswerk Nachbarschaftszentrum 12. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/7895/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-halloweenfest-2026-10-20"
@@ -3278,7 +3520,7 @@
         "Kinder"
       ],
       "desc": "Geisterdisco für Kinder ab 2 Jahren im Wiener Hilfswerk Nachbarschaftszentrum 2. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/7787/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-geisterdisco-2026-10-22"
@@ -3329,7 +3571,7 @@
         "Kinder"
       ],
       "desc": "Theaterstück 'Mit Gefühl(t)' für Kinder ab 2 Jahren im Jungen Theater Wien. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8019/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-mit-gefuhl-t-2026-10-23"
@@ -3355,7 +3597,7 @@
         "Kinder"
       ],
       "desc": "Gratis Veranstaltung 'Hollis Grätzltour' für Kinder ab 2 Jahren in der VHS Kulturgarage Seestadt. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=6",
+      "link": "https://wienxtra.at/kinder/event/8746/",
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-hollis-gratzltour-vhs-kulturgarage-seestadt-2026-10-23"
@@ -3382,7 +3624,7 @@
         "3+"
       ],
       "desc": "Kinderyoga für Kinder ab 3 Jahren im Figurentheater Lilarum. Anmeldung ist erforderlich.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/kinderyoga/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinderyoga-2026-10-23"
@@ -3409,7 +3651,7 @@
         "Schnitzen"
       ],
       "desc": "Kürbis schnitzen für Kinder ab 5 Jahren. Ohne Anmeldung, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7625/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kurbis-schnitzen-2026-10-24"
@@ -3436,7 +3678,7 @@
         "Kinder"
       ],
       "desc": "Halloween Tanzparty für Kinder ab 3 Jahren. Anmeldung erforderlich, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7803/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-halloween-tanzparty-2026-10-24"
@@ -3463,7 +3705,7 @@
         "Gratis"
       ],
       "desc": "Wiener Sicherheitsfest 2026 für Kinder und Familien. Ohne Anmeldung, gratis Eintritt.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7853/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-wiener-sicherheitsfest-2026-2026-10-25"
@@ -3517,7 +3759,7 @@
         "Gratis"
       ],
       "desc": "Herbstfest der Kinderfreunde Favoriten für Kinder ab 5 Jahren. Ohne Anmeldung, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/8018/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-herbstfest-der-kinderfreunde-favoriten-2026-10-25"
@@ -3544,7 +3786,7 @@
         "Drachen"
       ],
       "desc": "Drachenfeuer Burggemäuer für Familien mit Kindern ab 3 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7944/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-drachenfeuer-burggemauer-2026-10-26"
@@ -3571,7 +3813,7 @@
         "Spaß"
       ],
       "desc": "Kinderdisco „Ich mag laut!“ für Kinder ab 4 Jahren in der Kunsthalle Wien. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/8057/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ich-mag-laut-kinderdisco-2026-10-26"
@@ -3623,7 +3865,7 @@
         "Kinder"
       ],
       "desc": "Kunterbuntes Herbstatelier für Kinder ab 5 Jahren im Künstlerhaus Vereinigung. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7852/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kunterbuntes-herbstatelier-2026-10-27"
@@ -3650,7 +3892,7 @@
         "Kinder"
       ],
       "desc": "Kinder- und Familienführung im Parlament für Kinder ab 5 Jahren. Anmeldung erforderlich, gratis Eintritt.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/8045/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-ab-ins-parlament-kinder-und-familienfuhrung-2026-10-27"
@@ -3677,7 +3919,7 @@
         "Gratis"
       ],
       "desc": "Herbst.Zeit.Los ist ein kostenloses Spielangebot für Kinder ab 4 Jahren. Ohne Anmeldung, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/8241/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-herbst-zeit-los-2026-10-27"
@@ -3704,7 +3946,7 @@
         "2+"
       ],
       "desc": "Das Stück 'Einer für Alle – Alle für Einen' wird am 27. Oktober im Figurentheater Lilarum gezeigt und ist für Kinder ab 2 Jahren geeignet.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/einer-fuer-alle-alle-fuer-einen/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-einer-fur-alle-alle-fur-einen-2026-10-27"
@@ -3731,7 +3973,7 @@
         "Roboter"
       ],
       "desc": "Workshop „Roboter-Helferlein, Mäuselein & Menschsein“ für Kinder ab 3 Jahren. Anmeldung erforderlich, gratis.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/8171/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-roboter-helferlein-mauselein-menschsein-2026-10-28"
@@ -3758,7 +4000,7 @@
         "Buch"
       ],
       "desc": "Feier zum 80. Geburtstag von Sven Nordqvist mit Lesung für Kinder ab 4 Jahren. Ohne Anmeldung, gratis.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=7",
+      "link": "https://wienxtra.at/kinder/event/7423/",
       "source": "WienXtra 5J S.7",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-80-jahre-sven-nordqvist-2026-10-28"
@@ -3810,7 +4052,7 @@
         "Kreativ"
       ],
       "desc": "Sieben Termine für textiles Basteln für Kinder ab 5 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/7529/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-textiles-basteln-2026-10-29"
@@ -3837,7 +4079,7 @@
         "Saisonal"
       ],
       "desc": "Halloween-Party für Kinder ab 5 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/8000/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-halloween-party-2026-10-29"
@@ -3864,7 +4106,7 @@
         "Kunst"
       ],
       "desc": "Kinder-Vernissage mit Künstlerinnen der Albertina für Kinder ab 5 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/7953/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-kinder-vernissage-kunstlerinnen-der-albertina-2026-10-29"
@@ -3917,7 +4159,7 @@
         "Nachmittag"
       ],
       "desc": "Gruseliger Spielenachmittag für Kinder ab 3 Jahren. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/8235/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-gruseliger-spielenachmittag-2026-10-30"
@@ -3944,7 +4186,7 @@
         "Kreativ"
       ],
       "desc": "Leos kleine Lesestunde für Kinder ab 4 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/8022/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-leos-kleine-lesestunde-2026-10-31"
@@ -3997,7 +4239,7 @@
         "3+"
       ],
       "desc": "Das Stück 'Mia und der Schattenfleck' wird im Figurentheater Lilarum für Kinder ab 3 Jahren gezeigt. Es läuft vom 31. Oktober bis 22. November.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/mia/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-mia-und-der-schattenfleck-2026-10-31"
@@ -4024,7 +4266,7 @@
         "Outdoor"
       ],
       "desc": "Naturerlebnis im Wald für Kinder ab 3 Jahren. Ohne Anmeldung, Gruppen willkommen.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/7765/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-wald-der-jungen-wiener-innen-2026-11-07"
@@ -4075,7 +4317,7 @@
         "3+"
       ],
       "desc": "Der Bildertanz-Workshop lädt Kinder ab 3 Jahren zum Tanzen ein. Anmeldung ist erforderlich.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/bildertanz/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-bildertanz-2026-11-20"
@@ -4126,10 +4368,35 @@
         "Indoor"
       ],
       "desc": "Spielenachmittag in der Bücherei Philadelphiabrücke für Kinder ab 3 Jahren. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=8",
+      "link": "https://wienxtra.at/kinder/event/6088/",
       "source": "WienXtra 5J S.8",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-spielen-in-der-bucherei-philadelphiabrucke-2026-11-24"
+    },
+    {
+      "cat": "Theater",
+      "title": "WORTE",
+      "sub": "Theaterstück ab 3 Jahren",
+      "dateFrom": "2026-11-27",
+      "dateTo": "2026-12-01",
+      "time": "10:00, 15:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 3",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "ab 3"
+      ],
+      "desc": "WORTE ist ein Theaterstück für Kinder ab 3 Jahren mit mehreren Terminen im Dschungel Wien.",
+      "link": "https://www.dschungelwien.at/programm",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-worte-2026-11-27"
     },
     {
       "cat": "Theater",
@@ -4153,7 +4420,7 @@
         "3+"
       ],
       "desc": "Das Stück 'Weihnacht im Winterwald' wird im Figurentheater Lilarum für Kinder ab 3 Jahren gezeigt. Es läuft vom 28. November bis 24. Dezember.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/winterwald/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-weihnacht-im-winterwald-2026-11-28"
@@ -4205,7 +4472,7 @@
         "ab 6"
       ],
       "desc": "Ein Theaterstück für Kinder ab 6 Jahren mit vielen Terminen von Dezember bis Januar im Dschungel Wien.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=834",
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-die-wundersamen-abenteuer-des-baron-von-munchhause-2026-12-05"
@@ -4282,7 +4549,7 @@
         "ab 4"
       ],
       "desc": "Ein Theaterstück für Kinder ab 4 Jahren mit mehreren Terminen im Dezember im Dschungel Wien.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=980",
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-teig-2026-12-10"
@@ -4335,10 +4602,85 @@
         "3+"
       ],
       "desc": "Das Stück 'Rehkitz Fleckchen' wird im Januar im Figurentheater Lilarum für Kinder ab 3 Jahren gezeigt.",
-      "link": "https://www.lilarum.at/",
+      "link": "https://lilarum.at/veranstaltungsreihe/fleckchen/",
       "source": "Figurentheater Lilarum",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-rehkitz-fleckchen-2027-01-09"
+    },
+    {
+      "cat": "Theater",
+      "title": "DAS HAAR IN DER SUPPE",
+      "sub": "Theaterstück ab 7 Jahren",
+      "dateFrom": "2027-01-16",
+      "dateTo": "2027-01-19",
+      "time": "15:30, 10:00, 14:30",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 7",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "ab 7"
+      ],
+      "desc": "DAS HAAR IN DER SUPPE ist ein Theaterstück für Kinder ab 7 Jahren mit mehreren Terminen im Dschungel Wien.",
+      "link": "https://www.dschungelwien.at/programm",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-das-haar-in-der-suppe-2027-01-16"
+    },
+    {
+      "cat": "Theater",
+      "title": "FLEDERMÄUSE",
+      "sub": "Theaterstück ab 4 Jahren",
+      "dateFrom": "2027-01-20",
+      "dateTo": "2027-01-22",
+      "time": "10:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "ab 4"
+      ],
+      "desc": "FLEDERMÄUSE ist ein Theaterstück für Kinder ab 4 Jahren mit mehreren Terminen im Dschungel Wien.",
+      "link": "https://www.dschungelwien.at/programm",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-fledermause-2027-01-20"
+    },
+    {
+      "cat": "Theater",
+      "title": "DAS VAMPERL",
+      "sub": "Theaterstück ab 6 Jahren",
+      "dateFrom": "2027-01-25",
+      "dateTo": "2027-01-31",
+      "time": "10:00, 15:00, 14:30",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 6",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": null,
+      "tags": [
+        "Theater",
+        "ab 6"
+      ],
+      "desc": "DAS VAMPERL ist ein Theaterstück für Kinder ab 6 Jahren mit mehreren Terminen im Dschungel Wien.",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=952",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "s-das-vamperl-2027-01-25"
     },
     {
       "cat": "Theater",
@@ -4644,27 +4986,6 @@
       ],
       "desc": "Finn Flosse, Koko mit dem Zauberschirm. Liebevolle Figurentheater-Stücke für die Kleinen.",
       "link": "https://www.lilarum.at"
-    },
-    {
-      "id": 13,
-      "cat": "Theater",
-      "title": "Marionettentheater Schönbrunn",
-      "sub": "Klassiker als Marionettenspiel",
-      "loc": "Schloss Schönbrunn, 1130",
-      "locS": "13. Bez.",
-      "indoor": true,
-      "gratis": false,
-      "preis": "Ab € 15",
-      "reg": true,
-      "alter": "Ab 2 J.",
-      "freq": "400 Vorst./Jahr",
-      "tags": [
-        "Marionetten",
-        "Mozart",
-        "Märchen"
-      ],
-      "desc": "Kinderzauberflöte, Hänsel und Gretel, Aladdin. International ausgezeichnet.",
-      "link": "https://www.marionettentheater.at"
     },
     {
       "id": 14,
@@ -5232,27 +5553,6 @@
       "link": "https://www.christkindlmarkt.at"
     },
     {
-      "id": 41,
-      "cat": "Saisonal",
-      "title": "Weihnachtsmarkt Schönbrunn",
-      "sub": "Glice-Eisbahn GRATIS",
-      "loc": "Schloss Schönbrunn, 1130",
-      "locS": "13. Bez.",
-      "indoor": false,
-      "gratis": true,
-      "preis": "Eisbahn GRATIS",
-      "reg": false,
-      "alter": "Alle",
-      "freq": "Nov.–Jan.",
-      "tags": [
-        "Weihnachten",
-        "Eisbahn",
-        "Schönbrunn"
-      ],
-      "desc": "Kunsteis-Glice-Bahn kostenlos. Märchenstunde, Weihnachtsbäckerei.",
-      "link": "https://www.weihnachtsmarkt-schoenbrunn.at"
-    },
-    {
       "id": 42,
       "cat": "Saisonal",
       "title": "Wiener Eistraum (Kinderfläche)",
@@ -5507,7 +5807,7 @@
         "Indoor"
       ],
       "desc": "Regelmäßiger Spielenachmittag in der WIENXTRA-Spielebox für Kinder ab 3 Jahren. Ohne Anmeldung und kostenlos.",
-      "link": "https://wienxtra.at/kinder/veranstaltungen/?tx_solr%5Bfilter%5D%5B0%5D=age_events%3A5+Jahre&tx_solr%5Bpage%5D=3",
+      "link": "https://wienxtra.at/kinder/event/8405/",
       "source": "WienXtra 5J S.3",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-spielenachmittag-2026-10-03"
@@ -5613,7 +5913,7 @@
         "Familien"
       ],
       "desc": "An Familiensonntagen können Kinder an Mitmachführungen teilnehmen und im Atelier eigene Kunstwerke gestalten.",
-      "link": "https://www.wien.info/de/sehen-erleben/familien/programm-nur-fuer-kinder-355934",
+      "link": "https://www.albertina.at",
       "source": "WienInfo Kinderprogramm",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-familiensonntag-in-der-albertina"
@@ -5666,7 +5966,7 @@
         "Bildung"
       ],
       "desc": "Im Haus der Musik finden regelmäßig Kinderkonzerte statt, die von Kinderliedern bis zu klassischer Musik reichen. Die Konzerte laden zum Mitsingen und Mitmachen ein und sind für Kinder ab 4 Jahren geeignet.",
-      "link": "https://www.hdm.at/kinder/",
+      "link": "https://www.hdm.at/konzerte/?konzert-kategorie:8/",
       "source": "Haus der Musik Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-kinderkonzerte-im-haus-der-musik"
@@ -5693,7 +5993,7 @@
         "Familie"
       ],
       "desc": "Speziell auf die Bedürfnisse von Eltern mit Babys zugeschnittene Rundgänge in entspannter Atmosphäre. Ideal für die Allerkleinsten und ihre Familien.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/programm?search=Mit%20Baby%20im%20Museum",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-mit-baby-im-museum"
@@ -5720,7 +6020,7 @@
         "Kreativ"
       ],
       "desc": "Workshops für Familien mit Kindern ab 3 Jahren, bei denen gemeinsam Kunst entdeckt und verschiedene Materialien und Techniken ausprobiert werden.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/programm?field_target_group_target_id=862&title=F%C3%BCr%20Familien&search=Workshop",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-familienworkshops"
@@ -5747,7 +6047,7 @@
         "Kreativ"
       ],
       "desc": "Einmal im Monat können Kinder und Familien mit digitalen und analogen Techniken experimentieren und eigene fotografische Arbeiten entwickeln.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/programm?search=snapshot",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-fotoworkshops"
@@ -5774,7 +6074,7 @@
         "Kinder"
       ],
       "desc": "Feiert euren Kindergeburtstag im modernen Glaspavillon des Belvedere 21 mit Ausstellungserkundung, Party und Geburtstagstorte im Atelier.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/veranstaltung/kindergeburtstag-im-museum-polaroid-party-0",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-kindergeburtstag-im-belvedere-21"
@@ -5801,7 +6101,7 @@
         "Museum"
       ],
       "desc": "Entdeckt die kostenlosen Belvedere Games wie Art Leap, The Fantastic Palastics und Mission Museum, die spielerisch Kunst und Natur im Museum und Schlossgarten erlebbar machen.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/game",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-belvedere-games"
@@ -5828,7 +6128,7 @@
         "Malen"
       ],
       "desc": "Viele Anregungen zum gemeinsamen Malen, Gestalten, Erfinden oder Bauen mit ausgewählten Kunstwerken aus der Sammlung des Belvedere – ideal für Familien mit Kindern ab 3 Jahren.",
-      "link": "https://www.belvedere.at/familien",
+      "link": "https://www.belvedere.at/kunstpause",
       "source": "Belvedere Familien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-kunstpause"
@@ -5855,7 +6155,7 @@
         "Fossilien"
       ],
       "desc": "An Wochenenden können Kinder ab 3 Jahren die Geschichten hinter den Objekten des Museums entdecken. Mini-Treff für die Kleinsten und Kids & Co für ältere Kinder bieten altersgerechte Programme.",
-      "link": "https://www.nhm-wien.ac.at/kinder",
+      "link": "https://www.nhm.at/veranstaltungskalender?search=museum&zielgruppe_id=1732150597753",
       "source": "NHM Kinder",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-willkommen-im-museum"
@@ -6071,7 +6371,7 @@
         "Marionetten"
       ],
       "desc": "Die Kinderzauberflöte ist eine kindgerechte Kurzfassung der berühmten Oper von Mozart, gespielt mit kunstvollen Marionetten. Ein spannendes und musikalisches Erlebnis für Kinder ab 4 Jahren im Marionettentheater Schloss Schönbrunn.",
-      "link": "https://www.marionettentheater.at/",
+      "link": "https://www.marionettentheater.at/die-zauberfloete-oper-puppentheater-fuer-kinder-in-wien",
       "source": "Marionettentheater Schönbrunn",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-die-kinderzauberflote"
@@ -6098,7 +6398,7 @@
         "Marionetten"
       ],
       "desc": "Hänsel und Gretel ist ein klassisches Kindermärchen mit viel Musik, tanzenden Pilzen und zauberhaften Bühnenbildern, gespielt als Oper für Kinder im Marionettentheater Schloss Schönbrunn.",
-      "link": "https://www.marionettentheater.at/",
+      "link": "https://www.marionettentheater.at/haensel-und-gretel-oper-fuer-kinder",
       "source": "Marionettentheater Schönbrunn",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-hansel-und-gretel"
@@ -6125,7 +6425,7 @@
         "Marionetten"
       ],
       "desc": "Aladdin und die Wunderlampe ist ein musikalisches Marionettentheaterstück mit dem bekannten Märchen aus 1001 Nacht, geeignet für Kinder ab 4 Jahren.",
-      "link": "https://www.marionettentheater.at/",
+      "link": "https://www.marionettentheater.at/aladdin-und-die-wunderlampe-1001-nacht",
       "source": "Marionettentheater Schönbrunn",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-aladdin-und-die-wunderlampe"
@@ -6152,7 +6452,7 @@
         "Marionetten"
       ],
       "desc": "Eine kleine Nachtmusik ist ein Marionettenballett zur Musik von Mozart, das Kinder ab 4 Jahren in die Welt der klassischen Musik und des Tanzes entführt.",
-      "link": "https://www.marionettentheater.at/",
+      "link": "https://www.marionettentheater.at/eine-kleine-nachtmusik-ballett",
       "source": "Marionettentheater Schönbrunn",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-eine-kleine-nachtmusik"
@@ -6206,11 +6506,172 @@
         "Marionetten"
       ],
       "desc": "Die Fledermaus ist eine kindgerechte Marionettenfassung der bekannten Operette von Johann Strauss, mit Verkleidungen und Verwechslungen im Walzertakt.",
-      "link": "https://www.marionettentheater.at/",
+      "link": "https://www.marionettentheater.at/die-fledermaus-wien-the-bat-vienna",
       "source": "Marionettentheater Schönbrunn",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-die-fledermaus"
+    },
+    {
+      "cat": "Sport",
+      "title": "Sportfest 14./15./16. Bezirk",
+      "sub": "Sportfest für Kinder ohne Anmeldung",
+      "dateFrom": "2026-10-03",
+      "dateTo": "2026-10-03",
+      "time": null,
+      "indoor": false,
+      "gratis": false,
+      "preis": null,
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Bezirksvorstehung Penzing, 1160 Wien",
+      "locS": "14., Penzing",
+      "freq": "siehe Website",
+      "tags": [
+        "Sport",
+        "Kinder",
+        "Fest",
+        "Outdoor"
+      ],
+      "desc": "Ein Sportfest für Kinder im 14., 15. und 16. Bezirk, ohne Anmeldung.",
+      "link": "https://wienxtra.at/kinder/event/7900/",
+      "source": "WienXtra 5J S.3",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-sportfest-14-15-16-bezirk-2026-10-03"
+    },
+    {
+      "cat": "Museum",
+      "title": "Haus der Musik – Das Kindermuseum Wien für Töne und Klänge",
+      "sub": "Ein Abenteuerspielplatz für die Ohren mit interaktiven Klangstationen",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "täglich 10:00–22:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "täglich",
+      "tags": [
+        "Musik",
+        "Interaktiv",
+        "Museum",
+        "Kinder"
+      ],
+      "desc": "Das Haus der Musik bietet Kindern ab 4 Jahren einen spielerischen Zugang zur Welt der Klänge und Komponisten. Interaktive Stationen wie die Klangtreppe laden zum Entdecken und Mitmachen ein. Begleitmaterial und ein Smartphone Guide unterstützen die selbstständige Erkundung.",
+      "link": "https://www.hdm.at/kinder/",
+      "source": "Haus der Musik Kinder",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-haus-der-musik-das-kindermuseum-wien-fur-tone-und-"
+    },
+    {
+      "cat": "Musik",
+      "title": "Bernhard Fibich – Kinderliedmacher Nr. 1",
+      "sub": "Hits, Gags und Stories mit Respekt, Toleranz und Integration",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "siehe Website",
+      "tags": [
+        "Musik",
+        "Kinderlieder",
+        "Interaktiv",
+        "Kinder"
+      ],
+      "desc": "Bernhard Fibich begeistert Kinder mit seinen Liedern, die auch Werte wie Respekt und Toleranz vermitteln. Sein Programm richtet sich an Kinder jeden Alters und lädt zum Mitmachen ein.",
+      "link": "http://kinderlieder.at",
+      "source": "Haus der Musik Kinder",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-bernhard-fibich-kinderliedmacher-nr-1"
+    },
+    {
+      "cat": "Musik",
+      "title": "Gernot Kranner – Bauchsingen mit Puppen",
+      "sub": "Singen und Tanzen gegen schlimme Räuber",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "siehe Website",
+      "tags": [
+        "Musik",
+        "Puppenspiel",
+        "Kinder",
+        "Interaktiv"
+      ],
+      "desc": "Gernot Kranner verbindet Musical, Puppenspiel und Bauchreden zu einem unterhaltsamen Programm, bei dem Kinder singen, tanzen und gemeinsam Abenteuer erleben.",
+      "link": "http://gernotkranner.com",
+      "source": "Haus der Musik Kinder",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-gernot-kranner-bauchsingen-mit-puppen"
+    },
+    {
+      "cat": "Musik",
+      "title": "Marco Simsa – Theater- und Musikstücke für Kinder",
+      "sub": "Von Märchen bis Mozart – unterhaltsam und lehrreich",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Haus der Musik, Seilerstätte 30, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "siehe Website",
+      "tags": [
+        "Musik",
+        "Theater",
+        "Kinder",
+        "Bildung"
+      ],
+      "desc": "Marco Simsa präsentiert Musik- und Theaterstücke, die Kindern bekannte Märchen und klassische Musik näherbringen. Seine Programme sind unterhaltsam und fördern das musikalische Verständnis.",
+      "link": "http://markosimsa.at",
+      "source": "Haus der Musik Kinder",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-marco-simsa-theater-und-musikstucke-fur-kinder"
+    },
+    {
+      "cat": "Kreativ",
+      "title": "PhilosoWAS? - Philosophische Gespräche zwischen den Generationen",
+      "sub": "Philosophische Gespräche für Kinder ab 4 Jahren",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "regelmäßig samstags und an anderen Terminen",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Karten",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Dschungel Wien, 1020 Wien",
+      "locS": "2., Leopoldstadt",
+      "freq": "regelmäßig",
+      "tags": [
+        "Kreativ",
+        "Philosophie",
+        "ab 4"
+      ],
+      "desc": "PhilosoWAS? bietet philosophische Gespräche zwischen den Generationen für Kinder ab 4 Jahren im Dschungel Wien an.",
+      "link": "https://www.dschungelwien.at/programm",
+      "source": "Dschungel Wien",
+      "addedDate": "2026-09-21T15:09:55.635Z",
+      "id": "r-philosowas-philosophische-gesprache-zwischen-den-g"
     }
   ],
-  "lastUpdated": "2026-09-21T15:06:56.523Z"
+  "lastUpdated": "2026-09-21T15:09:55.635Z"
 }
