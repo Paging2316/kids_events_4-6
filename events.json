@@ -1339,33 +1339,6 @@
     },
     {
       "cat": "Sport",
-      "title": "Kinderturnen Gymnathlon - Sport Arena",
-      "sub": "Kinderturnen für Kinder ab 2 Jahren",
-      "dateFrom": "2026-10-01",
-      "dateTo": "2026-10-08",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": true,
-      "alter": "ab 2",
-      "loc": "Gymnathlon SV, 1020 Wien",
-      "locS": "2., Leopoldstadt",
-      "freq": "",
-      "tags": [
-        "Sport",
-        "Kinderturnen",
-        "ab 2",
-        "Anmeldung"
-      ],
-      "desc": "Kinderturnen für Kinder ab 2 Jahren in der Sport Arena. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/event/8015/",
-      "source": "WienXtra 4J S.2",
-      "addedDate": "2026-09-27T06:01:40.718Z",
-      "id": "s-kinderturnen-gymnathlon-sport-arena-2026-10-01"
-    },
-    {
-      "cat": "Sport",
       "title": "Girls/FLINTA*- Skateboard-Workshop",
       "sub": "Skateboard-Workshop nur für Mädchen ab 6 Jahren",
       "dateFrom": "2026-10-01",
@@ -2251,33 +2224,6 @@
       "id": "s-kinderturnen-gymnathlon-waldschule-2026-10-06"
     },
     {
-      "cat": "Sport",
-      "title": "Capoeira Kids Action",
-      "sub": "Capoeira für Kinder ab 6 Jahren",
-      "dateFrom": "2026-10-06",
-      "dateTo": "2026-10-08",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": true,
-      "alter": "ab 6",
-      "loc": "IPE Capoeira, 1210 Wien",
-      "locS": "21., Floridsdorf",
-      "freq": "",
-      "tags": [
-        "Capoeira",
-        "Sport",
-        "ab 6",
-        "Bewegung"
-      ],
-      "desc": "Capoeira für Kinder ab 6 Jahren. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/event/7724/",
-      "source": "WienXtra 6J S.2",
-      "addedDate": "2026-10-04T06:01:37.134Z",
-      "id": "s-capoeira-kids-action-2026-10-06"
-    },
-    {
       "cat": "Kreativ",
       "title": "RausZeit - Familiennachmittag",
       "sub": "Familiennachmittag mit Aktivitäten für Kinder ab 4 Jahren",
@@ -2357,33 +2303,6 @@
       "id": "s-kinder-kurzfilmfestival-kikeriki-2026-10-07"
     },
     {
-      "cat": "Museum",
-      "title": "Kinder-Vernissage Shara Hughes",
-      "sub": "Vernissage für Kinder ab 5 Jahren in der Albertina",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": true,
-      "alter": "ab 5",
-      "loc": "ALBERTINA, 1010 Wien",
-      "locS": "1., Innere Stadt",
-      "freq": "",
-      "tags": [
-        "Museum",
-        "Vernissage",
-        "Kinder",
-        "Kunst"
-      ],
-      "desc": "Eine spezielle Vernissage für Kinder ab 5 Jahren in der Albertina. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/event/7954/",
-      "source": "WienXtra 5J S.5",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-kinder-vernissage-shara-hughes-2026-10-08"
-    },
-    {
       "cat": "Theater",
       "title": "BIS EINE*R HEULT",
       "sub": "MATERIAL FÜR DIE NÄCHSTE SCHICHT",
@@ -2407,140 +2326,6 @@
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:16:44.572Z",
       "id": "s-bis-eine-r-heult-2026-10-08"
-    },
-    {
-      "cat": "Kreativ",
-      "title": "Bücherei@Stadtbox: Geschichtenzeit",
-      "sub": "Geschichtenzeit für Kinder ab 4 Jahren",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "",
-      "indoor": true,
-      "gratis": true,
-      "preis": "Gratis",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Stadtbox, Wien",
-      "locS": "",
-      "freq": "",
-      "tags": [
-        "Geschichten",
-        "Gratis",
-        "ab4",
-        "Kreativ"
-      ],
-      "desc": "Geschichtenzeit für Kinder ab 4 Jahren in der Stadtbox. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/event/8827/",
-      "source": "WienXtra 5J S.4",
-      "addedDate": "2026-09-27T06:01:40.718Z",
-      "id": "s-bucherei-stadtbox-geschichtenzeit-2026-10-08"
-    },
-    {
-      "cat": "Kreativ",
-      "title": "Stille Stunde in der WIENXTRA-Kinderinfo",
-      "sub": "Infos holen in reizarmer Umgebung",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "17:00 – 18:00",
-      "indoor": true,
-      "gratis": true,
-      "preis": "Gratis",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "WIENXTRA-Kinderinfo, Museumsplatz 1, 1070 Wien",
-      "locS": "7., Neubau",
-      "freq": "",
-      "tags": [
-        "Kinder & Familie",
-        "Info",
-        "Ruhe"
-      ],
-      "desc": "Stille Stunde in der WIENXTRA-Kinderinfo für Kinder in reizarmer Umgebung.",
-      "link": "https://www.mqw.at/programm/events/?tag=kinder-jugendliche",
-      "source": "MuseumsQuartier Kinder (inkl. ZOOM)",
-      "addedDate": "2026-10-05T06:01:37.784Z",
-      "id": "s-stille-stunde-in-der-wienxtra-kinderinfo-2026-10-08"
-    },
-    {
-      "cat": "Natur",
-      "title": "NHM Narrenturm: Führung durch die Studiensammlung",
-      "sub": "Themenführung Narrenturm",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "13:00",
-      "indoor": true,
-      "gratis": false,
-      "preis": "Ermäßigt € 14,00, Kinder freier Eintritt*",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "NHM Narrenturm, Maria-Theresien-Platz, 1010 Wien",
-      "locS": "1., Innere Stadt",
-      "freq": "",
-      "tags": [
-        "Führung",
-        "Studiensammlung",
-        "Narrenturm",
-        "Natur"
-      ],
-      "desc": "Erkunde die Studiensammlung im NHM Narrenturm bei einer spannenden Themenführung. Ideal für Kinder ab 4 Jahren, die mehr über Natur und Wissenschaft erfahren möchten.",
-      "link": "https://www.nhm.at/veranstaltungskalender",
-      "source": "NHM Kinder",
-      "addedDate": "2026-10-08T06:01:39.655Z",
-      "id": "s-nhm-narrenturm-fuhrung-durch-die-studiensammlung-2026-10-08"
-    },
-    {
-      "cat": "Spielen",
-      "title": "miniXplore",
-      "sub": "Entdecken, Ausprobieren, Erforschen für Kinder von 3-8 Jahren",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "09:30–10:10, 10:30–11:10, 11:30–12:10, 12:30–13:10, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
-      "indoor": true,
-      "gratis": false,
-      "preis": "€ 2,50",
-      "reg": true,
-      "alter": "3-8",
-      "loc": "Technisches Museum Wien, Mariahilfer Straße 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Entdecken",
-        "Experimentieren",
-        "Kinder",
-        "Familie"
-      ],
-      "desc": "miniXplore lädt Kinder von 3 bis 8 Jahren zum Entdecken, Ausprobieren und Erforschen ein. Die Veranstaltung findet mehrmals täglich mit begrenzten Plätzen statt und erfordert eine Reservierung.",
-      "link": "https://www.technischesmuseum.at/kinder",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-08T06:01:39.655Z",
-      "id": "s-minixplore-2026-10-08"
-    },
-    {
-      "cat": "Spielen",
-      "title": "minTi",
-      "sub": "Forschen, Staunen und Bewegen für Kinder von 1,5-5 Jahren",
-      "dateFrom": "2026-10-08",
-      "dateTo": "2026-10-08",
-      "time": "10:00–10:40, 11:00–11:40, 12:00–12:40, 13:00–13:40, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
-      "indoor": true,
-      "gratis": false,
-      "preis": "€ 2,50",
-      "reg": true,
-      "alter": "ab 1,5",
-      "loc": "Technisches Museum Wien, Mariahilfer Straße 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Forschen",
-        "Bewegen",
-        "Kinder",
-        "Familie"
-      ],
-      "desc": "minTi richtet sich an Kinder von 1,5 bis 5 Jahren und bietet spannende Forscher- und Bewegungsaktivitäten. Die Teilnahme ist kostenpflichtig und eine Reservierung ist erforderlich.",
-      "link": "https://www.technischesmuseum.at/kinder",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-08T06:01:39.655Z",
-      "id": "s-minti-2026-10-08"
     },
     {
       "cat": "Theater",
@@ -3344,6 +3129,33 @@
       "id": "s-kindersachenmarkt-2026-10-10"
     },
     {
+      "cat": "Natur",
+      "title": "Klimafitte Donaustadt: Landwirtschaft in der Stadt",
+      "sub": "Entdecke Landwirtschaft in der Stadt in der Donaustadt",
+      "dateFrom": "2026-10-10",
+      "dateTo": "2026-10-10",
+      "time": "10:00 bis 11:30",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Gratis",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Naufahrtbrücke, 1220 Wien",
+      "locS": "22., Donaustadt",
+      "freq": "",
+      "tags": [
+        "Natur",
+        "Landwirtschaft",
+        "Donaustadt",
+        "Gratis"
+      ],
+      "desc": "Erlebe, wie Landwirtschaft in der Stadt funktioniert und lerne spielerisch die Bedeutung von nachhaltiger Landwirtschaft kennen. Ein spannendes Angebot für Kinder ab 4 Jahren in der Donaustadt.",
+      "link": "https://www.wien.gv.at/veranstaltungen/klimafitte-donaustadt-landwirtschaft-in-der-stadt",
+      "source": "Wien.gv.at Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-klimafitte-donaustadt-landwirtschaft-in-der-stadt-2026-10-10"
+    },
+    {
       "cat": "Museum",
       "title": "Auf der Suche nach dem Einhorn",
       "sub": "Kinderführung ab 3 Jahren in der Österreichischen Nationalbibliothek",
@@ -3586,6 +3398,87 @@
       "id": "s-ein-muslim-ein-christ-und-ein-jude-2026-10-11"
     },
     {
+      "cat": "Saisonal",
+      "title": "Wiener Comic & Film Börse",
+      "sub": "Große Comicveranstaltung mit freiem Eintritt für Kinder unter 12",
+      "dateFrom": "2026-10-11",
+      "dateTo": "2026-10-11",
+      "time": "10:00",
+      "indoor": true,
+      "gratis": true,
+      "preis": "frei für Kinder unter 12",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Berufsschule Längenfeldgasse, Längenfeldgasse 13, 1120 Wien",
+      "locS": "12., Meidling",
+      "freq": "",
+      "tags": [
+        "Comic",
+        "Film",
+        "Kinder",
+        "Börse"
+      ],
+      "desc": "Österreichs größte Comicveranstaltung mit Comics, Filmen, Figuren und Raritäten. Kinder unter 12 Jahren haben freien Eintritt und erhalten ein Spielzeug gratis.",
+      "link": "https://www.falter.at/event/582626/wiener-comic-film-boerse",
+      "source": "Falter Wochenende",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-wiener-comic-film-borse-2026-10-11"
+    },
+    {
+      "cat": "Saisonal",
+      "title": "Untz Baby Untz",
+      "sub": "Kinder-inklusiver Day Rave mit elektronischer Musik für Eltern und Kinder",
+      "dateFrom": "2026-10-11",
+      "dateTo": "2026-10-11",
+      "time": "14:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Gleis 19, 1100 Wien",
+      "locS": "10., Favoriten",
+      "freq": "",
+      "tags": [
+        "Musik",
+        "Kinder",
+        "Party",
+        "Familie"
+      ],
+      "desc": "Ein kinder-inklusiver Day Rave mit elektronischer Musik (House, Techno), bei dem Eltern gemeinsam mit ihren Kindern tanzen können. Es gibt eine Still & Chill Area, Wickelstation, Kreativcorner und Kids Glitter Station.",
+      "link": "https://www.falter.at/event/1089910/untz-baby-untz",
+      "source": "Falter Wochenende",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-untz-baby-untz-2026-10-11"
+    },
+    {
+      "cat": "Theater",
+      "title": "Johann Sebastian und der verbotene Notenschrank",
+      "sub": "Theaterstück für Kinder über Johann Sebastian Bach",
+      "dateFrom": "2026-10-11",
+      "dateTo": "2026-10-11",
+      "time": "15:30 bis 16:15",
+      "indoor": true,
+      "gratis": false,
+      "preis": "Freie Spende",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Schönbrunner Straße 52, 1050 Wien",
+      "locS": "5., Margareten",
+      "freq": "",
+      "tags": [
+        "Theater",
+        "Kinder",
+        "Musik",
+        "Bach"
+      ],
+      "desc": "Ein kindgerechtes Theaterstück über Johann Sebastian Bach und seinen verbotenen Notenschrank. Ideal für Kinder ab 4 Jahren, die Musik und Theater lieben.",
+      "link": "https://www.wien.gv.at/veranstaltungen/johann-sebastian-und-der-verbotene-notenschrank",
+      "source": "Wien.gv.at Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-johann-sebastian-und-der-verbotene-notenschrank-2026-10-11"
+    },
+    {
       "cat": "Theater",
       "title": "Kikeriki: Wenn ich groß bin, bin ich Tiger!",
       "sub": "Theaterstück für Kinder ab 4 Jahren",
@@ -3714,7 +3607,7 @@
         "ab6"
       ],
       "desc": "Theaterstück für Kinder ab 6 Jahren im Dschungel Wien an mehreren Terminen im Oktober.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=752",
       "source": "Dschungel Wien",
       "addedDate": "2026-10-08T06:01:39.655Z",
       "id": "s-kleiner-schritt-grosser-sprung-2026-10-13"
@@ -3772,6 +3665,33 @@
       "source": "WienXtra 5J S.6",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-winterfit-fur-kinder-2026-10-15"
+    },
+    {
+      "cat": "Theater",
+      "title": "Kinderinfo kennenlernen",
+      "sub": "Für Gruppen",
+      "dateFrom": "2026-10-15",
+      "dateTo": "2026-10-15",
+      "time": "09:30 – 11:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": true,
+      "alter": "Familien",
+      "loc": "WIENXTRA-Kinderinfo, Museumsplatz 1, 1070 Wien",
+      "locS": "7., Neubau",
+      "freq": "",
+      "tags": [
+        "Kinderinfo",
+        "Gruppen",
+        "Familien",
+        "Info"
+      ],
+      "desc": "Ein Kennenlernangebot für Gruppen in der WIENXTRA-Kinderinfo.",
+      "link": "https://wienxtra.at/event/3303/",
+      "source": "MuseumsQuartier Kinder (inkl. ZOOM)",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-kinderinfo-kennenlernen-2026-10-15"
     },
     {
       "cat": "Kreativ",
@@ -4249,6 +4169,33 @@
       "id": "s-philosowas-philosophische-gesprache-zwischen-den-g-2026-10-17"
     },
     {
+      "cat": "Spielen",
+      "title": "Waldbaden mit Hermes. Im Gleichgewicht mit Kunst und Natur",
+      "sub": "Workshop in der Hermesvilla, Anmeldung erforderlich, ab 6 Jahren",
+      "dateFrom": "2026-10-17",
+      "dateTo": "2026-10-17",
+      "time": "09:30–11:30",
+      "indoor": false,
+      "gratis": true,
+      "preis": "gratis",
+      "reg": true,
+      "alter": "ab 6",
+      "loc": "Hermesvilla, 1130 Wien",
+      "locS": "13., Hietzing",
+      "freq": "",
+      "tags": [
+        "Workshop",
+        "Natur",
+        "Kinder",
+        "Gratis"
+      ],
+      "desc": "Ein Workshop in der Hermesvilla, der Kunst und Natur verbindet. Für Kinder ab 6 Jahren mit Anmeldung.",
+      "link": "https://www.wienmuseum.at/kalender",
+      "source": "Wien Museum Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-waldbaden-mit-hermes-im-gleichgewicht-mit-kunst-un-2026-10-17"
+    },
+    {
       "cat": "Saisonal",
       "title": "Riesen-Kinderflohmarkt",
       "sub": "Flohmarkt für Kinder- und Teeniesachen in Floridsdorf",
@@ -4589,6 +4536,33 @@
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-die-komische-tur-2026-10-22"
+    },
+    {
+      "cat": "Saisonal",
+      "title": "Kürbisfest am Siebenbrunnenplatz",
+      "sub": "Herbstliches Fest mit Kürbissen und Aktivitäten für Kinder",
+      "dateFrom": "2026-10-22",
+      "dateTo": "2026-10-22",
+      "time": "14:00 bis 19:00",
+      "indoor": false,
+      "gratis": true,
+      "preis": "Gratis",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Siebenbrunnenplatz, 1050 Wien",
+      "locS": "5., Margareten",
+      "freq": "",
+      "tags": [
+        "Saisonal",
+        "Fest",
+        "Kürbis",
+        "Kinder"
+      ],
+      "desc": "Das Kürbisfest am Siebenbrunnenplatz bietet herbstliche Stimmung und viele Aktivitäten für Kinder ab 4 Jahren. Der Eintritt ist frei und das Fest findet im Freien statt.",
+      "link": "https://www.wien.gv.at/veranstaltungen/kuerbisfest-margareten",
+      "source": "Wien.gv.at Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-kurbisfest-am-siebenbrunnenplatz-2026-10-22"
     },
     {
       "cat": "Theater",
@@ -5257,6 +5231,33 @@
       "id": "s-cilli-die-elfe-oder-die-suche-nach-dem-hohen-c-2026-10-27"
     },
     {
+      "cat": "Saisonal",
+      "title": "Herbstferien-Camp für Kinder",
+      "sub": "Feriencamp in Wien für Kinder in den Herbstferien",
+      "dateFrom": "2026-10-27",
+      "dateTo": "2026-10-30",
+      "time": "",
+      "indoor": false,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": false,
+      "alter": "ab 4",
+      "loc": "Wien",
+      "locS": "",
+      "freq": "",
+      "tags": [
+        "Saisonal",
+        "Feriencamp",
+        "Kinder",
+        "Herbstferien"
+      ],
+      "desc": "Ein Herbstferien-Camp in Wien für Kinder ab 4 Jahren mit abwechslungsreichen Aktivitäten und Betreuung während der Ferienzeit.",
+      "link": "https://www.wien.gv.at/veranstaltungen/herbstferien-camp-kinder",
+      "source": "Wien.gv.at Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-herbstferien-camp-fur-kinder-2026-10-27"
+    },
+    {
       "cat": "Kreativ",
       "title": "Roboter-Helferlein, Mäuselein & Menschsein",
       "sub": "Workshop für Kinder ab 3 Jahren",
@@ -5628,6 +5629,33 @@
       "id": "s-kabarett-niedermair-alice-im-wunderland-2026-11-07"
     },
     {
+      "cat": "Kreativ",
+      "title": "MAK Design Kids: Holz kneten und Lichter bauen",
+      "sub": "Workshop für 8- bis 12-Jährige ohne Begleitung",
+      "dateFrom": "2026-11-07",
+      "dateTo": "2026-11-07",
+      "time": "14:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "nicht angegeben",
+      "reg": true,
+      "alter": "ab 8",
+      "loc": "MAK, Stubenring 5, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "",
+      "tags": [
+        "Workshop",
+        "Design",
+        "Kinder",
+        "Kreativ"
+      ],
+      "desc": "In zweistündigen Workshops beschäftigen sich die MAK Design Kids mit Möbeln, Mode, Mustern und mehr – digitale Entwicklungen haben sie dabei stets im Blick. Die Kinder lernen Designprozesse kennen, entwickeln eigene Ideen, probieren Techniken aus oder erlernen den Umgang mit speziellen Materialien.",
+      "link": "https://www.mak.at/kinder",
+      "source": "MAK Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-mak-design-kids-holz-kneten-und-lichter-bauen-2026-11-07"
+    },
+    {
       "cat": "Musik",
       "title": "Disney in Concert",
       "sub": "Ein Konzert vom Hollywood-Sound-Orchestra.",
@@ -5863,6 +5891,33 @@
       "id": "s-meine-freundin-conni-2-2026-11-14"
     },
     {
+      "cat": "Kreativ",
+      "title": "MAK4Family: ein Ton, viele Töne",
+      "sub": "Workshop und Kurzführung für die ganze Familie (ab 4 Jahren)",
+      "dateFrom": "2026-11-14",
+      "dateTo": "2026-11-14",
+      "time": "14:00",
+      "indoor": true,
+      "gratis": false,
+      "preis": "nicht angegeben",
+      "reg": true,
+      "alter": "ab 4",
+      "loc": "MAK, Stubenring 5, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "",
+      "tags": [
+        "Workshop",
+        "Familie",
+        "Kreativ",
+        "Kinder"
+      ],
+      "desc": "Workshop und Kurzführung für die ganze Familie mit kreativen und informativen Inhalten für Jung und Alt ab 4 Jahren.",
+      "link": "https://www.mak.at/kinder",
+      "source": "MAK Kinder",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-mak4family-ein-ton-viele-tone-2026-11-14"
+    },
+    {
       "cat": "Musik",
       "title": "Marko Simsa: Kinderkonzerte im Haus der Musik, Wien",
       "sub": "",
@@ -5887,6 +5942,33 @@
       "source": "All4Family Kinderkonzerte",
       "addedDate": "2026-09-21T15:22:33.404Z",
       "id": "s-marko-simsa-kinderkonzerte-im-haus-der-musik-wien-2026-11-15"
+    },
+    {
+      "cat": "Kino",
+      "title": "ZUSAMMEN FINDEN KURZFILME (Kinderfilmfestival)",
+      "sub": "Kurzfilme für Kinder ab 4 Jahre",
+      "dateFrom": "2026-11-17",
+      "dateTo": "2026-11-17",
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": true,
+      "alter": "ab 4",
+      "loc": "WIENXTRA-Cinemagic, 1010 Wien",
+      "locS": "1., Innere Stadt",
+      "freq": "",
+      "tags": [
+        "Kurzfilm",
+        "Kinder",
+        "Festival",
+        "Kino"
+      ],
+      "desc": "Kinderfilmfestival mit Kurzfilmen für Kinder ab 4 Jahren im WIENXTRA-Cinemagic. Anmeldung möglich, auch für Gruppen geeignet.",
+      "link": "https://wienxtra.at/kinder/event/8759/",
+      "source": "WienXtra 5J S.5",
+      "addedDate": "2026-10-09T06:01:55.329Z",
+      "id": "s-zusammen-finden-kurzfilme-kinderfilmfestival-2026-11-17"
     },
     {
       "cat": "Kreativ",
@@ -7063,7 +7145,7 @@
         "ab3"
       ],
       "desc": "Performance für junge Menschen ab 3 Jahren im Dschungel Wien mit mehreren Terminen im Februar 2027.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=752",
       "source": "Dschungel Wien",
       "addedDate": "2026-10-08T06:01:39.655Z",
       "id": "s-genie-2027-02-20"
@@ -7089,7 +7171,7 @@
         "ab5"
       ],
       "desc": "Theaterstück für Kinder ab 5 Jahren im Dschungel Wien Ende Februar 2027.",
-      "link": "https://www.dschungelwien.at/programm",
+      "link": "https://dschungelwien.jetticket.net/webshop/webticket/shop?event=967",
       "source": "Dschungel Wien",
       "addedDate": "2026-10-08T06:01:39.655Z",
       "id": "s-raumschiff-aeki-2027-02-26"
@@ -10283,5 +10365,5 @@
       "id": "r-kostumwerkstatten-und-kostumfundus-bei-theater-in-"
     }
   ],
-  "lastUpdated": "2026-10-08T06:01:39.655Z"
+  "lastUpdated": "2026-10-09T06:01:55.329Z"
 }
