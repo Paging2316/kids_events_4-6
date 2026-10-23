@@ -777,33 +777,6 @@
     },
     {
       "cat": "Sport",
-      "title": "Fechten im 8.",
-      "sub": "Fechttraining für Kinder ab 6 Jahren",
-      "dateFrom": "2026-09-24",
-      "dateTo": "2026-10-22",
-      "time": "",
-      "indoor": true,
-      "gratis": true,
-      "preis": "Gratis",
-      "reg": false,
-      "alter": "ab 6",
-      "loc": "Fecht-Union Wien, 1080 Wien",
-      "locS": "8., Josefstadt",
-      "freq": "",
-      "tags": [
-        "Sport",
-        "Fechten",
-        "Kinder",
-        "Bewegung"
-      ],
-      "desc": "Fechttraining für Kinder ab 6 Jahren in der Fecht-Union Wien. Ohne Anmeldung.",
-      "link": "https://wienxtra.at/kinder/event/7445/",
-      "source": "WienXtra 6J S.2",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-fechten-im-8-2026-09-24"
-    },
-    {
-      "cat": "Sport",
       "title": "WTplus Tiger im 22. Bezirk",
       "sub": "Wing Tsun Kampfkunst für Kinder ab 6 Jahren",
       "dateFrom": "2026-09-24",
@@ -2195,32 +2168,6 @@
       "freq": ""
     },
     {
-      "cat": "Saisonal",
-      "title": "Geisterdisco",
-      "sub": "Disco für Kinder",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": true,
-      "alter": "ab 2",
-      "loc": "Wiener Hilfswerk - Nachbarschaftszentrum 2, 1020 Wien",
-      "locS": "2., Leopoldstadt",
-      "freq": "",
-      "tags": [
-        "Saisonal",
-        "Disco",
-        "Kinder"
-      ],
-      "desc": "Geisterdisco für Kinder ab 2 Jahren im Wiener Hilfswerk Nachbarschaftszentrum 2. Anmeldung erforderlich.",
-      "link": "https://wienxtra.at/kinder/event/7787/",
-      "source": "WienXtra 5J S.6",
-      "addedDate": "2026-09-21T15:06:56.523Z",
-      "id": "s-geisterdisco-2026-10-22"
-    },
-    {
       "cat": "Theater",
       "title": "DIE KOMISCHE TÜR",
       "sub": "Theaterstück ab 4 Jahren",
@@ -2245,87 +2192,6 @@
       "source": "Dschungel Wien",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "s-die-komische-tur-2026-10-22"
-    },
-    {
-      "cat": "Saisonal",
-      "title": "Kürbisfest am Siebenbrunnenplatz",
-      "sub": "Herbstliches Fest mit Kürbissen und Aktivitäten für Kinder",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "14:00 bis 19:00",
-      "indoor": false,
-      "gratis": true,
-      "preis": "Gratis",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Siebenbrunnenplatz, 1050 Wien",
-      "locS": "5., Margareten",
-      "freq": "",
-      "tags": [
-        "Saisonal",
-        "Fest",
-        "Kürbis",
-        "Kinder"
-      ],
-      "desc": "Das Kürbisfest am Siebenbrunnenplatz bietet herbstliche Stimmung und viele Aktivitäten für Kinder ab 4 Jahren. Der Eintritt ist frei und das Fest findet im Freien statt.",
-      "link": "https://www.wien.gv.at/veranstaltungen/kuerbisfest-margareten",
-      "source": "Wien.gv.at Kinder",
-      "addedDate": "2026-10-09T06:01:55.329Z",
-      "id": "s-kurbisfest-am-siebenbrunnenplatz-2026-10-22"
-    },
-    {
-      "cat": "Spielen",
-      "title": "miniXplore",
-      "sub": "Entdecken, Ausprobieren, Erforschen für Kinder von 3-8 Jahren",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "09:30–10:10, 10:30–11:10, 11:30–12:10, 12:30–13:10, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
-      "indoor": true,
-      "gratis": false,
-      "preis": "€ 2,50",
-      "reg": true,
-      "alter": "3-8",
-      "loc": "Technisches Museum Wien, Mariahilfer Str. 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Entdecken",
-        "Experimentieren",
-        "Kinder",
-        "Familie"
-      ],
-      "desc": "miniXplore lädt Kinder von 3 bis 8 Jahren zum Entdecken, Ausprobieren und Erforschen ein. Das Programm findet mehrmals täglich statt und erfordert eine Reservierung.",
-      "link": "https://www.technischesmuseum.at/kinder/event/reservierung_minixplore?no=00159923&eventNo=EVTH0009",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-22T06:02:18.270Z",
-      "id": "s-minixplore-2026-10-22"
-    },
-    {
-      "cat": "Spielen",
-      "title": "minTi",
-      "sub": "Forschen, Staunen und Bewegen für Kinder von 1,5-5 Jahren",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "10:00–10:40, 11:00–11:40, 12:00–12:40, 13:00–13:40, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
-      "indoor": true,
-      "gratis": false,
-      "preis": "€ 2,50",
-      "reg": true,
-      "alter": "ab 1,5",
-      "loc": "Technisches Museum Wien, Mariahilfer Str. 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Forschen",
-        "Bewegen",
-        "Kinder",
-        "Familie"
-      ],
-      "desc": "minTi ist ein Programm für Kinder von 1,5 bis 5 Jahren zum Forschen, Staunen und Bewegen. Es findet mehrmals täglich statt und erfordert eine Reservierung.",
-      "link": "https://www.technischesmuseum.at/kinder/event/minti?no=00160026&eventNo=EVTH0116",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-22T06:02:18.270Z",
-      "id": "s-minti-2026-10-22"
     },
     {
       "cat": "Museum",
@@ -2353,87 +2219,6 @@
       "source": "Technisches Museum Kinder",
       "addedDate": "2026-10-22T06:02:18.270Z",
       "id": "s-more-than-recycling-2026-10-22"
-    },
-    {
-      "cat": "Museum",
-      "title": "Materialwelten",
-      "sub": "Dauerausstellung zu Materialien und Technik",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Technisches Museum Wien, Mariahilfer Str. 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Dauerausstellung",
-        "Materialien",
-        "Technik",
-        "Familie"
-      ],
-      "desc": "Die Dauerausstellung 'Materialwelten' zeigt spannende Einblicke in Materialien und Technik und ist für Familien mit Kindern ab 4 Jahren geeignet.",
-      "link": "https://www.technischesmuseum.at/ausstellungen/materialwelten",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-22T06:02:18.270Z",
-      "id": "s-materialwelten-2026-10-22"
-    },
-    {
-      "cat": "Museum",
-      "title": "Klima. Wissen. Handeln!",
-      "sub": "Dauerausstellung zum Thema Klima",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Technisches Museum Wien, Mariahilfer Str. 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Klima",
-        "Ausstellung",
-        "Bildung",
-        "Familie"
-      ],
-      "desc": "Die Dauerausstellung 'Klima. Wissen. Handeln!' informiert über Klimathemen und ist für Familien mit Kindern ab 4 Jahren geeignet.",
-      "link": "https://www.technischesmuseum.at/ausstellungen/klima-wissen-handeln",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-22T06:02:18.270Z",
-      "id": "s-klima-wissen-handeln-2026-10-22"
-    },
-    {
-      "cat": "Museum",
-      "title": "Mobilität",
-      "sub": "Dauerausstellung zu Verkehr und Fortbewegung",
-      "dateFrom": "2026-10-22",
-      "dateTo": "2026-10-22",
-      "time": "",
-      "indoor": true,
-      "gratis": false,
-      "preis": "siehe Website",
-      "reg": false,
-      "alter": "ab 4",
-      "loc": "Technisches Museum Wien, Mariahilfer Str. 212, 1140 Wien",
-      "locS": "14., Penzing",
-      "freq": "",
-      "tags": [
-        "Mobilität",
-        "Verkehr",
-        "Technik",
-        "Familie"
-      ],
-      "desc": "Die Dauerausstellung Mobilität zeigt Fahrzeuge und Fortbewegungsmittel und ist für Familien mit Kindern ab 4 Jahren geeignet.",
-      "link": "https://www.technischesmuseum.at/ausstellungen/mobilitaet",
-      "source": "Technisches Museum Kinder",
-      "addedDate": "2026-10-22T06:02:18.270Z",
-      "id": "s-mobilitat-2026-10-22"
     },
     {
       "cat": "Theater",
@@ -2618,6 +2403,60 @@
       "source": "WienXtra 5J S.2",
       "addedDate": "2026-10-18T06:01:37.029Z",
       "id": "s-sonne-mond-und-sterne-2026-10-23"
+    },
+    {
+      "cat": "Spielen",
+      "title": "miniXplore",
+      "sub": "Entdecken, Ausprobieren, Erforschen für Kinder von 3-8 Jahren",
+      "dateFrom": "2026-10-23",
+      "dateTo": "2026-10-23",
+      "time": "09:30–10:10, 10:30–11:10, 11:30–12:10, 12:30–13:10, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
+      "indoor": true,
+      "gratis": false,
+      "preis": "€ 2,50",
+      "reg": true,
+      "alter": "3-8",
+      "loc": "Technisches Museum Wien, Mariahilfer Straße 212, 1140 Wien",
+      "locS": "14., Penzing",
+      "freq": "",
+      "tags": [
+        "Entdecken",
+        "Experimentieren",
+        "Kinder",
+        "Familie"
+      ],
+      "desc": "miniXplore lädt Kinder von 3 bis 8 Jahren zum Entdecken, Ausprobieren und Erforschen ein. Die Veranstaltung findet mehrmals am 23.10.2026 im Technischen Museum Wien statt und erfordert eine Reservierung.",
+      "link": "https://www.technischesmuseum.at/kinder/event/reservierung_minixplore?no=00159924&eventNo=EVTH0009",
+      "source": "Technisches Museum Kinder",
+      "addedDate": "2026-10-23T06:01:49.614Z",
+      "id": "s-minixplore-2026-10-23"
+    },
+    {
+      "cat": "Spielen",
+      "title": "minTi",
+      "sub": "Forschen, Staunen und Bewegen für Kinder von 1,5-5 Jahren",
+      "dateFrom": "2026-10-23",
+      "dateTo": "2026-10-23",
+      "time": "10:00–10:40, 11:00–11:40, 12:00–12:40, 13:00–13:40, 14:00–14:40, 15:00–15:40, 16:00–16:40, 17:00–17:40",
+      "indoor": true,
+      "gratis": false,
+      "preis": "€ 2,50",
+      "reg": true,
+      "alter": "ab 1,5",
+      "loc": "Technisches Museum Wien, Mariahilfer Straße 212, 1140 Wien",
+      "locS": "14., Penzing",
+      "freq": "",
+      "tags": [
+        "Forschen",
+        "Bewegen",
+        "Kinder",
+        "Familie"
+      ],
+      "desc": "minTi ist ein Programm für Kinder von 1,5 bis 5 Jahren zum Forschen, Staunen und Bewegen. Es findet am 23.10.2026 mehrmals im Technischen Museum Wien statt und erfordert eine Reservierung.",
+      "link": "https://www.technischesmuseum.at/kinder/event/minti?no=00160027&eventNo=EVTH0116",
+      "source": "Technisches Museum Kinder",
+      "addedDate": "2026-10-23T06:01:49.614Z",
+      "id": "s-minti-2026-10-23"
     },
     {
       "cat": "Kreativ",
@@ -7365,6 +7204,33 @@
       "id": "s-fledermause-2027-01-20"
     },
     {
+      "cat": "Musik",
+      "title": "Best of Bernhard Fibich- Kabarett Niedermair",
+      "sub": "Ein Mitmachkonzert für Kinder!",
+      "dateFrom": "2027-01-22",
+      "dateTo": "2027-05-01",
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": false,
+      "alter": "ab 3",
+      "loc": "Kabarett Niedermair, Wien",
+      "locS": "9., Alsergrund",
+      "freq": "",
+      "tags": [
+        "Mitmachkonzert",
+        "Bernhard Fibich",
+        "Kinder",
+        "Kabarett Niedermair"
+      ],
+      "desc": "Mitmachkonzert für Kinder mit Bernhard Fibich im Kabarett Niedermair in Wien.",
+      "link": "https://all4family.at/veranstaltungen/best-of-fibich-niedermair/?gde=2027-01-22",
+      "source": "All4Family Kinderkonzerte",
+      "addedDate": "2026-10-23T06:01:49.614Z",
+      "id": "s-best-of-bernhard-fibich-kabarett-niedermair-2027-01-22"
+    },
+    {
       "cat": "Theater",
       "title": "DAS VAMPERL",
       "sub": "Theaterstück ab 6 Jahren",
@@ -7626,6 +7492,33 @@
       "source": "Jeunesse Triolino",
       "addedDate": "2026-09-21T15:22:33.404Z",
       "id": "s-triolino-saxo-sausen-2027-04-17"
+    },
+    {
+      "cat": "Musik",
+      "title": "Kuddelmuddel und Gesprudel – Kabarett Niedermair",
+      "sub": "Ein Mitmach-Konzert für Kinder mit Bernhard Fibich.",
+      "dateFrom": "2027-04-23",
+      "dateTo": "2027-04-23",
+      "time": "",
+      "indoor": true,
+      "gratis": false,
+      "preis": "siehe Website",
+      "reg": false,
+      "alter": "ab 3",
+      "loc": "Kabarett Niedermair, Wien",
+      "locS": "9., Alsergrund",
+      "freq": "",
+      "tags": [
+        "Mitmachkonzert",
+        "Bernhard Fibich",
+        "Kinder",
+        "Kabarett Niedermair"
+      ],
+      "desc": "Mitmach-Konzert für Kinder mit Bernhard Fibich im Kabarett Niedermair in Wien.",
+      "link": "https://all4family.at/veranstaltungen/kuddelmuddel-und-gesprudel/",
+      "source": "All4Family Kinderkonzerte",
+      "addedDate": "2026-10-23T06:01:49.614Z",
+      "id": "s-kuddelmuddel-und-gesprudel-kabarett-niedermair-2027-04-23"
     },
     {
       "cat": "Theater",
@@ -8798,7 +8691,7 @@
         "Familien"
       ],
       "desc": "Im ZOOM Kindermuseum können Kinder spielerisch die Welt entdecken. Es gibt viele Mitmachstationen zum Basteln, Malen und Experimentieren. Auch Erwachsene können mitmachen oder die Zeit für einen Museumsbesuch nutzen.",
-      "link": "https://www.wien.info/de/sehen-erleben/familien/programm-nur-fuer-kinder-355934",
+      "link": "https://www.zoomkindermuseum.at",
       "source": "WienInfo Kinderprogramm",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-zoom-kindermuseum"
@@ -8824,7 +8717,7 @@
         "Familien"
       ],
       "desc": "Im Belvedere können Kinder an Führungen und Workshops teilnehmen und im Atelier Pinselstrich selbst kreativ werden. Die Teilnahme von Erwachsenen ist erforderlich.",
-      "link": "https://www.wien.info/de/sehen-erleben/familien/programm-nur-fuer-kinder-355934",
+      "link": "https://www.belvedere.at",
       "source": "WienInfo Kinderprogramm",
       "addedDate": "2026-09-21T15:06:56.523Z",
       "id": "r-belvedere-kinderprogramm"
@@ -9469,7 +9362,7 @@
         "Kinder"
       ],
       "desc": "Kinder von 8 bis 14 Jahren erfahren in Workshops alles über Oper, Ballett und Orchester. Nicht passend für 4-6 Jahre, daher ausgeschlossen.",
-      "link": "https://www.wien.info/de/sehen-erleben/familien/programm-nur-fuer-kinder-355934",
+      "link": "https://www.wiener-volksoper.at",
       "source": "WienInfo Kinderprogramm",
       "addedDate": "2026-09-21T15:16:44.572Z",
       "id": "r-kinder-workshops-in-der-volksoper"
@@ -10948,7 +10841,34 @@
       "source": "Dschungel Wien",
       "addedDate": "2026-10-19T06:01:35.987Z",
       "id": "r-city-jam"
+    },
+    {
+      "cat": "Kreativ",
+      "title": "Kostümwerkstätten und Kostümfundus der Josefstadt",
+      "sub": "Kinder zwischen 4 und 10 Jahren spielen, basteln und malen mit Künstlern des ZOOM Kindermuseums",
+      "dateFrom": null,
+      "dateTo": null,
+      "time": "Nachmittagsvorstellungen (Termine variabel)",
+      "indoor": true,
+      "gratis": true,
+      "preis": "Gratis",
+      "reg": true,
+      "alter": "4-10",
+      "loc": "Josefstadt, Wien",
+      "locS": "8., Josefstadt",
+      "freq": "bei Nachmittagsvorstellungen",
+      "tags": [
+        "Kreativ",
+        "Spielen",
+        "Museum",
+        "Kinder"
+      ],
+      "desc": "Während Eltern Theater in der Josefstadt besuchen, können Kinder im Kostümfundus und in den Werkstätten mit Künstlern spielen, basteln und malen. Anmeldung ist erforderlich.",
+      "link": "https://www.josefstadt.org/theater/spielstaetten/kammerspiele-der-josefstadt.html",
+      "source": "WienInfo Kinderprogramm",
+      "addedDate": "2026-10-23T06:01:49.614Z",
+      "id": "r-kostumwerkstatten-und-kostumfundus-der-josefstadt"
     }
   ],
-  "lastUpdated": "2026-10-22T06:02:18.270Z"
+  "lastUpdated": "2026-10-23T06:01:49.614Z"
 }
